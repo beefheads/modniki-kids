@@ -1,16 +1,20 @@
-/*
- */
+
+
+
 // #region timer
-const timers = document.querySelectorAll(".timer");
+const timers = document.querySelectorAll(".uc-timer");
 
 class Timer {
   timers = [];
   timerName = "localTimer";
-  timerDeadline = this.getTimerDeadlineFromNow(1);
+  // timerDeadline = this.getTimerDeadlineFromNow(1);
+  timerDeadline = this.getDeadlineDate("2023.02.15");
 
   constructor() {
-    this.setTimers(".b_timer");
+    this.setTimers(".uc-timer");
     this.launchTimers();
+    // console.log(this.getTimerDeadlineFromNow(1));
+    // console.log(this.getDeadlineDate("2023.02.15"));
   }
   setTimers(timerClass) {
     this.timers = [...document.querySelectorAll(timerClass)];
@@ -41,11 +45,11 @@ class Timer {
 
     this.getTimers().forEach((timer) => {
       this.getTimerSections(timer).forEach((section, i) => {
-        [...section.querySelectorAll(".timer__digit")].forEach(
-          (digit, index) => {
-            digit.innerText = total >= 0 ? timerSpan[i][index] : "0";
-          }
-        );
+        // [section].forEach(
+        //   (digit, index) => {
+            section.innerText = total >= 0 ? timerSpan[i] : "0";
+          // }
+        // );
       });
       if (total <= 0) {
         // clearInterval(timeinterval);
@@ -78,7 +82,10 @@ class Timer {
   }
 
   // var deadline = new Date(Date.parse(new Date()) + 10 * 1000); // for endless timer
-
+  getDeadlineDate(ymdDate) {
+    return Math.floor(new Date(ymdDate).getTime())
+    // return Math.floor(new Date(ymdDate).getTime() / 1000)
+  }
   getTimerDeadlineFromNow(hours, isDaysInTimer = false) {
     const milliseconds = 1000;
     const seconds = 60;

@@ -13,6 +13,11 @@ import "./unstable/burger.js";
 import "./poppa.js";
 
 /**
+ * Timer
+ */
+import "./b_timer.js";
+
+/**
  * Lazy Load
  */
 import "./libs/lazyload.min.js";
