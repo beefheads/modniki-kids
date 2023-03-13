@@ -1,53 +1,53 @@
-# Poppa
+# b_modal
 
-Окна сами получают нужную обертку и функционал, когда класс `Poppa` вызван хоть раз.
+Окна сами получают нужную обертку и функционал, когда класс `b_modal` вызван хоть раз.
 Окна открываются по хэшу в урле
 
 ## Окна
 
 Оберни то, что должно стать всплывашкой в:
 ```html
-<div class="poppa" id="your-modal-name">
+<div class="b_modal" id="your-modal-name">
 	<!- Твой контент окна ->
 </div>
 ```
-`.poppa` при генерит кастомные js события на открытии и заркытии:
-* `poppa-open`
-* `poppa-close`
+`.b_modal` при генерит кастомные js события на открытии и заркытии:
+* `b_modal-open`
+* `b_modal-close`
 
 ## Кнопки
-По клику откроет окно, которое ты создал ранее. В атрибуте `data-poppa-open` укажи id попапа
-Если поменять значение `data-poppa-open`, то будет открываться актуальное окно
+По клику откроет окно, которое ты создал ранее. В атрибуте `data-b_modal-open` укажи id попапа
+Если поменять значение `data-b_modal-open`, то будет открываться актуальное окно
 ```html
-<button data-poppa-open="your-modal-name">Открыть окно</button>
+<button data-b_modal-open="your-modal-name">Открыть окно</button>
 ```
 
-По клику закроет окно, которое ты создал ранее. В атрибуте `data-poppa-open` укажи id попапа
-Если поменять значение `data-poppa-close`, то будет открываться актуальное окно
+По клику закроет окно, которое ты создал ранее. В атрибуте `data-b_modal-open` укажи id попапа
+Если поменять значение `data-b_modal-close`, то будет открываться актуальное окно
 ```html
-<button data-poppa-close="your-modal-name">Открыть окно</button>
+<button data-b_modal-close="your-modal-name">Открыть окно</button>
 ```
 
 ## Методы
 
 ```js
-window.Poppa.openPop(id)
+window.b_modal.openPop(id)
 ```
 ```js
-window.Poppa.closePop(id)
+window.b_modal.closePop(id)
 ```
 
 Создает с нуля окно с текстом `text` и убирает его после `removeAfter_ms`
 ```js
-window.Poppa.makeInfoPop(text, removeAfter_ms)
+window.b_modal.makeInfoPop(text, removeAfter_ms)
 ```
 
 Создает попап из `popupNode` и присваевает ему опиональный `id`.
 ```js
-window.Poppa.makePopup(popupNode, id)
+window.b_modal.makePopup(popupNode, id)
 ```
 
 Заставляет `buttonNode` по клику открывать окно с id === `popupId`
 ```js
-window.Poppa.makeOpenerButton(buttonNode, popupId)
+window.b_modal.makeOpenerButton(buttonNode, popupId)
 ```

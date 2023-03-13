@@ -8,9 +8,9 @@ import Swiper, { Navigation, Autoplay } from "swiper";
 import "./unstable/burger.js";
 
 /**
- * Poppa
+ * b_modal
  */
-import "./poppa.js";
+import "./b_modal.js";
 
 /**
  * Timer

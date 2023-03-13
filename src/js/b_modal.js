@@ -69,7 +69,7 @@ function closeWhenClickingOnBg(itemArray, itemParent, classShow = "_show") {
   });
 }
 
-class Poppa {
+class b_modal {
   constructor() {
     this.initPopups();
     this.initButtons();
@@ -85,26 +85,26 @@ class Poppa {
       }
     });
 
-    this.openPoppaHash();
+    this.openb_modalHash();
   }
 
   instances = [];
   getPopupsStorage() {
-    return document.querySelector(".poppa__storage");
+    return document.querySelector(".b_modal__storage");
   }
 
   initPopups() {
-    const popups = document.querySelectorAll(".poppa");
+    const popups = document.querySelectorAll(".b_modal");
     const popupsStorage = document.createElement("div");
 
-    popupsStorage.classList.add("poppa__storage");
+    popupsStorage.classList.add("b_modal__storage");
     document.body.append(popupsStorage);
 
-    popups.forEach((poppa) => this.makePopupWrapper(poppa));
+    popups.forEach((b_modal) => this.makePopupWrapper(b_modal));
 
     window.addEventListener("click", (e) => {
-      if (e.target.classList.contains("poppa__aligner")) {
-        this.closePop(e.target.querySelector(".poppa").id);
+      if (e.target.classList.contains("b_modal__aligner")) {
+        this.closePop(e.target.querySelector(".b_modal").id);
       }
     });
   }
@@ -114,35 +114,35 @@ class Poppa {
     this.makePopupWrapper(popup);
   }
   makeOpenerButton(button, id) {
-    button.dataset.poppaOpen = id;
+    button.dataset.b_modalOpen = id;
     button.addEventListener("click", () => {
       this.handleOpen(button);
     });
   }
 
-  makePopupWrapper(poppa) {
-    let { id } = poppa;
+  makePopupWrapper(b_modal) {
+    let { id } = b_modal;
 
     const overlay = document.createElement("div");
-    overlay.classList.add("poppa__overlay");
-    overlay.classList.add(`poppa__overlay--${id}`);
-    overlay.dataset.poppaName = id;
+    overlay.classList.add("b_modal__overlay");
+    overlay.classList.add(`b_modal__overlay--${id}`);
+    overlay.dataset.b_modalName = id;
 
     const aligner = document.createElement("div");
-    aligner.classList.add("poppa__aligner");
+    aligner.classList.add("b_modal__aligner");
 
     const closer = document.createElement("button");
-    closer.classList.add("poppa__closer");
+    closer.classList.add("b_modal__closer");
     closer.innerText = "Закрыть";
-    closer.dataset.poppaClose = id;
+    closer.dataset.b_modalClose = id;
     const handleClose = () => {
       this.handleClose(closer);
     };
     closer.addEventListener("click", handleClose);
     // TODO: Сделай накидывание нужных ариа атрибутов
 
-    document.querySelector(".poppa__storage").append(overlay);
-    aligner.append(poppa);
+    document.querySelector(".b_modal__storage").append(overlay);
+    aligner.append(b_modal);
     overlay.append(aligner);
     overlay.append(closer);
 
@@ -150,14 +150,14 @@ class Poppa {
   }
 
   initButtons() {
-    const openButtons = document.querySelectorAll("[data-poppa-open]");
+    const openButtons = document.querySelectorAll("[data-b_modal-open]");
     openButtons.forEach((button) => {
       button.addEventListener("click", () => {
         this.handleOpen(button);
       });
     });
 
-    const closeButtons = document.querySelectorAll("[data-poppa-close]");
+    const closeButtons = document.querySelectorAll("[data-b_modal-close]");
     closeButtons.forEach((button) => {
       button.addEventListener("click", () => {
         this.handleClose(button);
@@ -166,9 +166,9 @@ class Poppa {
   }
 
   handleOpen(button) {
-    const id = button.dataset.poppaOpen;
-    const poppa = document.querySelector(`#${id}`);
-    if (poppa) {
+    const id = button.dataset.b_modalOpen;
+    const b_modal = document.querySelector(`#${id}`);
+    if (b_modal) {
       this.openPop(id);
     } else {
       this.makeInfoPop(`Попапа "#${id}" нет. Проверь айди`);
@@ -181,15 +181,15 @@ class Poppa {
       pop.classList.add("_show");
     });
     window.location.hash = id;
-    const event = new Event("poppa-open");
+    const event = new Event("b_modal-open");
     pop.dispatchEvent(event);
-    pop.querySelector(".poppa").dispatchEvent(event);
+    pop.querySelector(".b_modal").dispatchEvent(event);
   }
 
   handleClose(button) {
-    const id = button.dataset.poppaClose;
-    const poppa = document.querySelector(`#${id}`);
-    if (poppa) {
+    const id = button.dataset.b_modalClose;
+    const b_modal = document.querySelector(`#${id}`);
+    if (b_modal) {
       this.closePop(id);
     } else {
       this.makeInfoPop(`Попапа "#${id}" нет. Проверь айди`);
@@ -202,16 +202,16 @@ class Poppa {
       pop.classList.remove("_show");
     }
     this.resetHash();
-    const event = new Event("poppa-close");
+    const event = new Event("b_modal-close");
     pop.dispatchEvent(event);
-    pop.querySelector(".poppa").dispatchEvent(event);
+    pop.querySelector(".b_modal").dispatchEvent(event);
   }
 
   makeInfoPop(text, removeAfter = 6000) {
     const info = document.createElement("div");
     const id = "pop-" + new Date().getTime();
-    info.classList.add("poppa");
-    info.classList.add("poppa--invalid");
+    info.classList.add("b_modal");
+    info.classList.add("b_modal--invalid");
     info.innerHTML = text;
     info.id = id;
 
@@ -226,27 +226,27 @@ class Poppa {
   }
 
   getPop(id) {
-    return document.querySelector(`[data-poppa-name="${id}"]`);
+    return document.querySelector(`[data-b_modal-name="${id}"]`);
   }
   getTotalPopups() {
-    return document.querySelectorAll(`[data-poppa-name]`);
+    return document.querySelectorAll(`[data-b_modal-name]`);
   }
 
   getLastOpenedId() {
     // let storage = this.getPopupsStorage();
     // storage = Array.from(storage.children);
-    // return storage[storage.length - 1].dataset.poppaName;
-    const opened = [...document.querySelectorAll("._show[data-poppa-name]")];
+    // return storage[storage.length - 1].dataset.b_modalName;
+    const opened = [...document.querySelectorAll("._show[data-b_modal-name]")];
     return opened.length == 0
       ? false
-      : opened[opened.length - 1].dataset.poppaName;
+      : opened[opened.length - 1].dataset.b_modalName;
   }
 
-  openPoppaHash() {
+  openb_modalHash() {
     if (window.location.hash) {
       const hash = window.location.hash.substring(1);
-      const poppa = document.querySelector(`.poppa#${hash}`);
-      if (poppa) {
+      const b_modal = document.querySelector(`.b_modal#${hash}`);
+      if (b_modal) {
         this.openPop(hash);
       }
     }
@@ -258,5 +258,5 @@ class Poppa {
   }
 }
 
-const b_Poppa = new Poppa();
-window.poppa = b_Poppa;
+const b_b_modal = new b_modal();
+window.b_modal = b_b_modal;
