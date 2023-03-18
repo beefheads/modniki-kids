@@ -77,17 +77,14 @@ body._lock {
 // Общие стили проекта
 @import "./common";
 
+@import "./sections";
+
 // Карточки
 // @import "./components/cards/";
 
 // Модальные окна
 // @import "./components/modals/";
 
-// Секции
-@import "./sections/header";
-@import "./sections/main";
-@import "./sections/hero";
-@import "./sections/footer";
 
 // Стили для отдельных страниц
 // @import "./pages/";
