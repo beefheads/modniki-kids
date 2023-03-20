@@ -1,15 +1,24 @@
-import { bodyLock, bodyUnlock } from "../utils/functions.js";
+import {bodyLock} from '../utils/helpers.js'
+// import { bodyLock, bodyUnlock } from "../utils/functions.js";
 const burger = document.querySelector(".burger");
 const header = document.querySelector(".header");
 const HEADER_OPENED_CLASS = "header--opened";
+const BURGER_OPENED = "is-active";
 
 function openBurger() {
   header.classList.add(HEADER_OPENED_CLASS);
-  bodyLock();
+  burger.classList.add(BURGER_OPENED)
+  bodyLock(true);
+  const stickyHeader = document.querySelector('.page-heading--sticky-run');
+
+  if (!stickyHeader) return;
+
+  stickyHeader.style.transform = '';
 }
 function closeBurger() {
   header.classList.remove(HEADER_OPENED_CLASS);
-  bodyUnlock();
+  burger.classList.remove(BURGER_OPENED)
+  bodyLock(false);
 }
 
 if (header && burger) {

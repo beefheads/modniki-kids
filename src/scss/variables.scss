@@ -2,92 +2,53 @@
 $min-width: 320px;
 $max-width: 1920px;
 $max-width-container: 1170px;
-$container-padding: 48;
-$container-width: $max-width-container + $container-padding;
+// $container-width: $max-width-container + $container-padding;
 
 $laptop-l: 1500px;
 $laptop: 1100px;
-$tablet: 800px;
+$tablet: 992px;
 $mobile-l: 450px;
 $mobile-m: 390px;
 $mobile-s: 330px;
-$hide-menu: $tablet;
-$minHover: $laptop;
-// ================ Responsive End ================
 
-// ================ Colors Start ================
-// Текст
-$text-primary: var(--c-text-regular);
-$text-second: var(--c-text-secondary);
-$text-label: var(--c-text-label);
-$accent: #b24d2b;
-$light: #fff;
+$desktop-l: 1800px;
+$desktop-m: 1500px;
+$desktop-s: 1100px;
+$w-burger: $tablet;
+$w-mobile: 810px;
 
-// Задний фон разделов
-// $frame-dark: #080A0A;
-// $frame-light: #0E1010;
-
-// Обводка
-$border-line: var(--c-border);
-
-// Радиусы
-$radius-s: var(--radius-s);
-$radius-l: var(--radius-l);
-
-// Текстовые поля
-$input-placeholder: var(--c-input-placeholder);
-
-// Уведомления
-$error: var(--c-error);
-// ================ Colors End ================
 :root {
-  --c-text-regular: #333;
-  --c-text-secondary: #5b5b5b;
-  --c-button-secondary: #5b5b5b;
-  --c-text-label: #bdbdbd;
-  --c-text-on: #fff;
-  --c-input-placeholder: brig-color(#000, 0.3);
-
-  --c-accent: #b24d2b;
-  --c-accent-light: #cc886a;
-  --c-error: #ff3b30;
-
-  --bg-element: #fff;
-  --bg-app: #0e1317;
-  --bg-app-light: #212425;
-
-  --bg-dropdown: #384043;
-  --bg-dropdown-list: #4e5557;
-
-  --bg-b_modal: #171b1f;
-  --radius-b_modal: 10px;
-  --overlay-b_modal: rgba(0, 0, 0, 0.8);
-
-  --c-border: #cecece;
-  --radius-s: 4px;
-  --radius-l: 30px;
-
+  --index: #{"calc(1vw + 1vh)"};
   --tr: 0.3s;
   --tr-regular: all var(--tr) ease;
 
-  // --container-padding: #{math.div($container-padding, 2) + "px"};
-  --container-padding: 15px;
-  @media (max-width: 1100px) {
-    --container-padding: 10px;
+  // Colors
+  --c-accent: #FF9151;
+  --c-wa: #20B038;
+
+  --c-text-regular: #4E3D33;
+  --c-text-bold: #000;
+  --c-text-on: #fff;
+
+  --fancybox-accent-color: var(--c-accent);
+
+  // BGs
+  --bg-element: #fff;
+  --bg-app: #fff;
+
+  // Fonts
+  --ff-regular: "Inter", sans-serif;
+  --ff-em: "TexGyreChorus", serif;
+
+  // Widths
+  --w-container: 1440px;
+  @media (max-width: $desktop-m) {
+    --w-container: 1260px;
   }
-
-  --ff-regular: "Ubuntu", sans-serif;
-  --ff-title: "Poiret One", sans-serif;
-
-  --fz-button: 18px;
-  --lh-button: 126.5%;
+  @media (max-width: $desktop-s) {
+    --w-container: 892px;
+  }
   @media (max-width: 768px) {
-    --fz-button: 15px;
-    --lh-button: 126%;
+    --w-container: 100%;
   }
 }
-
-// ================ Other Start ================
-$ff-main: var(--ff-regular);
-$tr: var(--tr);
-// ================ Other End ================

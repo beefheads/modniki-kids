@@ -1,31 +1,40 @@
-/*
-
-    @link
-
-*/
-
-/* stylelint-disable */
 .link {
-  --link-color: var(--c-accent);
-  color: var(--link-color);
-  transition: all var(--tr) ease-in-out;
-  padding: 0;
+  --link-color: var(--c-text-regular);
+  --link-icon: var(--icon-color);
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
+  color: var(--link-color);
+  font-size: inherit;
 }
-
-.link--inline {
-  --link-color: var(--c-text-on);
-  border-bottom: 1px solid var(--link-color);
-  font-weight: 600;
-}
-
 .link:hover {
-  @media (min-width: $minHover) {
-    --link-color: var(--c-accent);
+  @media (any-hover:hover) {
+    --link-color: var(--c-text-secondary)
   }
 }
-.link:active {
-  opacity: 0.6;
+.link::before {
+  display: block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-right: 0.75em;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--link-icon);
+}
+.link--geo::before {
+  content: "";
+  @include getmask("../img/common/geo-icon.svg");
+}
+.link--email::before {
+  content: "";
+  @include getmask("../img/common/email-icon.svg");
+}
+.link--tel::before {
+  content: "";
+  @include getmask("../img/common/phone-icon.svg");
 }
 
-/* stylelint-enable */
+.link--underlined .link__text {
+  border-bottom: 1px dashed #959DA7;
+}

@@ -87,3 +87,34 @@ let lazyLoadInstance = new LazyLoad();
 //     }
 //   };
 // }
+
+// import { Fancybox, Carousel } from "@fancyapps/ui";
+// import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
+
+// Fancybox.bind('[data-fancybox]', {
+//   Toolbar: {
+//     display: [
+//       "close",
+//     ],
+//   },
+// });
+
+/*
+import SliderBar from 'before-after-slider'; // import
+
+function makeBeforeAfterSlider(el, index) {
+  const beforeImg = el.dataset.before;
+  const afterImg = el.dataset.after;
+  const elClass = `js-comparer-${index}`;
+  el.classList.add(elClass)
+  return new SliderBar({
+      el: `.${elClass}`,
+      beforeImg,
+      afterImg,
+  });
+}
+const beforeAfterSliders = document.querySelectorAll('.before-after-slider');
+beforeAfterSliders.forEach((slider, index) => {
+  makeBeforeAfterSlider(slider, index);
+})
+*/

@@ -9,7 +9,7 @@
 // Выключает стандартные подсказки валидации
 document.addEventListener(
   "invalid",
-  (function () {
+  (function (e) {
     return function (e) {
       e.preventDefault();
       e.target.focus();
@@ -21,10 +21,13 @@ document.addEventListener(
 );
 
 function setInputInvalid(input) {
+  input = input.classList.contains('iti') ? input.parentElement : input;
+
   input.classList.add("input--invalid");
   const field = input.querySelector(".input__field");
   const isValid = field.validity.valid;
   changeErrorText(input);
+  new window.snacky(field.validationMessage, field.form, 5000);
   return isValid;
 }
 
@@ -102,15 +105,16 @@ function enableButton(button) {
   button.classList.remove(buttonClasses.disabled);
   button.disabled = false;
 }
+
 // Обработчик форм
 const formsList = document.querySelectorAll("form");
 formsList.forEach((form) => {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    console.log("submit");
+    // console.log("submit");
     form.querySelectorAll(".input").forEach((input) => {
-      validateInput(input);
+      // validateInput(input);
     });
 
     const formBody = new URLSearchParams(new FormData(form));
@@ -124,19 +128,21 @@ formsList.forEach((form) => {
     // try {
     // let result = await response.json();
     // console.log(result);
-    console.log(form);
-    console.log("thanks");
+    // console.log(form);
+    // console.log("thanks");
     const submitButton = form.querySelector('button[type="submit"]');
     if (submitButton) {
       submitButton.dataset.buttonText = submitButton.innerHTML;
       // submitButton.innerText = "Message envoyé"
-      submitButton.innerHTML = "✓";
-      disableButton(submitButton);
+      // submitButton.innerHTML = "✓";
+      // disableButton(submitButton);
 
-      setTimeout(() => {
-        submitButton.innerHTML = submitButton.dataset.buttonText;
-        enableButton(submitButton);
-      }, 10000);
+      // setTimeout(() => {
+      //   submitButton.innerHTML = submitButton.dataset.buttonText;
+      //   enableButton(submitButton);
+      // }, 10000);
+      new window.snacky(`Спасибо!
+        Данные успешно отправлены.`, form, 5000);
     }
     const sentEvent = new Event("form_sent", {
       bubbles: true,
@@ -146,6 +152,10 @@ formsList.forEach((form) => {
     // } catch {
     // console.log("error");
     // }
+    setTimeout(() => {
+      window.poppa.closeCurrentPop()
+      form.reset();
+    }, 2500);
   });
 });
 

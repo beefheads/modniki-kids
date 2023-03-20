@@ -1,3 +1,108 @@
+import { mediaMax, isMobile } from "../utils/functions.js";
+import { isClickedBeyond } from "../utils/helpers.js";
+const megachips = document.querySelectorAll('.megachips');
+
+
+function toggleActiveButton(button, buttons) {
+  buttons.forEach((button, index, arr) => {
+    button.style.order = '';
+    button.classList.remove('_active')
+  })
+  button.classList.add('_active')
+}
+
+/**
+ * Проверяет есть кнопки расположены в одну или 2 строки
+ * Если кнопки расположены в 2 строки, то последняя нажатая кнопка савится в конец списка
+ */
+megachips.forEach((control) => {
+	const megachipsButtons = [...control.querySelectorAll('.megachips__button')];
+  const megachipsCurrent = control.querySelector('.megachips__current');
+
+
+	megachipsButtons.forEach((button, index) => {
+		button.addEventListener('click', () => {
+
+      toggleActiveButton(button, megachipsButtons);
+      megachipsCurrent.innerText = button.innerText;
+
+      let buttons = 0;
+      const totalButtonsWidth = megachipsButtons.reduce((buttonsWidth, button, index) => {
+        const currentButtonWidth = button.getBoundingClientRect().width;
+        let marginRight = window.getComputedStyle(button).marginRight;
+        marginRight = +marginRight.replace('px', '');
+
+        return buttonsWidth += currentButtonWidth + marginRight;
+      }, 0)
+      const megachipsWidth = control.querySelector('.megachips__list ').getBoundingClientRect().width
+
+      if (megachipsWidth + 1 <= totalButtonsWidth) {
+        button.style.order = index + 1;
+      }
+		});
+  })
+
+  window.addEventListener("click", (e) => {
+    if (isClickedBeyond(e, 'megachips__current')) {
+      control.classList.remove('_active')
+    } else {
+      if (control.classList.contains('_active')) {
+        control.classList.remove('_active')
+      } else {
+        control.classList.add('_active')
+      }
+    }
+  });
+})
+
+const tabsButtons = document.querySelectorAll('.tabs__buttons');
+tabsButtons.forEach(buttons => {
+	const tabsName = buttons.dataset.tabs;
+	const tabsPagesWraps = [...document.querySelectorAll(`.tabs__pages[data-tabs="${tabsName}"]`)];
+
+	if (tabsPagesWraps.length == 0) return;
+
+	buttons.querySelectorAll('.tabs__button').forEach((button, buttonIndex) => {
+		button.addEventListener('click', () => {
+			tabsPagesWraps.forEach(pages => {
+				const currentPages = [...pages.querySelectorAll('.tabs__page')];
+				currentPages.forEach(page => {
+					page.classList.remove('_active')
+				})
+				currentPages[buttonIndex].classList.add('_active')
+			})
+		})
+	})
+})
+
+/**
+ * Делает активной кнопку с классом _active и включает соотвествующий таб
+ */
+megachips.forEach((control) => {
+	const megachipsButtons = control.querySelectorAll('.megachips__button');
+  
+  const activeButton = control.querySelector('._active');
+  if (activeButton) {
+    activeButton.classList.remove('_active')
+    activeButton.click();
+  } else {
+    megachipsButtons.querySelector('button').click()
+  }
+})
+
+// Добавляем активное состояние для табов, чтоб инициализировать Swiper
+// tabsBars.forEach((tabsBar) => {
+//   if (tabsBar.dataset.tabs) {
+//     tabsPagesWraps.forEach((tabsPagesWrap) => {
+//       const tabPages = tabsPagesWrap.querySelectorAll(".tabs__page");
+//       tabPages.forEach((tabPage) => {
+//         tabPage.classList.add(TAB_ACTIVE_CLASS);
+//       });
+//     });
+//   }
+// });
+
+
 // #region tabs
 /**
  * @tabs
@@ -7,7 +112,6 @@
  *
  * .tabs>.tabs__toggler-container>button.tabs__toggler*2^.tabs__page-container>.tabs__page*2
  *
- */
 const tabsBars = document.querySelectorAll(".tabs__toggler-container");
 const tabsPagesWraps = document.querySelectorAll(".tabs__page-container");
 const TAB_ACTIVE_CLASS = "tab--active";
@@ -116,3 +220,4 @@ setTimeout(() => {
 }, 150);
 
 // #endregion tabs
+ */
