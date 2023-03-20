@@ -1,5 +1,10 @@
 /* stylelint-disable scss/operator-no-newline-after */
-// ШРИФТЫ
+
+/*
+  Подключает шфрит
+  @include font('Gilroy', normal, 400, '../resources/fonts/Gilroy/Gilroy-Regular');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap');
+ */ 
 @mixin font($fname, $fstyle, $fweight, $furl) {
   @font-face {
     font-family: $fname;
@@ -12,10 +17,39 @@
     font-display: swap;
   }
 }
-//========================================================================================================================================================
 
-// ЦВЕТА ========================================================================================================================================================
-// Генерирует цвет по указанной яркости
+/*
+  Создает грид
+ */ 
+@mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
+  display: grid;
+  grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+  gap: $gap;
+}
+
+/*
+  Делает маску из svg
+ */
+@mixin getmask($image_path: null, $size: contain) {
+  -webkit-mask: url("#{$image_path}");
+  mask: url("#{$image_path}");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: #{$size};
+  mask-size: #{$size};
+}
+
+/*
+
+  SCSS ONLY MIXINS
+
+ */
+
+/*
+  Генерирует цвет по указанной яркости
+*/
 @function brig-color($color, $brightness: 0) {
   @if $brightness == "hover" {
     @return adjust-color($color, $lightness: -3%);
@@ -27,18 +61,20 @@
   @return adjust-color($color, $lightness: 100% - ($brightness * 100%));
 }
 
-// Создать цвет rgba из hex
+/*
+  Создать цвет rgba из hex
+*/ 
 @function create-rgba($color, $opacity) {
   @return adjust-color($color, $alpha: -1 + $opacity);
 }
-//========================================================================================================================================================
 
-// ЕДИНИЦЫ ИЗМЕРЕНИЯ ========================================================================================================================================================
+// ЕДИНИЦЫ ИЗМЕРЕНИЯ 
 //Percent
 @function percent($px, $from) {
   $result: math.div($px, $from) * 100%;
   @return $result;
 }
+/*
 //REM
 @function rem($px) {
   $result: math.div($px, 16) + rem;
@@ -53,7 +89,6 @@
 @function lhperc($font-size, $line-height-px) {
   @return calc(round(calc($line-height-px / $font-size) * 10) / 10);
 }
-
 // Адаптивный размер
 @mixin resVal($property, $minSize, $maxSize, $minScreen, $maxScreen) {
   @media (min-width: #{$minScreen}px) and (max-width: #{$maxScreen}px) {
@@ -79,19 +114,11 @@
     );
   }
 }
-//========================================================================================================================================================
+*/
 
-// СЕТКА ========================================================================================================================================================
-// Grids
-@mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
-  display: grid;
-  grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
-  gap: $gap;
-}
-//========================================================================================================================================================
-
-// ЭЛЕМЕНТЫ ========================================================================================================================================================
-// Скроллбар
+/*
+ Кастомизирует скроллбар
+*/ 
 @mixin scrollbar(
   $width: 16px,
   $height: 100%,
@@ -155,13 +182,3 @@
 }
 //========================================================================================================================================================
 
-@mixin getmask($image_path: null, $size: contain) {
-  -webkit-mask: url("#{$image_path}");
-  mask: url("#{$image_path}");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: #{$size};
-  mask-size: #{$size};
-}
