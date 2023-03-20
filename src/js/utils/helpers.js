@@ -92,3 +92,37 @@ scrollTopButtons.forEach((button) =>
     scrollTop(event);
   })
 );
+
+
+/*
+  Проверяет был ли клик за пределами выбранного блока
+ */
+export function isClickedBeyond(e, selector) {
+    let isClickBeyond = true;
+    const path = e.path || (e.composedPath && e.composedPath());
+    const isSelect = path.map((item, index, pathElems) => {
+      if (pathElems.length - 4 < index) return;
+      if (item.classList.contains(selector)) {
+        isClickBeyond = false;
+      }
+    })
+    return isClickBeyond;
+}
+/*
+  Проверяет был ли клик за пределами выбранного блока
+ */
+export function getClickedNotBeyondElement(e, selector) {
+    // let isElementClicked = false;
+    let clickedElement;
+    const path = e.path || (e.composedPath && e.composedPath());
+    const isSelect = path.map((item, index, pathElems) => {
+      if (pathElems.length - 4 < index) return;
+      if (item.classList.contains(selector)) {
+        // isElementClicked = true;
+        clickedElement = item;
+      }
+    })
+    if (clickedElement !== undefined) return clickedElement;
+    return false
+    // return isElementClicked;
+}
