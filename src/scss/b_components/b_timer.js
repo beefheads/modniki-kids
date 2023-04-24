@@ -1,30 +1,16 @@
-
 /*
-
-1. Faketimer - если выбрано, то можно вбить атрибут days, hours, seconds для настройки  
-2. выбираешь формат day hour minute  
-  
-Сделай передачу данных из яндекс метрики, чтобы для каждого посетителя на разных девайсах был свой таймер  
-  
-[https://yandex.ru/support/metrica/data/user-params_data.html?lang=ru](https://yandex.ru/support/metrica/data/user-params_data.html?lang=ru)
-
  */
-
-
 // #region timer
-const timers = document.querySelectorAll(".uc-timer");
+const timers = document.querySelectorAll(".timer");
 
 class Timer {
   timers = [];
   timerName = "localTimer";
-  // timerDeadline = this.getTimerDeadlineFromNow(1);
-  timerDeadline = this.getDeadlineDate("2023.02.15");
+  timerDeadline = this.getTimerDeadlineFromNow(1);
 
   constructor() {
-    this.setTimers(".uc-timer");
+    this.setTimers(".b_timer");
     this.launchTimers();
-    // console.log(this.getTimerDeadlineFromNow(1));
-    // console.log(this.getDeadlineDate("2023.02.15"));
   }
   setTimers(timerClass) {
     this.timers = [...document.querySelectorAll(timerClass)];
@@ -55,11 +41,11 @@ class Timer {
 
     this.getTimers().forEach((timer) => {
       this.getTimerSections(timer).forEach((section, i) => {
-        // [section].forEach(
-        //   (digit, index) => {
-            section.innerText = total >= 0 ? timerSpan[i] : "0";
-          // }
-        // );
+        [...section.querySelectorAll(".timer__digit")].forEach(
+          (digit, index) => {
+            digit.innerText = total >= 0 ? timerSpan[i][index] : "0";
+          }
+        );
       });
       if (total <= 0) {
         // clearInterval(timeinterval);
@@ -92,10 +78,7 @@ class Timer {
   }
 
   // var deadline = new Date(Date.parse(new Date()) + 10 * 1000); // for endless timer
-  getDeadlineDate(ymdDate) {
-    return Math.floor(new Date(ymdDate).getTime())
-    // return Math.floor(new Date(ymdDate).getTime() / 1000)
-  }
+
   getTimerDeadlineFromNow(hours, isDaysInTimer = false) {
     const milliseconds = 1000;
     const seconds = 60;
@@ -132,3 +115,15 @@ const b_Timer = new Timer();
 
 window.b_timer = b_Timer;
 // #endregion timer
+//
+//
+/*
+
+1. Faketimer - если выбрано, то можно вбить атрибут days, hours, seconds для настройки  
+2. выбираешь формат day hour minute  
+  
+Сделай передачу данных из яндекс метрики, чтобы для каждого посетителя на разных девайсах был свой таймер  
+  
+[https://yandex.ru/support/metrica/data/user-params_data.html?lang=ru](https://yandex.ru/support/metrica/data/user-params_data.html?lang=ru)
+
+ */

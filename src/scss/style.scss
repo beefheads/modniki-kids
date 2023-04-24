@@ -14,10 +14,10 @@
 @import "./normalize";
 
 body {
-  font-family: $ff-main;
+  // font-family: $ff-main;
   font-weight: 400;
   line-height: 1.2;
-  color: $text-primary;
+  // color: $text-primary;
 }
 body._lock {
   overflow: hidden;
