@@ -1,29 +1,5 @@
 "use strict";
-
-/**
- * Фиксирует скрол у body
- *  */
-function bodyLock(con) {
-  let scrollFix = window.innerWidth - document.body.clientWidth;
-  const DEFAULT_SCROLLBAR_WIDTH = 17;
-  if (con === true) {
-    // scrollFix предотвращает скачки верстки в строну при блокировке скролла
-    scrollFix =
-      scrollFix > DEFAULT_SCROLLBAR_WIDTH ? DEFAULT_SCROLLBAR_WIDTH : scrollFix;
-    document.body.style.paddingRight = `${scrollFix}px`;
-    document.body.classList.add("_lock");
-  } else if (con === false) {
-    document.body.classList.remove("_lock");
-  } else if (con === undefined) {
-    if (!document.body.classList.contains("_lock")) {
-      document.body.classList.add("_lock");
-    } else {
-      document.body.classList.remove("_lock");
-    }
-  } else {
-    console.error("Неопределенный аргумент у функции bodyLock()");
-  }
-}
+import {bodyLock} from "../../b_helpers/action-helpers.js"
 
 // Закрытие модального окна при клике по заднему фону
 function closeWhenClickingOnBg(itemArray, itemParent, classShow = "_show") {
@@ -144,9 +120,24 @@ class b_modal {
     document.querySelector(".b_modal__storage").append(overlay);
     aligner.append(b_modal);
     overlay.append(aligner);
-    overlay.append(closer);
+
+    if (this.detectCloserType(b_modal) == 'inner') {
+      b_modal.append(closer);
+    } else {
+      overlay.append(closer);
+    }
+
+    if (b_modal.getBoundingClientRect().height > window.innerHeight) {
+      overlay.classList.add('b_modal--scrollable')
+    }
 
     this.instances.push(overlay);
+  }
+
+  detectCloserType(modal) {
+    if (!modal.dataset.closerType) return false;
+
+    return modal.dataset.closerType;
   }
 
   initButtons() {
@@ -184,6 +175,8 @@ class b_modal {
     const event = new Event("b_modal-open");
     pop.dispatchEvent(event);
     pop.querySelector(".b_modal").dispatchEvent(event);
+
+    bodyLock(true);
   }
 
   handleClose(button) {
@@ -205,6 +198,7 @@ class b_modal {
     const event = new Event("b_modal-close");
     pop.dispatchEvent(event);
     pop.querySelector(".b_modal").dispatchEvent(event);
+    bodyLock(false);
   }
 
   makeInfoPop(text, removeAfter = 6000) {
