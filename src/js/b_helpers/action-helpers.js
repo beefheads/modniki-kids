@@ -1,5 +1,4 @@
 
-
 /*
  * Удаляет у всех элементов items класс itemClass
  * items - класс элементов или массив с переменными с селекторами, у которых нужно удалить класс.
@@ -22,68 +21,103 @@ export function removeAllClasses(items, itemClass) {
 
 
 // Вспомогательные модули блокировки прокрутки и резкого сдвига
-export let bodyLockStatus = true;
-export function bodyLockToggle(delay = 100) {
-  if (document.documentElement.classList.contains("_lock")) {
-    bodyUnlock(delay);
-  } else {
-    bodyLock(delay);
-  }
-}
+// export let bodyLockStatus = true;
+// export function bodyLockToggle(delay = 100) {
+//   if (document.documentElement.classList.contains("_lock")) {
+//     bodyUnlock(delay);
+//   } else {
+//     bodyLock(delay);
+//   }
+// }
 
 // Разблокировать скролл
-export function bodyUnlock(delay = 100) {
-  let body = document.querySelector("body");
+// export function bodyUnlock(delay = 100) {
+//   let body = document.querySelector("body");
 
-  if (bodyLockStatus) {
-    let lockPadding = document.querySelectorAll("[data-lp]");
+//   if (bodyLockStatus) {
+//     let lockPadding = document.querySelectorAll("[data-lp]");
 
-    setTimeout(() => {
-      for (let index = 0; index < lockPadding.length; index++) {
-        const el = lockPadding[index];
+//     setTimeout(() => {
+//       for (let index = 0; index < lockPadding.length; index++) {
+//         const el = lockPadding[index];
 
-        el.style.paddingRight = "0px";
-      }
+//         el.style.paddingRight = "0px";
+//       }
 
-      body.style.paddingRight = "0px";
-      document.documentElement.classList.remove("_lock");
-    }, delay);
+//       body.style.paddingRight = "0px";
+//       document.documentElement.classList.remove("_lock");
+//     }, delay);
 
-    bodyLockStatus = false;
+//     bodyLockStatus = false;
 
-    setTimeout(function () {
-      bodyLockStatus = true;
-    }, delay);
-  }
-}
+//     setTimeout(function () {
+//       bodyLockStatus = true;
+//     }, delay);
+//   }
+// }
 
 // Заблокировать скролл
-export function bodyLock(delay = 100) {
-  let body = document.querySelector("body");
+// export function bodyLock(delay = 100) {
+//   let body = document.querySelector("body");
 
-  if (bodyLockStatus) {
-    let lock_padding = document.querySelectorAll("[data-lp]");
+//   if (bodyLockStatus) {
+//     let lock_padding = document.querySelectorAll("[data-lp]");
 
-    for (let index = 0; index < lock_padding.length; index++) {
-      const el = lock_padding[index];
+//     for (let index = 0; index < lock_padding.length; index++) {
+//       const el = lock_padding[index];
 
-      el.style.paddingRight =
-        window.innerWidth -
-        document.querySelector(".wrapper").offsetWidth +
-        "px";
+//       el.style.paddingRight =
+//         window.innerWidth -
+//         document.querySelector(".wrapper").offsetWidth +
+//         "px";
+//     }
+
+//     body.style.paddingRight =
+//       window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+//     document.documentElement.classList.add("_lock");
+
+//     bodyLockStatus = false;
+
+//     setTimeout(function () {
+//       bodyLockStatus = true;
+//     }, delay);
+//   }
+// }
+
+/**
+ * Фиксирует скрол у body
+ *  */
+
+function lockBody() {
+  const DEFAULT_SCROLLBAR_WIDTH = getScrollbarWidth();
+  document.body.classList.add("_lock");
+  document.body.style.paddingRight = `${DEFAULT_SCROLLBAR_WIDTH}px`;
+}
+function unlockBody() {
+  const DEFAULT_SCROLLBAR_WIDTH = getScrollbarWidth();
+  document.body.classList.remove("_lock");
+  document.body.style.paddingRight = '';
+}
+function getScrollbarWidth() {
+  return window.innerWidth - document.body.offsetWidth;
+}
+export function bodyLock(con) {
+  let scrollFix = window.innerWidth - document.body.clientWidth;
+  if (con === true) {
+    lockBody();
+  } else if (con === false) {
+    unlockBody();
+  } else if (con === undefined) {
+    if (!document.body.classList.contains("_lock")) {
+      lockBody();
+    } else {
+      unlockBody();
     }
-
-    body.style.paddingRight =
-      window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
-    document.documentElement.classList.add("_lock");
-
-    bodyLockStatus = false;
-
-    setTimeout(function () {
-      bodyLockStatus = true;
-    }, delay);
+  } else {
+    console.error("Неопределенный аргумент у функции bodyLock()");
   }
 }
+
 
 /**
  * Загружает скрипт в DOM

@@ -1,0 +1,39 @@
+:root {
+  --tr: 0.3s;
+  --tr-regular: all var(--tr) ease;
+
+  // Colors
+  --c-accent: #E7AE44;
+  --c-accent-active: #F8B12D;
+  --c-accent-disabled: #E0C187;
+
+  --c-text-regular: #373737;
+  --c-text-bold: #000;
+  --c-text-on: #fff;
+  --c-text-button: #000;
+
+  --c-error: #E5042C;
+
+  --fancybox-accent-color: var(--c-accent);
+
+  // BGs
+  --bg-element: #F4F5F6;
+  --bg-app: #fff;
+  --bg-dark: #222222;
+
+  // Fonts
+  --ff-regular: "Inter", sans-serif;
+  --ff-em: "TexGyreChorus", serif;
+
+  // Widths
+  --w-container: 1440px;
+  @media (max-width: $desktop-m) {
+    --w-container: 1260px;
+  }
+  @media (max-width: $desktop-s) {
+    --w-container: 892px;
+  }
+  @media (max-width: 768px) {
+    --w-container: 100%;
+  }
+}

@@ -2,8 +2,7 @@
 
 /*
   Подключает шфрит
-  @include font('Gilroy', normal, 400, '../resources/fonts/Gilroy/Gilroy-Regular');
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap');
+  @include font('Inter', normal, 400, '../resources/fonts/Inter/Inter-Regular');
  */ 
 @mixin font($fname, $fstyle, $fweight, $furl) {
   @font-face {
@@ -74,6 +73,47 @@
   $result: math.div($px, $from) * 100%;
   @return $result;
 }
+
+//REM
+// @function rem($px) {
+//   $result: math.div($px, 16) + rem;
+//   @return $result;
+// }
+//EM
+// @function em($px, $current: 16) {
+//   $result: math.div($px, $current) + em;
+//   @return $result;
+// }
+// line-height в px переводит в %
+// @function lhperc($font-size, $line-height-px) {
+//   @return calc(round(calc($line-height-px / $font-size) * 10) / 10);
+// }
+// Адаптивный размер
+// @mixin resVal($property, $minSize, $maxSize, $minScreen, $maxScreen) {
+//   @media (min-width: #{$minScreen}px) and (max-width: #{$maxScreen}px) {
+//     #{$property}: calc(
+//       (100vw - #{$minScreen}px) / (#{$maxScreen} - #{$minScreen}) *
+//         (#{$maxSize} - #{$minSize}) + #{$minSize}px
+//     );
+//   }
+// }
+
+// Адаптивный размер только с максимальным медиа запросом
+// @mixin resValNotMinWidth(
+//   $property,
+//   $minSize,
+//   $maxSize,
+//   $minScreen,
+//   $maxScreen
+// ) {
+//   @media (max-width: #{$maxScreen}px) {
+//     #{$property}: calc(
+//       (100vw - #{$minScreen}px) / (#{$maxScreen} - #{$minScreen}) *
+//         (#{$maxSize} - #{$minSize}) + #{$minSize}px
+//     );
+//   }
+// }
+
 
 /*
  Кастомизирует скроллбар
