@@ -1,7 +1,8 @@
 /* stylelint-disable no-invalid-position-at-import-rule */
 @use "sass:math";
 
-@import "./variables";
+@import "./variables/variables";
+@import "./variables/colors";
 @import "./mixins";
 @import "./components";
 

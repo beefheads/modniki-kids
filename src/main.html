@@ -19,72 +19,506 @@
       @@include('tpls/header.html',{})
 
       <main class="main">
-        <section class="hero">
-          <div class="container hero__container">
-            <h2 class="section-title hero__title"></h2>
+        <section class="offer-carousel">
+          <div class="swiper offer-carousel-carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide offer-carousel__slide">
+                <div class="container offer-carousel__container">
+                  <div class="offer-carousel__content">
+                    <h2 class="offer-carousel__title">
+                      Школьные блузки
+                      <sub class="offer-carousel__sub">
+                        <span class="offer-carousel__sub-text">от классики до креатива.</span>
+                      </sub>
+                    </h2>
+                    <h3 class="offer-carousel__subtitle">
+                      Ищите качественные и модные <br>
+                      блузки для девочек?
+                    </h3>
+                    <p class="offer-carousel__desc">
+                      Закажите их у нас! При покупак школьных блузок у нас повысите лояльность клиентов. Бонусом избавитесь от лишней головной боли — налогов, логистики, сертификатов
+                    </p>
+                    <button class="button-primary button-filled offer-carousel__button" data-b_modal="price">
+                      Получить прайс
+                    </button>
+                  </div>
+                  <div class="offer-carousel__hero">
+                    <picture class="offer-carousel__hero-pic">
+                      <img src="./img/hero/hero.png" alt="" class="offer-caorusel__hero-img">
+                    </picture>
+                  </div>
+                </div>
+                <div class="offer-carousel__bg">
+                  <picture class="offer-carousel__bg-pic">
+                    <img src="./img/hero/hero-bg.jpg" alt="" class="offer-carousel__bg-img">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide offer-carousel__slide">
+                <div class="container offer-carousel__container">
+                  <div class="offer-carousel__content">
+                    <h2 class="offer-carousel__title">
+                      2 Страница
+                      <sub class="offer-carousel__sub">
+                        <span class="offer-carousel__sub-text">от классики до креатива.</span>
+                      </sub>
+                    </h2>
+                    <h3 class="offer-carousel__subtitle">
+                      Ищите качественные и модные <br>
+                      блузки для девочек?
+                    </h3>
+                    <p class="offer-carousel__desc">
+                      Закажите их у нас! При покупак школьных блузок у нас повысите лояльность клиентов. Бонусом избавитесь от лишней головной боли — налогов, логистики, сертификатов
+                    </p>
+                    <button class="button-primary button-filled offer-carousel__button" data-b_modal="price">
+                      Получить прайс
+                    </button>
+                  </div>
+                  <div class="offer-carousel__hero">
+                    <picture class="offer-carousel__hero-pic">
+                      <img src="./img/hero/production-hero.png" alt="" class="offer-caorusel__hero-img">
+                    </picture>
+                  </div>
+                </div>
+                <div class="offer-carousel__bg">
+                  <picture class="offer-carousel__bg-pic">
+                    <img src="./img/hero/production-hero-bg.jpg" alt="" class="offer-carousel__bg-img">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          
+            <div class="offer-carousel__nav container">
+              <div class="b_swiper-buttons offer-carousel-buttons">
+                <div class="swiper-button-prev offer-carousel-button-prev"></div>
+                <div class="swiper-button-next offer-carousel-button-next"></div>
+              </div>
+              <div class="swiper-pagination offer-carousel-pagination"></div>
+            </div>
           </div>
         </section>
+
+        <div class="section features">
+          <div class="container features__container">
+            <div class="features__gallery">
+              <div class="features-card">
+                <div class="features-card__media">
+                  <picture class="features-card__pic">
+                    <img src="./img/features/cart-support.png" alt="Помощь и поддержка от выбора до отгрузки " class="features-card__img">
+                  </picture>
+                </div>
+                <p class="features-card__desc">
+                  Помощь и поддержка от&nbsp;выбора до отгрузки 
+                </p>
+              </div>
+              <div class="features-card">
+                <div class="features-card__media">
+                  <picture class="features-card__pic">
+                    <img src="./img/features/wallet.png" alt="Заказ от 3500 рублей " class="features-card__img">
+                  </picture>
+                </div>
+                <p class="features-card__desc">Заказ от 3500 рублей </p>
+              </div>
+              <div class="features-card">
+                <div class="features-card__media">
+                  <picture class="features-card__pic">
+                    <img src="./img/features/" alt="Более 100 артикулов доступных к заказу " class="features-card__img">
+                  </picture>
+                </div>
+                <p class="features-card__desc">Более 100 артикулов доступных к&nbsp;заказу </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section why-we">
+          <div class="container why-we__container">
+            <h2 class="section-title why-we__title">Почему именно мы</h2>
+            <div class="why-we__gallery">
+              <div class="why-we-card">
+                <div class="why-we-card__media">
+                  <picture class="why-we-card__pic">
+                    <img class="why-we-card__img" src="./img/why-we/law.png" alt="">
+                  </picture>
+                </div>
+                <h3 class="why-we-card__title">Юридическая безопасность </h3>
+                <p class="why-we-card__desc">
+                  Оформляем поставки по договору. Спецификации и&nbsp;сертификаты соответствия предоставим <br> по&nbsp;запросу. 
+                </p>
+              </div>
+            </div>
+              <div class="why-we-card">
+                <div class="why-we-card__media">
+                  <picture class="why-we-card__pic">
+                    <img class="why-we-card__img" src="./img/why-we/pig.png" alt="">
+                  </picture>
+                </div>
+                <h3 class="why-we-card__title">Расчетный счет в РФ </h3>
+                <p class="why-we-card__desc">
+                  Позаботились, чтобы вам не пришлось переводить деньги за границу. 
+                </p>
+              </div>
+            </div>
+              <div class="why-we-card">
+                <div class="why-we-card__media">
+                  <picture class="why-we-card__pic">
+                    <img class="why-we-card__img" src="./img/why-we/pyramid.png" alt="">
+                  </picture>
+                </div>
+                <h3 class="why-we-card__title">Сотрудничество надолго </h3>
+                <p class="why-we-card__desc">Работаем с 80% клиентов больше 7 лет.</p>
+              </div>
+            </div>
+              <div class="why-we-card">
+                <div class="why-we-card__media">
+                  <picture class="why-we-card__pic">
+                    <img class="why-we-card__img" src="./img/why-we/torch.png" alt="">
+                  </picture>
+                </div>
+                <h3 class="why-we-card__title">Свободный склад или предзаказ </h3>
+                <p class="why-we-card__desc">
+                  Пополняем наличие товаров <br> и&nbsp;работаем по предзаказам. Заказать партию блузок можно всегда. 
+                </p>
+              </div>
+            </div>
+              <div class="why-we-card">
+                <div class="why-we-card__media">
+                  <picture class="why-we-card__pic">
+                    <img class="why-we-card__img" src="./img/why-we/discount.png" alt="">
+                  </picture>
+                </div>
+                <h3 class="why-we-card__title">Скидки</h3>
+                <p class="why-we-card__desc">
+                  Устраиваем распродажи товаров <br> и&nbsp;даем максимально выгодные цены.
+                </p>
+              </div>
+            </div>
+              <div class="why-we-card">
+                <div class="why-we-card__media">
+                  <picture class="why-we-card__pic">
+                    <img class="why-we-card__img" src="./img/why-we/shipping.png" alt="">
+                  </picture>
+                </div>
+                <h3 class="why-we-card__title">Отправка в любой город</h3>
+                <p class="why-we-card__desc">Доставим блузки в течение 2-5 недель.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section categories">
+          <div class="container categories__container">
+            <h2 class="section-title categories__title">Все категории</h2>
+            <p class="section-desc categories__desc">
+              Здесь вы найдете прибыльный товар для своего магазина
+            </p>
+            <div class="categories__gallery">
+              <article class="categories-card">
+                <div class="categories-card__content">
+                  <h3 class="categories-card__title">Распродажа</h3>
+                  <p class="categories-card__desc">
+                    Посмотрите, какой <br> товар приобрести <br> с&nbsp;максимальной выгодой.
+                  </p>
+                  <a href="#" class="button-primary button-filled categories-card__button">
+                    Смотреть категорию
+                  </a>
+                </div>
+                <figure class="cateogires-card__media">
+                  <picture class="categories-card__pic">
+                    <img class="categories-card__img" src="./img/categories/sale.png" alt="">
+                  </picture>
+                </figure>
+              </article>
+              <article class="categories-card">
+                <div class="categories-card__content">
+                  <h3 class="categories-card__title">Новинки</h3>
+                  <p class="categories-card__desc">
+                    Будьте в тренде <br> и&nbsp;продавайте самые актуальные товары
+                  </p>
+                  <a href="#" class="button-primary button-filled categories-card__button">
+                    Смотреть категорию
+                  </a>
+                </div>
+                <figure class="cateogires-card__media">
+                  <picture class="categories-card__pic">
+                    <img class="categories-card__img" src="./img/categories/new.png" alt="">
+                  </picture>
+                </figure>
+              </article>
+              <article class="categories-card">
+                <div class="categories-card__content">
+                  <h3 class="categories-card__title">Младшая школа</h3>
+                  <p class="categories-card__desc">
+                    Завоюйте сердца юных школьниц <br> и&nbsp;их родителей 
+                  </p>
+                  <a href="#" class="button-primary button-filled categories-card__button">
+                    Смотреть категорию
+                  </a>
+                </div>
+                <figure class="cateogires-card__media">
+                  <picture class="categories-card__pic">
+                    <img class="categories-card__img" src="./img/categories/junior.png" alt="">
+                  </picture>
+                </figure>
+              </article>
+              <article class="categories-card">
+                <div class="categories-card__content">
+                  <h3 class="categories-card__title">Подростки</h3>
+                  <p class="categories-card__desc">
+                    Просто покажите им эти блузки, и их будут покупать до конца учебы
+                  </p>
+                  <a href="#" class="button-primary button-filled categories-card__button">
+                    Смотреть категорию
+                  </a>
+                </div>
+                <figure class="cateogires-card__media">
+                  <picture class="categories-card__pic">
+                    <img class="categories-card__img" src="./img/categories/teen.png" alt="">
+                  </picture>
+                </figure>
+              </article>
+              <article class="categories-card">
+                <div class="categories-card__content">
+                  <h3 class="categories-card__title">Креативные подростки</h3>
+                  <p class="categories-card__desc">
+                    Увеличьте количество продаж за счет нового сегмента покупателей
+                  </p>
+                  <a href="#" class="button-primary button-filled categories-card__button">
+                    Смотреть категорию
+                  </a>
+                </div>
+                <figure class="cateogires-card__media">
+                  <picture class="categories-card__pic">
+                    <img class="categories-card__img" src="./img/categories/creative.png" alt="">
+                  </picture>
+                </figure>
+              </article>
+              <article class="categories-card">
+                <div class="categories-card__content">
+                  <h3 class="categories-card__title">Не белые блузки</h3>
+                  <p class="categories-card__desc">
+                    Разбавьте ассортимент цветными товарами <br> и&nbsp;делайте больше продаж
+                  </p>
+                  <a href="#" class="button-primary button-filled categories-card__button">
+                    Смотреть категорию
+                  </a>
+                </div>
+                <figure class="cateogires-card__media">
+                  <picture class="categories-card__pic">
+                    <img class="categories-card__img" src="./img/categories/not-white.png" alt="">
+                  </picture>
+                </figure>
+              </article>
+            </div>
+            
+          </div>
+        </section>
+
+        <section class="section besseller">
+          <div class="container besseller__container">
+            <h2 class="section-title besseller__title"></h2>
+            <div class="bestseller-carousel">
+              <div class="swiper carousel">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card.html',{})
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card.html',{})
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card.html',{})
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card.html',{})
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card.html',{})
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card.html',{})
+                  </div>
+                </div>
+              
+                <div class="carousel__nav">
+                  <div class="swiper-buttons carousel-buttons">
+                    <div class="swiper-button-prev carousel-button-prev"></div>
+                    <div class="swiper-button-next carousel-button-next"></div>
+                  </div>
+                  <div class="swiper-pagination carousel-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section cooperation">
+          <div class="container cooperation__container">
+            <h2 class="section-title cooperation__title">
+              4 шага успешного <br> сотрудничества
+            </h2>
+            <div class="cooperation__gallery">
+              <article class="cooperation-card">
+                <div class="cooperation-card__media">
+                  <picture class="cooperation-card__pic">
+                    <img src="./img/cooperation/step-help.png" alt="" class="cooperation-card__img">
+                  </picture>
+                </div>
+                <h3 class="cooperation-card__title">Поможем с выбором</h3>
+                <p class="cooperation-card__desc">
+                  Честно расскажем, какие блузки лучше всего взять. Отошьем блузки по предзаказу и/или отправим партию со свободного склада, чтобы вы смогли оценить качество ткани и изделий.
+                </p>
+              </article>
+              <article class="cooperation-card">
+                <div class="cooperation-card__media">
+                  <picture class="cooperation-card__pic">
+                    <img src="./img/cooperation/step-checkout.png" alt="" class="cooperation-card__img">
+                  </picture>
+                </div>
+                <h3 class="cooperation-card__title">Оформим заказ</h3>
+                <p class="cooperation-card__desc">
+                  Предоставим всю сертификацию при необходимости. Как только определитесь с&nbsp;выбором — подпишем  договор и забронируем товар за вами после предоплаты всего в 30%.
+                </p>
+              </article>
+              <article class="cooperation-card">
+                <div class="cooperation-card__media">
+                  <picture class="cooperation-card__pic">
+                    <img src="./img/cooperation/step-shipping.png" alt="" class="cooperation-card__img">
+                  </picture>
+                </div>
+                <h3 class="cooperation-card__title">Передадим логистам</h3>
+                <p class="cooperation-card__desc">
+                  И подберем оптимальный по срокам способ доставки — от 14 дней. <br>Отправим партию за наш счет при сумме заказа от 100 000 рублей. 
+                </p>
+              </article>
+              <article class="cooperation-card">
+                <div class="cooperation-card__media">
+                  <picture class="cooperation-card__pic">
+                    <img src="./img/cooperation/step-ltv.png" alt="" class="cooperation-card__img">
+                  </picture>
+                </div>
+                <h3 class="cooperation-card__title">Будем ждать вас снова!</h3>
+                <p class="cooperation-card__desc">
+                  Как только товар приедет, проконсультируем по отгрузке. Расскажем, как отвечать на вопросы покупателей и быстро реализовать партию. Успешной торговли!
+                </p>
+              </article>
+            </div>
+            <div class="cooperation__warning">
+              <span class="cooperation__warning-hl">Не</span>
+              <span class="cooperation__warning-text">
+                рассматриваем к сотрудничеству поставщиков маркетплейсов и желающих шить в нашем цеху вещи под собственным брендом.
+              </span>
+            </div>
+            <div class="cooperation__figures">
+              <div class="cooperation__figure"></div>
+              <div class="cooperation__figure"></div>
+              <div class="cooperation__figure"></div>
+              <div class="cooperation__figure"></div>
+              <div class="cooperation__figure"></div>
+              <div class="cooperation__figure"></div>
+            </div>
+            
+          </div>
+        </section>
+
+        <section class="section faq">
+          <div class="container faq__container">
+            <h2 class="section-title faq__title">Часто задаваемые <br> вопросы</h2>
+            <div class="faq__content">
+              <div class="faq__list">
+                <div class="bayan faq-card">
+                  <div class="faq-card__question">Сколько стоит доставка?</div>
+                  <div class="faq-card__answer">Стоимость зависит от Вашего города и веса заказа. Доставим бесплатно при заказе от 100 тыс. рублей</div>
+                </div>
+                <div class="bayan faq-card">
+                  <div class="faq-card__question">В какие города доставляете?</div>
+                  <div class="faq-card__answer">Доставляем по всей России, также можем отправить в Беларусь, Казахстан и в любой другой уголок мира :)</div>
+                </div>
+                <div class="bayan faq-card">
+                  <div class="faq-card__question">Где Вы отшиваете блузки?</div>
+                  <div class="faq-card__answer"> У нас собственное производство в Бишкеке, Киргизия</div>
+                </div>
+                <div class="bayan faq-card">
+                  <div class="faq-card__question">
+                    Нужно ли переводить деньги за границу?
+                  </div>
+                  <div class="faq-card__answer">
+                    Нет! Всю головную боль с налогами за ввоз товаров и перевод денег в Киргизию мы берем на себя. Вы оплачиваете на российский расчетный счет
+                  </div>
+                </div>
+                <div class="bayan faq-card">
+                  <div class="faq-card__question">Ткань точно Турецкая? Как можете доказать?</div>
+                  <div class="faq-card__answer">
+                    Да, ткань точно турецкая и качественная. Это доказано многолетней работой <br> с&nbsp;ней, также мы предоставляем сертификаты на ткань. Если опасаетесь - <br> закажите пробную партию, чтобы «пощупать» или проверить ее самостоятельно
+                  </div>
+                </div>
+                <div class="bayan faq-card">
+                  <div class="faq-card__question">Возможно продавать ваши блузки на WB?</div>
+                  <div class="faq-card__answer">С маркетплейсами мы не сотрудничаем: товар сезонный и белый. Поэтому <br> может «зависнуть» на складе</div>
+                </div>
+                <div class="bayan faq-card">
+                  <div class="faq-card__question">А под нашим брендом отошьете?</div>
+                  <div class="faq-card__answer">Работаем только под своей ТМ (она зарегистрированна на территории РФ) и&nbsp;отшиваем только свою продукцию.</div>
+                </div>
+              </div>
+              <div class="faq-help">
+                <div class="faq-help__media">
+                  <picture class="faq-help__media-pic">
+                    <img src="./img/faq/faq-hero.jpg" alt="" class="faq-help__media-img">
+                  </picture>
+                </div>
+                <h3 class="faq-help__title">Не нашли ответа на свой вопрос?</h3>
+                <p class="faq-help__desc">
+                  Свяжитесь с нами любым удобным&nbsp;способом — ответим на всё подробно.
+                </p>
+                <div class="socials">
+                  <a href="#" class="socials__link" aria-label="modniki-kids whatsapp">
+                    <svg class="socials__icon">
+                      <use xlink:href="./img/common/whatsapp.svg#whatsapp" />
+                    </svg>
+                  </a>
+                  <a href="#" class="socials__link" aria-label="modniki-kids telegram">
+                    <svg class="socials__icon">
+                      <use xlink:href="./img/common/telegram.svg#telegram" />
+                    </svg>
+                  </a>
+                  <a href="#" class="socials__link" aria-label="modniki-kids телефон">
+                    <svg class="socials__icon">
+                      <use xlink:href="./img/common/tel.svg#tel" />
+                    </svg>
+                  </a>
+                  <a href="#" class="socials__link" aria-label="modniki-kids почта">
+                    <svg class="socials__icon">
+                      <use xlink:href="./img/common/mail.svg#mail" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section cta">
+          <div class="container cta__container">
+            <div class="cta__offer">
+              <h2 class="section-title cta__title">
+                Получите прайс-лист по электронной почте
+              </h2>
+              <p class="section-desc cta__desc">
+                Сможете подобрать позиции под свой бюджет, посчитать чистую прибыль, выбрать самый выгодный вариант <br> и&nbsp;перейти к&nbsp;оформлению заказа.
+              </p>
+            </div>
+            <form class="cta__form">
+              <fieldset class="form__row">
+                @@include('tpls/input/tel.html',{})
+                @@include('tpls/input/name.html',{})
+              </fieldset>
+              button.cta__form-submit.button-filled
+            </form>
+          </div>
+        </section>
+
       </main>
-
-      <div class="content">
-        <form action="">
-          <h2>Заголовок формы</h2>
-          <label class="input input--name">
-            <input
-              class="input__field"
-              name="user_name"
-              type="text"
-              placeholder="Имя"
-              data-value-missing="Заполните имя"
-              data-value-invalid="Что-то не так с введенным именем"
-              autocomplete="name"
-            />
-            <span class="input__message">Сообщение</span>
-          </label>
-          <label class="input input--tel">
-            <input
-              class="input__field"
-              name="user_tel"
-              type="tel"
-              placeholder="Телефон"
-              maxlength="25"
-              minlength="10"
-              data-value-missing="Напишите телефон"
-              data-value-invalid="Проверьте корректность телефона"
-              autocomplete="tel"
-            />
-            <span class="input__message">Ошибка</span>
-          </label>
-          <label class="input input--email">
-            <input
-              class="input__field"
-              name="user_email"
-              type="email"
-              placeholder="Email"
-              autocorrect="off"
-              autocomplete="email"
-              data-value-missing="Напишите имейл"
-              data-value-invalid="Проверьте корректность имейла"
-            />
-            <span class="input__message">Ошибка</span>
-          </label>
-          <button class="button button--primary" type="submit">
-            Отправить!
-          </button>
-        </form>
-        <button class="button button--primary" data-b_modal-open="popich">
-          Открыть
-        </button>
-        <button>еще</button>
-      </div>
-
-      <div id="popich" class="b_modal">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae
-        consectetur velit architecto illo! A itaque saepe consequatur quam
-        iusto, quaerat ratione, earum ad et recusandae voluptates iure error
-        quidem tempore!
-      </div>
-
       @@include('tpls/footer.html',{})
     </div>
 
