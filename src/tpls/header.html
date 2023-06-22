@@ -6,7 +6,7 @@
     <div class="header__menu">
       <nav class="nav header__nav">
         <ul class="header__nav-links">
-          <li class="header__nav-item">
+          <li class="header__nav-item header__nav-item--active">
             <a href="#" class="header__nav-link">Главная</a>
           </li>
           <li class="header__nav-item">
@@ -45,20 +45,20 @@
             <span class="contact-item__text">+7 800-533-88-35</span>
           </a>
         </div>
-        
+
       </div>
-      <div class="header__shopers">
-        <div class="header-shopers__item header-shopers__search">
-          <button class="header-shopers__item-button">
-            <svg class="search__icon">
+      <div class="header-shoppers">
+        <div class="header-shoppers__item header-shoppers__search">
+          <button class="header-shoppers__item-button">
+            <svg class="header-shoppers__item-icon search-icon">
               <use xlink:href="./img/common/search.svg#search" />
             </svg>
           </button>
-          <div class="search">
+          <div class="search header-shoppers__dropdown">
             <form action="" class="search__row">
-              <div class="search__input">
+              <label class="search__input">
                 <input type="text" name="s" class="search__field" placeholder="Что ищете?">
-              </div>
+              </label>
               <button class="search__button">
                 <svg class="search__icon">
                   <use xlink:href="./img/common/search.svg#search" />
@@ -67,9 +67,9 @@
             </form>
           </div>
         </div>
-        <div class="header-shopers__item header-shopers__cart">
-          <button class="header-shopers__item-button">
-            <svg class="cart__icon">
+        <div class="header-shoppers__item header-shoppers__cart">
+          <button class="header-shoppers__item-button">
+            <svg class="header-shoppers__item-icon cart-icon">
               <use xlink:href="./img/common/header-cart.svg#header-cart" />
             </svg>
           </button>

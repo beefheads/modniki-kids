@@ -3,23 +3,23 @@
 */
 
 :root {
-  --fz-button: 1rem;
-  --fw-button: 500;
-  --lh-button: auto;
+  --fz-button: 2rem;
+  --fw-button: 600;
+  --lh-button: initial;
 
-  --button-bg: var(--c-accent);
-  --button-bg-hover: var(--bg-element);
-  --button-color: var(--c-text-on);
-  --button-color-hover: var(--c-accent);
+  --button-bg: var(--c-primary);
+  --button-bg-hover: var(--bg-primary);
+  --button-color: var(--fg-on);
+  --button-color-hover: var(--fg-on);
 }
 
-.button-primary {
+.button-filled {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: rem(21.5) rem(31.5);
+  padding: 2.8rem 4rem 2.9rem 4rem;
 
-  border: 1px solid var(--c-accent); //1
+  border: 1px solid transparent; //1
 
   font-size: var(--fz-button);
   font-weight: var(--fw-button);
@@ -28,18 +28,15 @@
   text-align: center;
   cursor: pointer;
 
-  border-radius: rem(10);
+  border-radius: 9999px;
   color: var(--button-color);
   --icon-color: var(--button-color);
-  background: var(--button-bg, transparent);
+  background-color: var(--button-bg, transparent);
 
-  transition: all 0.3s ease;
-
-  @media (max-width: $w-mobile) {
-    padding: 1.678rem;  
-  }
+  transition: var(--tr-regular);
 }
-.button-primary:hover {
+
+.button-filled:hover {
   @media (any-hover:hover) {
     background-color: var(--button-bg-hover);
     color: var(--button-color-hover)
@@ -48,6 +45,37 @@
 .button--wait {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.button-ghost {
+  --fz-button: 1.6rem;
+  --button-bg: transparent;
+  --button-color: var(--c-second--dark);
+  --button-bg-hover: var(--c-second);
+  --button-color-hover: var(--fg-on);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.3rem 2rem 1.5rem 2rem;
+  font-weight: var(--fw-button);
+  line-height: var(--lh-button);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 9999px;
+  color: var(--button-color);
+  background-color: var(--button-bg, transparent);
+  background-image: url("../img/common/draw-button.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: var(--tr-regular);
+}
+
+.button-ghost:hover {
+  @media (any-hover:hover) {
+    background-color: var(--button-bg-hover);
+    color: var(--button-color-hover)
+  }
 }
 
 

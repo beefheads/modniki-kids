@@ -1,9 +1,9 @@
 .logo {
-  --size: 48px;
+  max-width: 11rem;
+  width: 100%;
   display: block;
-  width: var(--size);
-  height: var(--size);
 }
+
 .logo__img {
   display: block;
   object-fit: contain;

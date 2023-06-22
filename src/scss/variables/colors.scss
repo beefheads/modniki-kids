@@ -3,36 +3,39 @@
   --tr-regular: all var(--tr) ease;
 
   // Colors
-  --c-accent: #E7AE44;
-  --c-accent-active: #F8B12D;
-  --c-accent-disabled: #E0C187;
+  --c-primary: #F6A6A3;
 
-  --c-text-regular: #373737;
-  --c-text-bold: #000;
-  --c-text-on: #fff;
-  --c-text-button: #000;
+  --c-second: #7FC4E1;
+  --c-second--light: #8BC8E3;
+  --c-second--dark: #64AAC9;
+
+  --fg-regular: #2F3C4F;
+  --fg-second: #848483;
+  --fg-third: #ababab;
+  --fg-title: #5B5B5B;
+
+  --fg-on: #fff;
 
   --c-error: #E5042C;
-
-  --fancybox-accent-color: var(--c-accent);
+  --c-border: #eee;
 
   // BGs
-  --bg-element: #F4F5F6;
   --bg-app: #fff;
-  --bg-dark: #222222;
+  --bg-primary: #FAF2EB;
+  --bg-second: #F9FBFF;
 
   // Fonts
   --ff-regular: "Inter", sans-serif;
   --ff-em: "TexGyreChorus", serif;
 
   // Widths
-  --w-container: 1440px;
-  @media (max-width: $desktop-m) {
-    --w-container: 1260px;
-  }
-  @media (max-width: $desktop-s) {
-    --w-container: 892px;
-  }
+  --w-container: 117rem;
+  //@media (max-width: $desktop-m) {
+  //  --w-container: 1260px;
+  //}
+  //@media (max-width: $desktop-s) {
+  //  --w-container: 892px;
+  //}
   @media (max-width: 768px) {
     --w-container: 100%;
   }
