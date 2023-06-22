@@ -1,5 +1,5 @@
 .header {
-   position: sticky;
+   // position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -18,6 +18,9 @@
 
 .header__logo {
   margin-right: 8.45rem;
+  @media (max-width: $laptop) {
+    // margin-right: 4.45rem;
+  }
   @media (max-width: $tablet) {
     margin-right: auto;
   }
@@ -76,13 +79,29 @@
   display: block;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  color: inherit;
 }
+
 .header__nav-item {
   position: relative;
+  transition: var(--tr-regular);
+  color: var(--fg-second);
 }
+
+.header__nav-item:hover {
+  @media (any-hover:hover) {
+    color: var(--c-primary);
+  }
+}
+
 
 .header__nav-item:not(:last-child) {
   margin-right: 4.5rem;
+
+  @media (max-width: $desktop-s) {
+    margin-right: 3rem;
+  }
+
   @media (max-width: $tablet) {
     margin-right: unset;
     margin-bottom: 2rem;
@@ -90,9 +109,7 @@
 }
 
 .header__nav-item.header__nav-item--active {
-  @media (max-width: $tablet) {
-    font-weight: 600;
-  }
+  font-weight: 700;
 }
 
 .header__nav-item.header__nav-item--active:after {
@@ -102,15 +119,12 @@
   height: 0.3rem;
   background-color: var(--c-second);
   border-radius: 0.6rem 0.6rem 0 0;
-}
-
-.header__nav-item {
-  transition: var(--tr-regular);
-}
-.header__nav-item:hover {
-  @media (any-hover:hover) {
-    color: var(--c-primary);
-  }
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header__buttons {
@@ -124,62 +138,6 @@
     margin-top: 3rem;
   }
 }
-.header__socials {
-  margin-right: 6.4rem;
-
-  @media (max-width: $tablet) {
-    margin-right: 1.5rem;
-    --icons-size: 4rem
-  }
-}
-.header__button-consult {
-  flex-grow: 1;
-
-  @media (min-width: $tablet+ 1) {
-    display: none;
-  }
-
-  @media (max-width: $mobile-l) {
-    margin-top: 1.4rem;
-  }
-}
-
-.header__button-phone  {
-  --button-icon-color: #222;
-  --button-icon-color-hover: #000;
-
-  @media (max-width: $tablet) {
-    --button-icon-color: #fff;
-    --button-bg: #222222;
-    flex-grow: 1;
-    align-self: stretch;
-    display: flex;
-  }
-
-  @media (min-width: $mobile-l + 1) and (max-width: $tablet) {
-    margin-right: 1rem;
-  }
-
-}
-
-.header__button-phone .button__icon {
-  transition: var(--tr-regular);
-}
-.header__button-phone:hover .button__icon {
-  @media (any-hover:hover) {
-    // animation: polifillhover 0.4s forwards;
-    filter: invert(1);
-    transform: none;
-  }
-}
-
-.header__button-phone .button__text {
-  @media (max-width: $tablet) {
-    display: none;
-  }
-}
-
-//
 
 .header__contacts {
   @media (min-width: $w-burger) {
@@ -214,5 +172,6 @@
 }
 .header-shoppers__item-icon {
   max-width: 3.2rem;
+  max-height: 4.3rem;
   width: 100%;
 }

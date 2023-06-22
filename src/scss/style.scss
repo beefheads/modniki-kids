@@ -4,16 +4,16 @@
 @import "./variables/variables";
 @import "./variables/colors";
 @import "./mixins";
-@import "./components";
 
 
 // Шрифты
-@include font('DinPro', normal, 400, '../resources/fonts/dinpro/dinpro-medium');
-@include font('DinPro', normal, 600, '../resources/fonts/dinpro/dinpro-bold');
+@include font('DinPro', normal, 400, '../resources/fonts/dinpro/dinpro');
+@include font('DinPro', normal, 500, '../resources/fonts/dinpro/dinpro-medium');
+@include font('DinPro', normal, 700, '../resources/fonts/dinpro/dinpro-bold');
 
-@include font('DinPro', normal, 300, '../resources/fonts/dinroundpro/dinroundpro-light');
-@include font('DinPro', normal, 400, '../resources/fonts/dinroundpro/dinroundpro');
-@include font('DinPro', normal, 600, '../resources/fonts/dinroundpro/dinroundpro-bold');
+@include font('DinRoundPro', normal, 300, '../resources/fonts/dinroundpro/dinroundpro-light');
+@include font('DinRoundPro', normal, 400, '../resources/fonts/dinroundpro/dinroundpro');
+@include font('DinRoundPro', normal, 700, '../resources/fonts/dinroundpro/dinroundpro-bold');
 
 
 // Сброс CSS
@@ -22,7 +22,15 @@
 
 html {
   overscroll-behavior: none;
-  font-size: #{'calc(0.520834 * var(--base-size))'};//calc(0.342466 * var(--base-size)); //10px for 1920×1000
+  --fz-modifier: 0.520834;
+  font-size: #{'calc(var(--fz-modifier) * var(--base-size))'};//calc(0.342466 * var(--base-size)); //10px for 1920×1000
+
+  @media (max-width: $laptop) {
+    --fz-modifier: 1.020834;
+  }
+  @media (max-width: $mobile-xl) {
+    --fz-modifier: 1.663894;
+  }
   /*
   @media (max-width: $tablet) {
     font-size: #{'calc(2 * 1.0395 * var(--base-size))'};//calc(1.0395 * var(--base-size));//calc(1.0582 * var(--base-size));
@@ -38,12 +46,16 @@ html {
 }
 
 body {
-  color: var(--c-text-regular);
+  color: var(--fg-regular);
   font-weight: 400;
   font-family: var(--ff-regular);
   font-size: 1.6rem;
   line-height: 1.2;
   overscroll-behavior: none;
+
+  @media (max-width: $tablet) and (min-width: $mobile-xl + 1) {
+    font-size: 2rem;
+  }
 }
 body._lock {
   overflow: hidden;
@@ -85,6 +97,7 @@ body._lock {
 @import "./libs/swiper";
 @import "./libs/fancybox";
 
+@import "./components";
 @import "./sections";
 @import "./pages";
 

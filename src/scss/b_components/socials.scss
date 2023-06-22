@@ -1,25 +1,24 @@
 .socials {
   display: flex;
   align-items: center;
+  --icon-size: 6rem;
+  --icon-gap: 2.3rem;
+  --link-padding: 1.4rem;
 }
 
 .socials__link {
-  --size: 2.5rem; //40
   display: block;
-  width: var(--size);
-  min-width: var(--size);
-  max-width: var(--size);
-  height: var(--size);
-  min-height: var(--size);
-  max-height: var(--size);
-  transition: var(--tr);
-  margin-right: 1.25rem;
+  width: var(--icon-size);
+  min-width: var(--icon-size);
+  max-width: var(--icon-size);
+  height: var(--icon-size);
+  min-height: var(--icon-size);
+  max-height: var(--icon-size);
+  margin-right: var(--icon-gap);
   transition: var(--tr-regular);
-  border-radius: 50%;
-  @media (max-width: $w-mobile) {
-    --size: 2.142rem;
-    margin-right: 1.0714rem;
-  }
+  border-radius: 9999px;
+  padding: var(--link-padding);
+  border: 1px solid var(--c-border);
 }
 .socials__link:last-child {
   margin-right: 0;
@@ -31,7 +30,8 @@
 }
 
 .socials__icon {
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
 .socials__icon--whatsapp {
   background: linear-gradient(0deg, #20B038 0%, #60D66A 100%);

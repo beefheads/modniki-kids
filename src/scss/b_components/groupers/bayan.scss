@@ -1,6 +1,17 @@
 .bayan {
 	overflow: hidden;
 	transition: all 0.4s;
+
+  --toggler-line-width: 100%;
+  --toggler-line-height: 0.4rem;
+  --closer-width: 3rem;
+  --closer-height: 3rem;
+
+  @media (max-width: $tablet) {
+	  --closer-width: 1.6rem;
+	  --closer-height: 1.6rem;
+	  --toggler-line-height: 0.2rem;
+  }
 }
 
 .bayan__top {
@@ -42,21 +53,13 @@
 }
 
 .bayan__toggler {
-  --line-width: 100%;
-  --line-height: 0.4rem;
-  --closer-width: 3rem;
-  --closer-height: 3rem;
   position: relative;
   width: var(--closer-width, 3rem);
+  min-width: var(--closer-width, 3rem);
   height: var(--closer-height, 3rem);
   transition: var(--tr);
   transform-origin: center;
 
-  @media (max-width: $tablet) {
-	  --closer-width: 1.6rem;
-	  --closer-height: 1.6rem;
-	  --line-height: 0.2rem;
-  }
 }
 
 .bayan__toggler:before,
@@ -66,17 +69,19 @@
   top: 50%;
   left: 50%;
   display: block;
-  background: var(--togler-color, var(--c-text-regular));
+  background: var(--toggler-color, #000);
   transition: var(--tr);
   border-radius: 2rem;
 }
 .bayan__toggler:before {
-  width: var(--line-width, 40%);
-  height: var(--line-height, 0.2rem);
+  width: var(--toggler-line-width, 40%);
+  min-width: var(--toggler-line-width, 40%);
+  height: var(--toggler-line-height, 0.2rem);
 }
 .bayan__toggler:after {
-  width: var(--line-height, 0.2rem);
-  height: var(--line-width, 40%);
+  width: var(--toggler-line-height, 0.2rem);
+  min-width: var(--toggler-line-height, 0.2rem);
+  height: var(--toggler-line-width, 40%);
 }
 
 .bayan__toggler:before {
@@ -93,4 +98,11 @@
 
 .bayan--opened .bayan__toggler:after {
   transform: translate(-50%, -60%) rotate(45deg);
+}
+
+.bayan--closer-minus.bayan--opened .bayan__toggler:before {
+  transform: translate(-50%, -50%);
+}
+.bayan--closer-minus.bayan--opened .bayan__toggler:after {
+  transform: translate(-50%, -50%) rotate(90deg);
 }

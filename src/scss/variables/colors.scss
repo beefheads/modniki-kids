@@ -13,30 +13,18 @@
   --fg-second: #848483;
   --fg-third: #ababab;
   --fg-title: #5B5B5B;
+  --fg-primary: #565656;
 
   --fg-on: #fff;
+  --fg-card-title: #444;
+  --fg-card-text-second: #c7c7c7;
 
   --c-error: #E5042C;
   --c-border: #eee;
 
   // BGs
   --bg-app: #fff;
+  --bg-card: #fff;
   --bg-primary: #FAF2EB;
   --bg-second: #F9FBFF;
-
-  // Fonts
-  --ff-regular: "Inter", sans-serif;
-  --ff-em: "TexGyreChorus", serif;
-
-  // Widths
-  --w-container: 117rem;
-  //@media (max-width: $desktop-m) {
-  //  --w-container: 1260px;
-  //}
-  //@media (max-width: $desktop-s) {
-  //  --w-container: 892px;
-  //}
-  @media (max-width: 768px) {
-    --w-container: 100%;
-  }
 }

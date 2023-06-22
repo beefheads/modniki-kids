@@ -6,3 +6,5 @@ package-lock.json
 convert-images/
 desktop.txt
 dist/
+
+readme-local.md
