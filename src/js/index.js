@@ -12,7 +12,7 @@
  */
 // import "./b_modal.js";
 
-import "./b_components/header/burger.js";
+import "./b_components/header/header.js";
 
 /**
  * accordions

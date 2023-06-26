@@ -86,7 +86,7 @@ function mediaMin(value) {
  * @param {Тайминг} time Время перерыва между сраабатыванием функции
  * @returns void
  */
-const debounce = function (fn, time) {
+export const debounce = function (fn, time) {
   if (!fn && !time) return;
   let timeout;
 

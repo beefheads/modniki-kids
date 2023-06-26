@@ -1,5 +1,5 @@
 .header {
-   // position: sticky;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -8,6 +8,11 @@
   margin-left: auto;
   margin-right: auto;
   background-color: var(--bg-app);
+  transition: var(--tr-regular);
+}
+
+.header--hidden {
+  transform: translateY(-100%);
 }
 
 .header__container {
@@ -41,7 +46,7 @@
   justify-content: flex-start;
   transition: var(--tr-regular);
 
-  @media (max-width: $tablet) {
+  @media (max-width: $w-burger) {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -50,7 +55,7 @@
     padding: 	6rem 2rem 3rem;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
     background-color: var(--bg-app);
     z-index: -1;
     transform: translateY(-200%);
@@ -157,7 +162,7 @@
 }
 
 .header__buttons {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: flex-start;
   margin-right: 3.7rem;
@@ -184,9 +189,13 @@
 
 .header-shoppers__item {
   margin-right: 2.1rem;
+  position: relative;
 
   @media (max-width: $tablet) {
     margin-right: 1rem;
+  }
+  @media (max-width: $mobile-l) {
+    position: static;
   }
 }
 .header-shoppers__item:last-child {
@@ -199,7 +208,43 @@
   visibility: hidden;
   transition: var(--tr-regular);
   position: absolute;
-  left: 0;
+  top: 140%;
+  right: 0;
+  width: 320px;
+  transform: translateY(2rem);
+  box-shadow: 0px 1.4rem 4.4rem 0px rgba(197, 197, 197, 0.25);
+
+  @media (max-width: $mobile-l) {
+    max-width: #{'calc(100% - 2.2rem)'};
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    top: 90%;
+  }
+}
+
+.header-shoppers__dropdown::after {
+  content: "";
+  display: block; 
+  position: absolute; 
+  top: -1rem;
+  right: 1.4rem; 
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0.8rem 1rem 0.8rem;
+  border-color: transparent transparent var(--bg-card) transparent;
+
+  @media (max-width: $mobile-l) {
+    right: 8.4rem;
+  }
+}
+
+.header-shoppers__search._opened .header-shoppers__dropdown{
+  opacity: 1;
+  pointer-events: initial;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .header-shoppers__item.active .header-shoppers__dropdown {
@@ -233,3 +278,4 @@
     margin-bottom: 2.7rem;
   }
 }
+

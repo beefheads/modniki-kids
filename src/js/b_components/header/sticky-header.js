@@ -1,8 +1,48 @@
-// #region stickyHeader
+import {debounce} from '../../b_helpers/condition-helpers.js'
 
 const header = document.querySelector(".header");
-const headerNav = header.querySelector(".header__nav");
+
+let prevScrollPos = window.pageYOffset;
+
+function showHeader() {
+  const showHeaderEvent = new CustomEvent('show-header', {
+    detail: {
+    }
+  });
+  header.classList.remove('header--hidden');
+
+  header.dispatchEvent(showHeaderEvent);
+}
+
+function hideHeader() {
+  const hideHeaderEvent = new CustomEvent('hide-header', {
+    detail: {
+    }
+  });
+  header.classList.add('header--hidden');
+
+  header.dispatchEvent(hideHeaderEvent);
+}
+
+const handleScroll = () => {
+  if (window.pageYOffset <= header.getBoundingClientRect().height) {
+    showHeader();
+    return;
+  }
+
+  const currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    showHeader();
+  } else {
+    hideHeader();
+  }
+  prevScrollPos = currentScrollPos;
+};
+
+window.addEventListener('scroll', debounce(handleScroll, 200));
+
 window.addEventListener("scroll", () => {
+  return
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
@@ -11,12 +51,15 @@ window.addEventListener("scroll", () => {
     // код для мобильных устройств
   } else {
     // код для обычных устройств
+
+    /*
+    const headerNav = header.querySelector(".header__nav");
     const headerOffset = headerNav.getBoundingClientRect();
     if (headerOffset.height < window.pageYOffset) {
       header.classList.add("header--sticky");
     } else {
       header.classList.remove("header--sticky");
     }
+    */
   }
 });
-// #endregion stickyHeader
