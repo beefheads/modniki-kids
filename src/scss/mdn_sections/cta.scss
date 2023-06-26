@@ -29,6 +29,7 @@
 		text-align: left;
 	}
 }
+
 .cta__desc {
 	color: #97989a;
 	font-size: 1.8rem;
@@ -40,6 +41,19 @@
 
 	@media (max-width: $tablet) {
 		font-size: 2rem;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 1.4rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-bottom: 2.5rem;
+	}
+}
+
+.cta__desc br {
+	@media (max-width: $mobile-l) {
+		display: none;
 	}
 }
 
@@ -54,5 +68,9 @@
 		max-width: 70rem;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	@media (max-width: $mobile-l) {
+		padding: 2rem 1.5rem;
 	}
 }

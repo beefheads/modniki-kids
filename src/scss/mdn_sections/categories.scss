@@ -9,6 +9,7 @@
 
 	@media (max-width: $mobile-xl) {
 		grid-template-columns: 100%;
+		row-gap: 1.5rem;
 	}
 }
 
@@ -26,6 +27,10 @@
 	
 	@media (max-width: $mobile-xl) {
 		--content-width: 30rem;
+		min-height: 20.8rem;
+	}
+	@media (max-width: $mobile-l) {
+		--content-width: 55.3%;
 	}
 }
 
@@ -42,6 +47,14 @@
 	@media (max-width: $tablet) {
 		padding: 2rem 0 2.4rem 3rem;
 	}
+
+	@media (max-width: $mobile-xl) {
+		padding: 2rem 0 2rem 2.5rem;
+		display: flex;
+		flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+	}
 }
 
 .categories-card__media {
@@ -51,6 +64,10 @@
 	z-index: 0;
 	height: 100%;
 	pointer-events: none;
+
+	@media (max-width: $mobile-xl) {
+		right: -4rem;
+	}
 }
 
 .categories-card__pic {
@@ -72,6 +89,11 @@
 	line-height: 130.4%;
 	margin-bottom: 1.5rem;
 	max-width: var(--content-width);
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.6rem;
+		margin-bottom: 0.4rem;
+	}
 }
 
 .categories-card__desc {
@@ -80,6 +102,10 @@
 	line-height: 130.4%;
 	margin-bottom: 2rem;
 	max-width: var(--content-width);
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.4rem;
+	}
 }
 
 .categories-card__button {
@@ -96,6 +122,11 @@
     padding-right: 2rem;
     padding-top: 1.7rem;
     padding-bottom: 1.7rem;
+	}
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.2rem;
+		margin-top: auto;
 	}
 }
 

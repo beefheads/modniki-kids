@@ -28,8 +28,13 @@ html {
   @media (max-width: $laptop) {
     --fz-modifier: 1.020834;
   }
+
   @media (max-width: $mobile-xl) {
     --fz-modifier: 1.663894;
+  }
+
+  @media (max-width: $mobile-l) {
+    --fz-modifier: 3.125;
   }
   /*
   @media (max-width: $tablet) {
@@ -80,16 +85,8 @@ body._lock {
   max-width: var(--w-container);
   margin-left: auto;
   margin-right: auto;
-
-  @media (max-width: $desktop-s) and (min-width: $tablet + 1) {
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
-  }
-
-  @media (max-width: $tablet) {
-    padding-left: 1.8rem;
-    padding-right: 1.8rem;
-  }
+  padding-left: var(--p-container);
+  padding-right: var(--p-container);
 }
 
 
@@ -105,4 +102,10 @@ body._lock {
 .is-hidden {
   visibility: hidden !important;
   display: none !important;
+}
+
+.only-mobile {
+  @media (min-width: $mobile-xl + 1) {
+    display: none;
+  }
 }

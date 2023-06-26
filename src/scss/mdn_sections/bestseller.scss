@@ -3,5 +3,7 @@
 }
 
 .bestseller .product-card__media {
-	height: 18.1rem;
+	@media (min-width: $mobile-l + 1) {
+		height: 18.1rem;
+	}
 }

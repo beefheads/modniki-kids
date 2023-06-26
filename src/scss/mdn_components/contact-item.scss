@@ -5,7 +5,13 @@
   color: var(--fg-title);
   margin-bottom: 1.4rem;//0.9rem;
   font-size: 2.2rem;
+
+  @media (max-width: $mobile-xl) {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
 }
+
 .contact-item:last-child {
   margin-bottom: unset;
 }
@@ -22,6 +28,11 @@
   min-width: var(--size);
   height:    var(--size);
   margin-right: 1.4rem;
+
+  @media (max-width: $mobile-l) {
+    --size: 2.5rem;
+    margin-right: 1rem;
+  }
 }
 
 .contact-item__text {

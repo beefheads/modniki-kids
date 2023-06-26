@@ -4,6 +4,12 @@
   --icon-size: 6rem;
   --icon-gap: 2.3rem;
   --link-padding: 1.4rem;
+
+  @media (max-width: $mobile-l) {
+    --icon-size: 4rem;
+    --icon-gap: 1.5rem;
+    --link-padding: 0.9rem;
+  }
 }
 
 .socials__link {

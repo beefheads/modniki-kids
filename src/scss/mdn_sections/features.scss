@@ -2,6 +2,11 @@
 	background-color: var(--bg-second);
 	padding-top: 8rem;
 	padding-bottom: 10rem;
+
+	@media (max-width: $mobile-xl) {
+		padding-top: 3rem;
+		padding-bottom: 5rem;
+	}
 }
 
 .features__gallery {
@@ -16,6 +21,7 @@
 
 	@media (max-width: $mobile-xl) {
 		grid-template-columns: 100%;
+		gap: 1.5rem;
 	}
 }
 
@@ -24,6 +30,10 @@
 	border: 1px solid rgba(0, 0, 0, 0.04);
 	border-radius: 20px;
 	padding: 4rem 3rem;
+
+	@media (max-width: $mobile-xl) {
+		padding: 2.1rem 2.3rem 3rem;
+	}
 }
 
 .features-card:first-child,
@@ -67,6 +77,11 @@
 	box-shadow: 10px 48px 83px -29px rgba(0, 0, 0, 0.1), inset 5px 4px 24px rgba(255, 255, 255, 0.25);
 	margin-left: auto;
 	margin-right: auto;
+
+	@media (max-width: $mobile-xl) {
+		--size: 10rem;
+		margin-bottom: 1.8rem;
+	}
 }
 
 .features-card__pic {
@@ -86,4 +101,8 @@
 	text-align: center;
 	font-size: 2rem;
 	line-height: 130.4%;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.6rem;
+	}
 }

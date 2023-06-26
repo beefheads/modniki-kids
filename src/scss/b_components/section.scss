@@ -8,6 +8,11 @@
     padding-top: 6rem; //120
     padding-bottom: 6rem; //120
   }
+
+  @media (max-width: $mobile-xl) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 .section-title {
@@ -42,10 +47,19 @@
   @media (max-width: $tablet) {
     font-size: 2.4rem;
   }
+
+  @media (max-width: $mobile-xl) {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .section-title + .section-desc {
   margin-top: -0.9rem;
+
+  @media (max-width: $mobile-xl) {
+    margin-top: -1.3rem;
+  }
 }
 
 .section-text--color {

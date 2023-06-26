@@ -14,13 +14,21 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  @media (max-width: $w-burger) {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    background-color: inherit;
+  }
+
+  @media (max-width: $mobile-l) {
+    padding-right: 0.5rem;
+  }
 }
 
 .header__logo {
   margin-right: 8.45rem;
-  @media (max-width: $laptop) {
-    // margin-right: 4.45rem;
-  }
+
   @media (max-width: $tablet) {
     margin-right: auto;
   }
@@ -48,9 +56,10 @@
     transform: translateY(-200%);
     overflow: auto;
   }
-
-  @media (max-width: $mobile-l) {
-    padding-top: 7rem;
+  @media (max-width: $w-burger) {
+    padding-top: 9.5rem;
+    padding-left: var(--p-container);
+    padding-right: var(--p-container);
   }
 }
 .header--opened .header__menu {
@@ -61,6 +70,10 @@
 
   @media (max-width: $tablet) {
     margin-bottom: auto;
+  }
+  @media (max-width: $w-burger) {
+    margin-right: unset;
+    margin-bottom: 1.7rem;
   }
 }
 .header__nav-links {
@@ -74,12 +87,20 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  @media (max-width: $w-burger) {
+    font-size: 1.8rem;
+  }
 }
 .header__nav-link {
   display: block;
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: inherit;
+
+  @media (max-width: $w-burger) {
+    padding: 0;
+  }
 }
 
 .header__nav-item {
@@ -104,12 +125,16 @@
 
   @media (max-width: $tablet) {
     margin-right: unset;
-    margin-bottom: 2rem;
+    margin-bottom: 1.4rem;
   }
 }
 
 .header__nav-item.header__nav-item--active {
   font-weight: 700;
+
+  @media (max-width: $w-burger) {
+    color: var(--c-primary);
+  }
 }
 
 .header__nav-item.header__nav-item--active:after {
@@ -125,6 +150,10 @@
   bottom: 0;
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: $w-burger) {
+    display: none;
+  }
 }
 
 .header__buttons {
@@ -135,7 +164,9 @@
 
   @media (max-width: $tablet) {
     flex-wrap: wrap;
-    margin-top: 3rem;
+  }
+  @media (max-width: $w-burger) {
+    margin-right: 0;
   }
 }
 
@@ -153,6 +184,10 @@
 
 .header-shoppers__item {
   margin-right: 2.1rem;
+
+  @media (max-width: $tablet) {
+    margin-right: 1rem;
+  }
 }
 .header-shoppers__item:last-child {
   margin-right: 0;
@@ -164,7 +199,9 @@
   visibility: hidden;
   transition: var(--tr-regular);
   position: absolute;
+  left: 0;
 }
+
 .header-shoppers__item.active .header-shoppers__dropdown {
   opacity: 1;
   visibility: visible;
@@ -174,4 +211,25 @@
   max-width: 3.2rem;
   max-height: 4.3rem;
   width: 100%;
+
+  @media (max-width: $w-burger) {
+    max-width: 2.6rem;
+    max-height: 2.6rem;
+  }
+}
+
+
+.header__burger {
+  --c-burger-line: #777782;
+  --line-width: 71.25%;
+
+  @media (max-width: $tablet) {
+    margin-left: 1.8rem;
+  }
+}
+
+.header__button-callback {
+  @media (max-width: $w-burger) {
+    margin-bottom: 2.7rem;
+  }
 }

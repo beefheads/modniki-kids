@@ -5,9 +5,12 @@
 }
 
 .cooperation__title {
-	margin-bottom: 7.1rem;
 	position: relative;
 	z-index: 2;
+
+	@media (min-width: $mobile-xl + 1) {
+		margin-bottom: 7.1rem;
+	}
 }
 
 .cooperation__gallery {
@@ -65,6 +68,11 @@
 
 	@media (max-width: $mobile-xl) {
 		margin-bottom: 2.7rem;
+		--size: 11rem;
+	}
+
+	@media (max-width: $mobile-l) {
+		margin-bottom: 2rem;
 	}
 }
 
@@ -88,12 +96,21 @@
 	font-size: 2.4rem;
 	line-height: 130.4%;
 	margin-bottom: 1.5rem;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.6rem;
+		margin-bottom: 0.3rem;
+	}
 }
 
 .cooperation-card__desc {
 	font-weight: 400;
 	font-size: 2rem;
 	line-height: 1.4;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.4rem;
+	}
 }
 
 .cooperation-card__desc br {
@@ -129,6 +146,8 @@
 		flex-direction: column;
 		text-align: center;
 		padding-bottom: 2.7rem;
+		font-size: 1.4rem;
+		margin-bottom: 0;
 	}
 }
 
@@ -137,11 +156,15 @@
 	color: var(--c-primary);
 	text-transform: uppercase;
 	margin-right: 1.2rem;
-	margin-top: -1.2rem;
+	margin-top: 1.2rem;
 	margin-bottom: 1rem;
 
 	@media (max-width: $mobile-xl) {
 		margin-bottom: -1rem;
+	}
+	@media (max-width: $mobile-l) {
+		font-size: 5.627rem;
+		margin-bottom: -0.3rem;
 	}
 }
 
@@ -233,6 +256,11 @@
 	@media (max-width: $mobile-xl) {
 		top: 96rem;
 	}
+	@media (max-width: $mobile-l) {
+		top: 65rem;
+    width: 7rem;
+    height: 8rem;
+	}
 }
 
 .cooperation__figure:nth-child(2) {
@@ -249,6 +277,10 @@
 		top: 40rem;
     right: -18rem;
     transform: rotate(35deg);
+	}
+	@media (max-width: $mobile-l) {
+		top: 5rem;
+		width: 24.6rem;
 	}
 }
 
@@ -270,6 +302,7 @@
 	}
 	@media (max-width: $mobile-l) {
 		width: 5rem;
+		top: 10.5rem
 	}
 }
 
@@ -287,7 +320,8 @@
 		top: 30.7rem;
 	}
 	@media (max-width: $mobile-l) {
-		width: 5rem;
+		width: 6rem;
+		top: 15.2rem;
 	}
 }
 
@@ -297,6 +331,11 @@
 	height: 52.1rem;
 	bottom: 0;
 	left: 0;
+
+	@media (max-width: $mobile-l) {
+		width: 20.2rem;
+    height: 26.1rem;
+	}
 }
 .cooperation__figure:nth-child(6) {
 	background-image: url("../img/cooperation/figure-6.svg");
@@ -308,5 +347,8 @@
 	@media (max-width: $tablet-l) {
 		width: 27.7rem;
     height: 48.4rem;
+	}
+	@media (max-width: $mobile-xl) {
+		display: none;
 	}
 }

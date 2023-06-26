@@ -2,6 +2,10 @@
   max-width: 11rem;
   width: 100%;
   display: block;
+
+  @media (max-width: $tablet) {
+    max-width: 6.9rem;
+  }
 }
 
 .logo__img {

@@ -1,4 +1,5 @@
 $laptop-l: 1500px;
+$laptop-m: 1368px;
 $laptop: 1100px;
 $tablet: 992px;
 $tablet-l: 962px;
@@ -42,6 +43,20 @@ $w-burger: $tablet;
   // Fonts
   --ff-regular: "DinRoundPro", sans-serif;
   --ff-title: "DinPro", sans-serif;
+
+
+  --p-container: 0;
+  @media (max-width: $desktop-s) and (min-width: $tablet + 1) {
+    --p-container: 4.5rem;
+  }
+
+  @media (max-width: $tablet) {
+    --p-container: 1.8rem;
+  }
+
+  @media (max-width: $mobile-xl) {
+    --p-container: 1rem;
+  }
 
   // Widths
   --w-container: 117rem;

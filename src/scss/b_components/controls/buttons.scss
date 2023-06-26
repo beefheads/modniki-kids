@@ -7,6 +7,10 @@
   --fw-button: 600;
   --lh-button: initial;
 
+
+  @media (max-width: $mobile-xl) {
+    --fz-button: 1.7rem;
+  }
 }
 
 .button-primary {
@@ -47,6 +51,11 @@
   background-color: var(--button-bg, transparent);
 
   transition: var(--tr-regular);
+
+  @media (max-width: $mobile-xl) {
+    // padding: 1.6rem 3.5rem 2.1rem 3.5rem;
+    padding: 1.6rem 3.5rem 1.9rem 3.5rem;
+  }
 }
 
 .button-filled:hover {
@@ -67,6 +76,10 @@
   border: 1px solid var(--button-border-color);
   transition: var(--tr-regular);
   text-align: center;
+
+  @media (max-width: $mobile-xl) {
+    padding: 0.9rem 1.5rem;
+  }
 }
 .button-stroke:hover {
   @media (any-hover:hover) {

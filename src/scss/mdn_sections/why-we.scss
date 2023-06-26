@@ -9,6 +9,7 @@
 
 	@media (max-width: $mobile-xl) {
 		grid-template-columns: 100%;
+		gap: 0.6rem;
 	}
 }
 
@@ -35,6 +36,11 @@
 	@media (max-width: $mobile-xl) {
 		margin-left: 3rem;
 		--size: 13.8rem;
+	}
+
+	@media (max-width: $mobile-l) {
+		--size: 10.9rem;
+		margin-bottom: 0.5rem;
 	}
 }
 

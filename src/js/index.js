@@ -12,6 +12,8 @@
  */
 // import "./b_modal.js";
 
+import "./b_components/header/burger.js";
+
 /**
  * accordions
  */
