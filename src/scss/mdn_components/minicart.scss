@@ -13,6 +13,7 @@
 	}
 }
 
+.b_modal__overlay[class*="--minicart"] .b_modal__aligner,
 .b_modal__overlay--minicart .b_modal__aligner {
 	padding: 0;
 	justify-content: flex-end;

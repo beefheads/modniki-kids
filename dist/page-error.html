@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Страница ошибки</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230626205339" />
+    <link rel="stylesheet" href="./css/style.css?_v=20230626212456" />
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" />
@@ -232,7 +232,7 @@
 <div class="minicart b_modal b_modal--slide-left" id="minicart">
   <button class="minicart__button-close" type="button" data-b_modal-close="minicart">Назад</button>
   <h3 class="minicart__title">Ваша корзина</h3>
-  <p class="minicart__row">
+  <p class="minicart__row minicart__positions">
     <span class="minicart__row-title">Количество позиций:</span>
     <span class="minicart__row-value">2</span>
   </p>
@@ -295,7 +295,7 @@
 </article>
 
   </div>
-  <p class="minicart__row">
+  <p class="minicart__row minicart__total">
     <span class="minicart__row-title">Итого:</span>
     <span class="minicart__row-value">31500₽</span>
   </p>
@@ -303,6 +303,12 @@
     <a href="#" class="button-filled button-primary minicart__button-continue">Продолжить покупки</a>
     <a href="#" class="button-stroke button-primary minicart__button-checkout">Оформить заказ</a>
   </div>
+</div>
+
+<div class="minicart b_modal b_modal--slide-left" id="minicart-empty">
+  <button class="minicart__button-close" type="button" data-b_modal-close="minicart">Назад</button>
+  <h3 class="minicart__title">Ваша корзина</h3>
+  <p>Пока пусто</p>
 </div>
     </div>
 
@@ -324,6 +330,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20230626205339"></script>
+    <script src="./js/bundle.min.js?_v=20230626212456"></script>
   </body>
 </html>
