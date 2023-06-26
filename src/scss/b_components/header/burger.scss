@@ -8,7 +8,7 @@
   transition: var(--tr);
   margin-left: 3rem;
 
-  @media (min-width: $laptop-m + 1) {
+  @media (min-width: $w-burger+ 1) {
     display: none;
   }
 }

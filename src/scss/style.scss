@@ -20,6 +20,7 @@
 @import "./reset";
 @import "./normalize";
 
+
 html {
   overscroll-behavior: none;
   --fz-modifier: 0.520834;
@@ -49,11 +50,17 @@ html {
   }
    */
 }
-html.wide {
-  @media (max-width: $desktop-m) {
+
+.wide {
+  @media (max-width: $desktop-l) and (min-width: $desktop-m + 1) {
+    --fz-modifier: 0.625;
+  }
+
+  @media (max-width: $desktop-m) and (min-width: $laptop + 1)  {
     --fz-modifier: 0.694444;
   }
 }
+
 
 body {
   color: var(--fg-regular);
@@ -92,6 +99,10 @@ body._lock {
   margin-right: auto;
   padding-left: var(--p-container);
   padding-right: var(--p-container);
+}
+
+.main {
+  margin-top: auto;
 }
 
 

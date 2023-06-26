@@ -144,7 +144,7 @@
   }
 
   @media (max-width: $tablet-l) {
-  	height: 50rem;
+  	max-width: 50rem;
   }
 
   @media (max-width: $mobile-xl) {

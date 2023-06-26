@@ -39,8 +39,9 @@ const handleScroll = () => {
   prevScrollPos = currentScrollPos;
 };
 
-window.addEventListener('scroll', debounce(handleScroll, 200));
+window.addEventListener('scroll', debounce(handleScroll, 50));
 
+/*
 window.addEventListener("scroll", () => {
   return
   if (
@@ -51,15 +52,6 @@ window.addEventListener("scroll", () => {
     // код для мобильных устройств
   } else {
     // код для обычных устройств
-
-    /*
-    const headerNav = header.querySelector(".header__nav");
-    const headerOffset = headerNav.getBoundingClientRect();
-    if (headerOffset.height < window.pageYOffset) {
-      header.classList.add("header--sticky");
-    } else {
-      header.classList.remove("header--sticky");
-    }
-    */
   }
 });
+*/

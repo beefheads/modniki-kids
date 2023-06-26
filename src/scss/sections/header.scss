@@ -34,7 +34,7 @@
 .header__logo {
   margin-right: 8.45rem;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $w-burger) {
     margin-right: auto;
   }
 }
@@ -60,13 +60,12 @@
     z-index: -1;
     transform: translateY(-200%);
     overflow: auto;
-  }
-  @media (max-width: $w-burger) {
     padding-top: 9.5rem;
     padding-left: var(--p-container);
     padding-right: var(--p-container);
   }
 }
+
 .header--opened .header__menu {
   transform: translateY(0);
 }
@@ -76,11 +75,13 @@
   @media (max-width: $tablet) {
     margin-bottom: auto;
   }
+
   @media (max-width: $w-burger) {
     margin-right: unset;
     margin-bottom: 1.7rem;
   }
 }
+
 .header__nav-links {
   display: flex;
   align-items: center;
@@ -88,15 +89,13 @@
   font-size: 1.6rem;
   line-height: initial;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $w-burger) {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  @media (max-width: $w-burger) {
     font-size: 1.8rem;
   }
 }
+
 .header__nav-link {
   display: block;
   padding-top: 3rem;
@@ -128,7 +127,7 @@
     margin-right: 3rem;
   }
 
-  @media (max-width: $tablet) {
+  @media (max-width: $w-burger) {
     margin-right: unset;
     margin-bottom: 1.4rem;
   }
@@ -167,10 +166,8 @@
   justify-content: flex-start;
   margin-right: 3.7rem;
 
-  @media (max-width: $tablet) {
-    flex-wrap: wrap;
-  }
   @media (max-width: $w-burger) {
+    flex-wrap: wrap;
     margin-right: 0;
   }
 }
@@ -191,13 +188,12 @@
   margin-right: 2.1rem;
   position: relative;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $w-burger) {
     margin-right: 1rem;
-  }
-  @media (max-width: $mobile-l) {
     position: static;
   }
 }
+
 .header-shoppers__item:last-child {
   margin-right: 0;
 }
@@ -214,7 +210,7 @@
   transform: translateY(2rem);
   box-shadow: 0px 1.4rem 4.4rem 0px rgba(197, 197, 197, 0.25);
 
-  @media (max-width: $mobile-l) {
+  @media (max-width: $w-burger) {
     max-width: #{'calc(100% - 2.2rem)'};
     left: 0;
     margin-right: auto;
@@ -252,6 +248,7 @@
   visibility: visible;
   pointer-events: initial;
 }
+
 .header-shoppers__item-icon {
   max-width: 3.2rem;
   max-height: 4.3rem;
