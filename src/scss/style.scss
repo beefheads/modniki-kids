@@ -49,6 +49,11 @@ html {
   }
    */
 }
+html.wide {
+  @media (max-width: $desktop-m) {
+    --fz-modifier: 0.694444;
+  }
+}
 
 body {
   color: var(--fg-regular);
