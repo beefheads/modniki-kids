@@ -7,15 +7,16 @@
 	--fg-stepper-value: #000;
 	--bg-stepper-value: var(--bg-card);
 	--border-color: var(--c-primary);
+	--brad: 1rem;
 	display: inline-flex;
   position: relative;
-  border: 0.1rem solid var(--border-color);
-  border-radius: 1rem;
   max-width: 11rem;
+  overflow: visible;
 
   @media (max-width: $mobile-xl) {
   	--fz: 1.2rem;
 		--minw-stepper-button: 2.8rem;
+		--brad: 0.63rem;
 	  max-width: 9rem;
   }
 }
@@ -42,11 +43,13 @@
 
 .stepper__minus {
 	left: 0;
-	border-right: 0.1rem solid var(--border-color)
+	border: 0.1rem solid var(--border-color);
+	border-radius: var(--brad) 0 0 var(--brad);
 }
 .stepper__plus {
 	right: 0;
-	border-left: 0.1rem solid var(--border-color)
+  border: 0.1rem solid var(--border-color);
+	border-radius: 0 var(--brad) var(--brad) 0;
 }
 
 .stepper__value {
@@ -57,4 +60,8 @@
 	padding: var(--padding);
 	font-size: var(--fz);
   font-family: var(--ff-title);
+  border: 0.1rem solid var(--border-color);
+  border-left: none;
+  border-right: none;
+  border-radius: var(--brad);
 }
