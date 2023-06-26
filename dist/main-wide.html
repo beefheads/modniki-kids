@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230626191443" />
+    <link rel="stylesheet" href="./css/style.css?_v=20230626205339" />
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" />
@@ -88,7 +88,7 @@
         </div>
       </div>
       <div class="header-shoppers__item header-shoppers__cart">
-        <button class="header-shoppers__item-button">
+        <button class="header-shoppers__item-button" type="button" data-b_modal-open="minicart">
           <svg class="header-shoppers__item-icon cart-icon">
             <use xlink:href="./img/common/header-cart.svg#header-cart" />
           </svg>
@@ -956,6 +956,81 @@
   </div>
 </footer>
 
+<div class="minicart b_modal b_modal--slide-left" id="minicart">
+  <button class="minicart__button-close" type="button" data-b_modal-close="minicart">Назад</button>
+  <h3 class="minicart__title">Ваша корзина</h3>
+  <p class="minicart__row">
+    <span class="minicart__row-title">Количество позиций:</span>
+    <span class="minicart__row-value">2</span>
+  </p>
+  <div class="minicart__content">
+      <article class="minicart-product">
+  <div class="minicart-product__media">
+    <picture class="minicart-product__media-pic">
+      <img src="./img/catalog/product-no-bg.png" alt="" class="minicart-product__media-img"></picture>
+  </div>
+  <div class="minicart-product__info">
+    <h3 class="minicart-product__title">Какое-то длинное название товара прям очень</h3>
+    <div class="minicart-product__price">
+    	<span class="minicart-product__price-new">1500₽</span>
+    </div>
+    <div class="stepper minicart-product__stepper">
+      <button class="stepper__button stepper__minus">−</button>
+      <input type="text" class="stepper__value" value="8">
+      <button class="stepper__button stepper__plus">+</button>
+    </div>
+  </div>
+  <button class="minicart-product__button-remove" type="button">×</button>
+</article>
+
+      <article class="minicart-product">
+  <div class="minicart-product__media">
+    <picture class="minicart-product__media-pic">
+      <img src="./img/catalog/product-no-bg.png" alt="" class="minicart-product__media-img"></picture>
+  </div>
+  <div class="minicart-product__info">
+    <h3 class="minicart-product__title">Обычное название товара</h3>
+    <div class="minicart-product__price">
+    	<span class="minicart-product__price-new">1500₽</span>
+    </div>
+    <div class="stepper minicart-product__stepper">
+      <button class="stepper__button stepper__minus">−</button>
+      <input type="text" class="stepper__value" value="8">
+      <button class="stepper__button stepper__plus">+</button>
+    </div>
+  </div>
+  <button class="minicart-product__button-remove" type="button">×</button>
+</article>
+
+      <article class="minicart-product">
+  <div class="minicart-product__media">
+    <picture class="minicart-product__media-pic">
+      <img src="./img/catalog/product-no-bg.png" alt="" class="minicart-product__media-img"></picture>
+  </div>
+  <div class="minicart-product__info">
+    <h3 class="minicart-product__title">Короткое</h3>
+    <div class="minicart-product__price">
+    	<span class="minicart-product__price-new">1500₽</span>
+    </div>
+    <div class="stepper minicart-product__stepper">
+      <button class="stepper__button stepper__minus">−</button>
+      <input type="text" class="stepper__value" value="8">
+      <button class="stepper__button stepper__plus">+</button>
+    </div>
+  </div>
+  <button class="minicart-product__button-remove" type="button">×</button>
+</article>
+
+  </div>
+  <p class="minicart__row">
+    <span class="minicart__row-title">Итого:</span>
+    <span class="minicart__row-value">31500₽</span>
+  </p>
+  <div class="minicart__buttons">
+    <a href="#" class="button-filled button-primary minicart__button-continue">Продолжить покупки</a>
+    <a href="#" class="button-stroke button-primary minicart__button-checkout">Оформить заказ</a>
+  </div>
+</div>
     </div>
 
     
@@ -976,6 +1051,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20230626191443"></script>
+    <script src="./js/bundle.min.js?_v=20230626205339"></script>
   </body>
 </html>

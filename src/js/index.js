@@ -7,17 +7,20 @@
 // import Swiper, { Navigation, Autoplay } from "swiper";
 // import "./unstable/burger.js";
 
+import "./b_components/header/header.js";
+
 /**
  * b_modal
  */
-// import "./b_modal.js";
+import "./b_components/spawners/b_modal.js";
 
-import "./b_components/header/header.js";
 
 /**
  * accordions
  */
 import "./b_components/groupers/bayan.js";
+
+import "./b_components/controls/stepper.js";
 
 
 /**

@@ -1,10 +1,11 @@
 :root {
   // --tr-enter-jolly: opacity 0.5s cubic-bezier(0.5, 0, 0.5, 1);
   // --tr-enter-jolly: all 0.5s cubic-bezier(0.4, 0, 0, 1);
-  --bg-b_modal-overlay: rgba(0, 0, 0, 0.8);
   --c-b_modal-closer-hover: #ff3b30;
   --z-b_modal: 1234567890;
   // opacity 0.5s cubic-bezier(0.4, 0, 0, 1);
+  --bg-overlay: rgba(0, 0, 0, 0);
+  --bg-overlay-visible: rgba(0, 0, 0, 0.8);
 }
 
 .b_modal__storage {
@@ -15,8 +16,6 @@
   z-index: var(--z-b_modal);
   display: block;
   width: 100%;
-  // height: calc(100 * 1vh);
-  // max-height: 1000px;
   height: 100%;
   pointer-events: none;
 }
@@ -25,17 +24,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  // height: calc(100 * 1vh);
-  // max-height: 1000px;
   height: 100%;
   pointer-events: none;
-  background-color: var(--bg-b_modal-overlay);
-  opacity: 0;
+  background-color: var(--bg-overlay);
   transition: all 0.3s ease;
 }
 .b_modal__overlay._show {
   pointer-events: initial;
-  opacity: 1;
+  background-color: var(--bg-overlay-visible);
 }
 
 .b_modal__aligner {
@@ -60,6 +56,12 @@
 }
 ._show .b_modal {
   transform: scale(1);
+  opacity: 1;
+}
+
+.b_modal {
+  transition: var(--tr-regular);
+  opacity: 0;
 }
 
 .b_modal__closer {
@@ -128,4 +130,13 @@
   align-items: flex-start;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.b_modal--slide-left {
+  transform: translateX(100%);
+  opacity: 1;
+}
+
+._show .b_modal--slide-left {
+  transform: translateX(0);
 }
