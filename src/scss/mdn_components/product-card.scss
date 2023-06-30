@@ -142,13 +142,31 @@
 	font-size: 1.85rem;
 	display: flex;
 	align-items: center;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.2rem;
+	}
 }
 
 .product-card__price-new {
 	margin-right: 1rem;
+
+	@media (max-width: $mobile-xl) {
+		margin-right: 0.5rem;
+	}
 }
+
 .product-card__price-old {
 	font-size: 1.8rem;
 	text-decoration: line-through;
-	color: var(--fg-third)
+	color: var(--fg-third);
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.1rem;
+	}
+}
+
+.product-card__price-currency {
+	font-family: -apple-system, var(--ff-regular);
+	font-weight: 300;
 }
