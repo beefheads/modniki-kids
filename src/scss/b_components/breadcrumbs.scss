@@ -61,6 +61,7 @@
 
 .breadcrumbs__link {
 	transition: var(--tr-regular);
+	font-weight: 700;
 }
 .breadcrumbs__link:hover {
 	@media (any-hover:hover) {
