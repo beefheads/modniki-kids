@@ -34,6 +34,10 @@
 .header__logo {
   margin-right: 8.45rem;
 
+  @media (max-width: $laptop) {
+    margin-right: 5.45rem;
+  }
+
   @media (max-width: $w-burger) {
     margin-right: auto;
   }
@@ -102,6 +106,11 @@
   padding-bottom: 3rem;
   color: inherit;
 
+  @media (max-width: $laptop) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   @media (max-width: $w-burger) {
     padding: 0;
   }
@@ -119,12 +128,15 @@
   }
 }
 
-
 .header__nav-item:not(:last-child) {
   margin-right: 4.5rem;
 
   @media (max-width: $desktop-s) {
     margin-right: 3rem;
+  }
+
+  @media (max-width: $laptop) {
+    margin-right: 1.4rem;
   }
 
   @media (max-width: $w-burger) {

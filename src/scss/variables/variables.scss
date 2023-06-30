@@ -50,7 +50,7 @@ $w-burger: $tablet;
     --p-container: 4.5rem;
   }
 
-  @media (max-width: $tablet) {
+  @media (max-width: $laptop) {
     --p-container: 1.8rem;
   }
 

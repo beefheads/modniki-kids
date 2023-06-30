@@ -26,6 +26,15 @@ html {
   --fz-modifier: 0.520834;
   font-size: #{'calc(var(--fz-modifier) * var(--base-size))'};//calc(0.342466 * var(--base-size)); //10px for 1920×1000
 
+
+  @media (max-width: $desktop-l) {
+    --fz-modifier: 0.625;
+  }
+
+  @media (max-width: $desktop-m)  {
+    --fz-modifier: 0.694444;
+  }
+
   @media (max-width: $laptop) {
     --fz-modifier: 1.020834;
   }
@@ -50,17 +59,6 @@ html {
   }
    */
 }
-
-.wide {
-  @media (max-width: $desktop-l) and (min-width: $desktop-m + 1) {
-    --fz-modifier: 0.625;
-  }
-
-  @media (max-width: $desktop-m) and (min-width: $laptop + 1)  {
-    --fz-modifier: 0.694444;
-  }
-}
-
 
 body {
   color: var(--fg-regular);

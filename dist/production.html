@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Производство</title>
+    <link rel="stylesheet" href="./css/style.css?_v=20230630140756" />
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+  <div class="container header__container">
+    <a href="#" class="header__logo logo">
+      <img src="./img/common/logo-header.svg" alt="" class="logo__img" />
+    </a>
+    <div class="header__menu">
+      <nav class="nav header__nav">
+        <ul class="header__nav-links">
+          <li class="header__nav-item header__nav-item--active">
+            <a href="#" class="header__nav-link">Главная</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Каталог</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Отзывы</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Блог</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">О бренде</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Покупателям</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__buttons">
+        <button class="button-ghost header__button-callback" data-b_modal-open="callback">
+          Заказать звонок
+        </button>
+
+        <div class="contact-list header__contacts">
+          <a class="contact-item header__contact" href="tel:">
+            <svg class="contact-item__icon">
+              <use xlink:href="./img/common/tel--filled.svg#tel--filled" />
+            </svg>
+            <span class="contact-item__text">+7 993-976-60-86</span>
+          </a>
+          <a class="contact-item header__contact" href="tel:">
+            <svg class="contact-item__icon">
+              <use xlink:href="./img/common/tel--filled.svg#tel--filled" />
+            </svg>
+            <span class="contact-item__text">+7 800-533-88-35</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="header-shoppers">
+      <div class="header-shoppers__item header-shoppers__search">
+        <button class="header-shoppers__item-button">
+          <svg class="header-shoppers__item-icon search-icon">
+            <use xlink:href="./img/common/search.svg#search" />
+          </svg>
+        </button>
+        <div class="search header-shoppers__dropdown">
+          <form action="" class="search__row">
+            <label class="search__input">
+              <input type="text" name="s" class="search__field" placeholder="Что ищете?">
+            </label>
+            <button class="search__button">
+              <svg class="search__icon">
+                <use xlink:href="./img/common/search.svg#search" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="header-shoppers__item header-shoppers__cart">
+        <button class="header-shoppers__item-button" type="button" data-b_modal-open="minicart">
+          <svg class="header-shoppers__item-icon cart-icon">
+            <use xlink:href="./img/common/header-cart.svg#header-cart" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <button class="burger header__burger">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+  </div>
+</header>
+
+
+      <main class="main">
+
+        <section class="section hero">
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__container container">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                  О нас
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="container hero__container">
+            <div class="hero__content">
+              <h1 class="section-title hero__title">
+                Собственное прозводство полного цикла в Бишкеке  
+              </h1>
+              <p class="hero__desc">
+                Создаем каждую блузку “от” и “до” 
+              </p>
+              <button class="button-filled button-primary hero__button hero__button-get-price">Получить прайс</button>
+            </div>
+            <div class="hero__media">
+              <picture class="hero__media-pic">
+                <source srcset="./img/hero/production-hero-mobile.png"media="(max-width: 601px)">
+                <img src="./img/hero/production-hero.png" alt="" class="hero__media-img">
+              </picture>
+            </div>
+          </div>
+          <div class="hero__bg">
+            <picture class="hero__bg-pic">
+              <img src="./img/hero/production-hero-bg.jpg" alt="" class="hero__bg-img">
+            </picture>
+          </div>
+        </section>
+
+        <section class="section history">
+          <div class="container history__container">
+            <h2 class="section-title history__title">История создания и&nbsp;ценности</h2>
+            <div class="history-card">
+              <figure class="history-card__media">
+                <picture class="history-card__media-pic">
+                  <img src="./img/history/history-hero.png" alt="" class="history-card__media-img">
+                </picture>
+              </figure>
+              <div class="history-card__content">
+                <h3 class="history-card__title">Семейное дело с 1998 года.</h3>
+                <p class="history-card__desc">
+                  Поколения менялись, бизнес переходил по наследству, а ценности оставались неизменными.
+                </p>
+              </div>
+            </div>
+            <div class="history-card">
+              <figure class="history-card__media">
+                <picture class="history-card__media-pic">
+                  <img src="./img/history/history-1.png" alt="" class="history-card__media-img">
+                </picture>
+              </figure>
+              <div class="history-card__content">
+                <h3 class="history-card__title">Мы знаем, какие блузки <br> нужны мамам и школьницам.</h3>
+                <p class="history-card__desc">
+                  К каждому изделию относимся по <br>
+                  принципу: делаем то, во что одели бы <br>
+                  своих детей. Производим блузки под <br>
+                  разные типы фигур и предпочтения в стиле. 
+                </p>
+            </div>
+            </div>
+            <div class="history-card">
+              <figure class="history-card__media">
+                <picture class="history-card__media-pic">
+                  <img src="./img/history/history-2.png" alt="" class="history-card__media-img">
+                </picture>
+              </figure>
+              <div class="history-card__content">
+                <h3 class="history-card__title">Вышли на рынок <br> РФ в 2014 году.</h3>
+                <p class="history-card__desc">
+                  Наши блузки из Кыргызстана быстро <br>
+                  нашли своего покупателя, и мы начали получать теплые отзывы от оптовых клиентов.
+                </p>
+              </div>
+            </div>
+            <div class="history-card">
+              <figure class="history-card__media">
+                <picture class="history-card__media-pic">
+                  <img src="./img/history/history-3.png" alt="" class="history-card__media-img">
+                </picture>
+              </figure>
+              <div class="history-card__content">
+                <h3 class="history-card__title">80% клиентов <br> покупают регулярно.</h3>
+                <p class="history-card__desc">
+                  Потому что нам важно помочь <br>
+                  нашим покупателям сделать правильный выбор, <br>
+                  вовремя отшить и доставить <br>
+                  товар. 
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
+        <section class="section production">
+          <div class="container production__container">
+            <h2 class="section-title production__title">
+              Залог успеха наших блузок — <br>
+              производство
+            </h2>
+            <div class="production__gallery">
+              <article class="production-card">
+                <figure class="production-card__media">
+                  <picture class="production-card__media-pic">
+                    <img src="./img/production/production-1.png" alt="" class="production-card__media-img">
+                  </picture>
+                </figure>
+                <p class="production-card__desc">
+                  Прежде, чем приступить к созданию новой коллекции, мы анализируем модные тренды,  продажи и собираем обратную связь от наших клиентов.
+                </p>
+                <p class="production-card__desc">
+                  Это помогает нам становиться лучше и делать модели, которые не залежатся на складе. 
+                </p>
+              </article>
+              <article class="production-card">
+                <figure class="production-card__media">
+                  <picture class="production-card__media-pic">
+                    <img src="./img/production/production-2.png" alt="" class="production-card__media-img">
+                  </picture>
+                </figure>
+                <p class="production-card__desc">
+                  Мы всегда создаем несколько эскизов и выбираем самые лучшие. 
+                </p>
+                <p class="production-card__desc">
+                  Следом прописываем ТЗ для технологов и конструкторов.
+                </p>
+              </article>
+              <article class="production-card">
+                <figure class="production-card__media">
+                  <picture class="production-card__media-pic">
+                    <img src="./img/production/production-3.png" alt="" class="production-card__media-img">
+                  </picture>
+                </figure>
+                <p class="production-card__desc">
+                  У нас свой штат конструкторов и собстенный швейный цех, где каждый человек - часть большой семьи и обладает большим опытом работы.
+                </p>
+              </article>
+              <article class="production-card">
+                <figure class="production-card__media">
+                  <picture class="production-card__media-pic">
+                    <img src="./img/production/production-4.png" alt="" class="production-card__media-img">
+                  </picture>
+                </figure>
+                <p class="production-card__desc">
+                  Для каждой модели создается свой комплект лекал и отшивается тестовый образец 
+                </p>
+                <p class="production-card__desc">
+                  После пошива тестового образца идет примерка, где мы оцениваем посадку, пропорции, то, насколько в этом удобно двигаться и какая стоимость производства  
+                </p>
+              </article>
+              <article class="production-card">
+                <figure class="production-card__media">
+                  <picture class="production-card__media-pic">
+                    <img src="./img/production/production-5.png" alt="" class="production-card__media-img">
+                  </picture>
+                </figure>
+                <p class="production-card__desc">
+                  После того, как модель утверждена, мы проводим фотосессию, где разрешаем девочкам веселиться, прыгать, бегать и быть собой. 
+                </p>
+              </article>
+              <article class="production-card">
+                <figure class="production-card__media">
+                  <picture class="production-card__media-pic">
+                    <img src="./img/production/production-6.png" alt="" class="production-card__media-img">
+                  </picture>
+                </figure>
+                <p class="production-card__desc">
+                  Затем отшивается партия. Одну блузку собирает одна швея. Швеи у нас с большим опытом работы, поэтому блузки выходят аккуратными и с ровными строчками. 
+                </p>
+              </article>
+              <article class="production-card">
+                <figure class="production-card__media">
+                  <picture class="production-card__media-pic">
+                    <img src="./img/production/production-7.png" alt="" class="production-card__media-img">
+                  </picture>
+                </figure>
+                <p class="production-card__desc">
+                  Мы следим, чтобы блузки были не только качественно сшиты, но и аккуратно отутюжены, с надежно пришитыми пуговицами и нигде не торчали нитки. Для этого у нас есть ОТК, где  заметят даже малейший брак и не пропустят его дальше.
+                </p>
+              </article>
+              <article class="production-card">
+                <figure class="production-card__media">
+                  <picture class="production-card__media-pic">
+                    <img src="./img/production/production-8.png" alt="" class="production-card__media-img">
+                  </picture>
+                </figure>
+                <p class="production-card__desc">
+                  Только после такого большого пути блузки попадают на склад, где ждут своих покупателей.
+                </p>
+              </article>
+            </div>
+            <div class="section__buttons">
+              <button class="button-filled button-primary production__button" type="button">Получить прайс</button>
+            </div>
+          </div>
+          <div class="production__blobs">
+            <div class="production__blob"></div>
+            <div class="production__blob"></div>
+            <div class="production__blob"></div>
+            <div class="production__blob"></div>
+            <div class="production__blob"></div>
+          </div>
+        </section>
+
+        <section class="section offer">
+          <div class="container offer__container">
+            <h2 class="section-title offer__title">
+              Школьные блузки — <br> от классики до креатива
+            </h2>
+            <p class="section-desc offer__desc">
+              <!-- В каталоге 6 категорий и блузки на <br> -->
+              <!-- любой сегмент покупателей. -->
+              Склад вентилируется, защищен от влаги и плесени. Блузки дождутся вашего заказа в первозданном качестве.
+            </p>
+            <div class="offer__gallery">
+              <figure class="offer__media">
+                <picture class="offer__media-pic">
+                  <source srcset="./img/offer/offer-mobile.png"media="(max-width: 601px)">
+                  <img src="./img/offer/offer.png" alt="" class="offer__media-img">
+                </picture>
+              </figure>
+              <article class="offer-card">
+                <div class="offer-card__content">
+                  <h3 class="offer-card__title">
+                    Сшиты из турецкой ткани.
+                  </h3>
+                  <p class="offer-card__desc">
+                    Приятны в носке и на ощупь. <br>Ткань дышит, не пропускает влагу и не слишком мнется.
+                  </p>
+                </div>
+              </article>
+              <article class="offer-card">
+                <div class="offer-card__content">
+                  <h3 class="offer-card__title">
+                    ГОСТируются.
+                  </h3>
+                  <p class="offer-card__desc">
+                    Соответствуют всем требованиям детской одежды и не вызывают сомнения у покупателей.
+                  </p>
+                </div>
+              </article>
+              <article class="offer-card">
+                <div class="offer-card__content">
+                  <h3 class="offer-card__title">
+                    Дизайн и посадка <br> на любой вкус и фигуру. 
+                  </h3>
+                  <p class="offer-card__desc">
+                    Рисуем эскизы на основе запросов детей, их родителей и трендов, поэтому блузки привлекают покупателей любого возраста.
+                  </p>
+                </div>
+              </article>
+              <article class="offer-card">
+                <div class="offer-card__content">
+                  <h3 class="offer-card__title">
+                    Ручная работа с полным <br> контролем качества. 
+                  </h3>
+                  <p class="offer-card__desc">
+                    Швы и декор нравятся даже самым требовательным мамам.
+                  </p>
+                </div>
+              </article>
+            </div>
+            
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+  <div class="container footer__container">
+    <a href="#" class="footer__logo logo">
+      <img src="./img/common/logo-footer.svg" alt="" class="logo__img" />
+    </a>
+    <div class="footer__about">
+      <p class="footer__about-row">
+        ИП Маханькова Арина Дмитриевна 
+      </p>
+      <p class="footer__about-row">
+        <span class="section-text--bold">ИНН:</span> 780267205312
+      </p>
+      <p class="footer__about-row">
+        <span class="section-text--bold">ОГРНИП:</span> 321784700316831
+      </p>
+    </div>
+    <div class="footer__nav">
+      <div class="footer__nav-menu">
+        <h3 class="footer__nav-menu-title">Покупателям</h3>
+        <ul class="footer__nav-menu-list">
+          <li class="footer__nav-menu-item">
+            <a href="#" class="footer__nav-menu-link">
+              Сотрудничество
+            </a>
+          </li>
+          <li class="footer__nav-menu-item">
+            <a href="#" class="footer__nav-menu-link">
+              Доставка и оплата
+            </a>
+          </li>
+          <li class="footer__nav-menu-item">
+            <a href="#" class="footer__nav-menu-link">
+              Таблицы размеров
+            </a>
+          </li>
+          <li class="footer__nav-menu-item">
+            <a href="#" class="footer__nav-menu-link">
+              Уход за одеждой
+            </a>
+          </li>
+          <li class="footer__nav-menu-item">
+            <a href="#" class="footer__nav-menu-link">
+              Контакты и реквизиты
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__nav-menu">
+        <h3 class="footer__nav-menu-title">Каталог</h3>
+        <ul class="footer__nav-menu-list">
+          <li class="footer__nav-menu-item">
+            <a href="" class="footer__nav-menu-link">
+              Новинки
+            </a>
+          </li>
+          <li class="footer__nav-menu-item">
+            <a href="" class="footer__nav-menu-link">
+              Распродажа
+            </a>
+          </li>
+          <li class="footer__nav-menu-item">
+            <a href="" class="footer__nav-menu-link">
+              Младшая школа
+            </a>
+          </li>
+          <li class="footer__nav-menu-item">
+            <a href="" class="footer__nav-menu-link">
+              Подростки
+            </a>
+          </li>
+          <li class="footer__nav-menu-item">
+            <a href="" class="footer__nav-menu-link">
+              Креативный подросток
+            </a>
+          </li>
+          <li class="footer__nav-menu-item">
+            <a href="" class="footer__nav-menu-link">
+              Не белые блузки
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__contacts contact-list">
+      <a class="contact-item footer__contact" href="tel:">
+        <svg class="contact-item__icon">
+          <use xlink:href="./img/common/tel--filled.svg#tel--filled" />
+        </svg>
+        <span class="contact-item__text">+7 993-976-60-86</span>
+      </a>
+      <a class="contact-item footer__contact" href="tel:">
+        <svg class="contact-item__icon">
+          <use xlink:href="./img/common/tel--filled.svg#tel--filled" />
+        </svg>
+        <span class="contact-item__text">+7 800-533-88-35</span>
+      </a>
+    </div>
+    <div class="footer__links">
+      <a href="#" class="footer__link link-second">
+        Политика конфиденциальности
+      </a>
+      <a href="#" class="footer__link link-second">
+        Договор оферты
+      </a>
+    </div>
+    <div class="footer__credits">
+      <a href="#" class="footer__credits-link">Создатель сайта - Асташко Никита</a>
+    </div>
+  </div>
+</footer>
+
+<div class="minicart b_modal b_modal--slide-left" id="minicart">
+  <button class="minicart__button-close" type="button" data-b_modal-close="minicart">Назад</button>
+  <h3 class="minicart__title">Ваша корзина</h3>
+  <p class="minicart__row minicart__positions">
+    <span class="minicart__row-title">Количество позиций:</span>
+    <span class="minicart__row-value">2</span>
+  </p>
+  <div class="minicart__content">
+      <article class="minicart-product">
+  <div class="minicart-product__media">
+    <picture class="minicart-product__media-pic">
+      <img src="./img/catalog/product-no-bg.png" alt="" class="minicart-product__media-img"></picture>
+  </div>
+  <div class="minicart-product__info">
+    <h3 class="minicart-product__title">Какое-то длинное название товара прям очень</h3>
+    <div class="minicart-product__price">
+    	<span class="minicart-product__price-new">1500₽</span>
+    </div>
+    <div class="stepper minicart-product__stepper">
+      <button class="stepper__button stepper__minus">−</button>
+      <input type="text" class="stepper__value" value="8">
+      <button class="stepper__button stepper__plus">+</button>
+    </div>
+  </div>
+  <button class="minicart-product__button-remove" type="button">×</button>
+</article>
+
+      <article class="minicart-product">
+  <div class="minicart-product__media">
+    <picture class="minicart-product__media-pic">
+      <img src="./img/catalog/product-no-bg.png" alt="" class="minicart-product__media-img"></picture>
+  </div>
+  <div class="minicart-product__info">
+    <h3 class="minicart-product__title">Обычное название товара</h3>
+    <div class="minicart-product__price">
+    	<span class="minicart-product__price-new">1500₽</span>
+    </div>
+    <div class="stepper minicart-product__stepper">
+      <button class="stepper__button stepper__minus">−</button>
+      <input type="text" class="stepper__value" value="8">
+      <button class="stepper__button stepper__plus">+</button>
+    </div>
+  </div>
+  <button class="minicart-product__button-remove" type="button">×</button>
+</article>
+
+      <article class="minicart-product">
+  <div class="minicart-product__media">
+    <picture class="minicart-product__media-pic">
+      <img src="./img/catalog/product-no-bg.png" alt="" class="minicart-product__media-img"></picture>
+  </div>
+  <div class="minicart-product__info">
+    <h3 class="minicart-product__title">Короткое</h3>
+    <div class="minicart-product__price">
+    	<span class="minicart-product__price-new">1500₽</span>
+    </div>
+    <div class="stepper minicart-product__stepper">
+      <button class="stepper__button stepper__minus">−</button>
+      <input type="text" class="stepper__value" value="8">
+      <button class="stepper__button stepper__plus">+</button>
+    </div>
+  </div>
+  <button class="minicart-product__button-remove" type="button">×</button>
+</article>
+
+  </div>
+  <p class="minicart__row minicart__total">
+    <span class="minicart__row-title">Итого:</span>
+    <span class="minicart__row-value">31500₽</span>
+  </p>
+  <div class="minicart__buttons">
+    <a href="#" class="button-filled button-primary minicart__button-continue">Продолжить покупки</a>
+    <a href="#" class="button-stroke button-primary minicart__button-checkout">Оформить заказ</a>
+  </div>
+</div>
+
+<div class="minicart b_modal b_modal--slide-left" id="minicart-empty">
+  <button class="minicart__button-close" type="button" data-b_modal-close="minicart">Назад</button>
+  <h3 class="minicart__title">Ваша корзина</h3>
+  <p>Пока пусто</p>
+</div>
+    </div>
+
+    
+
+<!-- <div class="snack" id="snack-cookies">
+  <div class="container gtc-2 snack__container">
+    <div class="snack__info">
+      <span class="snack__hl">Our Site Uses Cookies</span>
+      By clicking Agree, you agree to our
+      <a href="#" class="link link--inline">terms of service</a>,
+      <a href="#" class="link link--inline">privacy policy</a>
+      and
+      <a href="#" class="link link--inline">cookies policy</a>
+    </div>
+    <div class="snack__buttons flex">
+      <button class="snack__button button button--primary">Agree</button>
+    </div>
+  </div>
+</div> -->
+
+    <script src="./js/bundle.min.js?_v=20230630140756"></script>
+  </body>
+</html>
