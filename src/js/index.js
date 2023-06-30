@@ -22,6 +22,8 @@ import "./b_components/groupers/bayan.js";
 
 import "./b_components/controls/stepper.js";
 
+import "./b_components/controls/b_tabs.js";
+
 
 /**
  * Timer

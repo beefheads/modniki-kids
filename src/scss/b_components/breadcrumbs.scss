@@ -14,13 +14,14 @@
   position: relative;
 
 	@media (max-width: $tablet) {
-	  margin-right: -1.6rem;
+		// margin-right: #{'calc(0px - var(--p-container))'};
 		font-size: 1.4rem;
-	  width: #{'calc(100% + 3.2rem)'};
+	  // width: #{'calc(100% + 2 * var(--p-container))'};
 	}
 
 	@media (max-width: $mobile-xl) {
 		font-size: 1.2rem;
+	  margin-left: 0;
 	}
 }
 
@@ -30,16 +31,14 @@
 	@media (max-width: $mobile-xl) {
 		padding-top: 3rem;
 	}
+	@media (max-width: $mobile-l) {
+		margin-bottom: 0;
+	}
 }
 
 .breadcrumbs__container {
 	margin-bottom: -2rem;
 	overflow: hidden;
-
-	@media (max-width: $tablet) {
-		padding-left: 0;
-		padding-right: 0;
-	}
 }
 
 .breadcrumbs__list {
@@ -50,17 +49,12 @@
 	padding-bottom: 2rem;
   -webkit-mask-image: var(--mask);
   mask: var(--mask);
-	padding-left: 1.8rem;
-	padding-right: 1.8rem;
-	margin-left: -1.8rem;
-	margin-right: -1.8rem;
+	padding-left: var(--p-container);
+	padding-right: var(--p-container);
+	margin-left: #{'calc(0px - var(--p-container))'};
+	margin-right: #{'calc(0px - var(--p-container))'};
 	margin-left: 0;
 	margin-right: 0;
-
-	@media (max-width: $mobile-xl) {
-		padding-left: 2.8rem;
-		padding-right: 2.8rem;
-	}
 }
 
 .breadcrumbs__item {
@@ -71,15 +65,17 @@
 	transition: var(--tr-regular);
 	font-weight: 700;
 }
+
 .breadcrumbs__link:hover {
 	@media (any-hover:hover) {
 		color: var(--c-accent);
 	}
 }
+
 .breadcrumbs__link:after {
 	content: "";
-	margin-left: 0.1rem;
-	margin-right: 0.2rem;
+	margin-left: 0.3rem;
+	margin-right: 0.3rem;
 	color: #646464;
 	display: inline-block;
 	--size: 0.9rem;
@@ -92,4 +88,8 @@
 	background-position: center;
 	background-size: contain;
 	transform: scaleX(-1);
+	@media (max-width: $mobile-xl) {
+		margin-left: 0.1rem;
+		margin-right: 0.2rem;
+	}
 }
