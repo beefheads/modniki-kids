@@ -114,6 +114,8 @@
 }
 
 .product-card__button {
+	min-width: 47%;
+
 	@media (max-width: $laptop) {
 		width: 100%;
 		max-width: 100%;
@@ -124,6 +126,7 @@
 	}
 }
 
+
 .product-card__button:not(:last-child) {
 	margin-right: 1.6rem;
 	@media (max-width: $laptop) {
@@ -133,4 +136,19 @@
 	@media (max-width: $mobile-xl) {
 		margin-bottom: 1rem;
 	}
+}
+
+.product-card__price {
+	font-size: 1.85rem;
+	display: flex;
+	align-items: center;
+}
+
+.product-card__price-new {
+	margin-right: 1rem;
+}
+.product-card__price-old {
+	font-size: 1.8rem;
+	text-decoration: line-through;
+	color: var(--fg-third)
 }
