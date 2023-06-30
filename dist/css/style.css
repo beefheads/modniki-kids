@@ -3490,14 +3490,16 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   height: 100%;
   max-width: 47.2rem;
   width: 100%;
-  padding: 4.1rem 5rem;
+  padding: 4.1rem 5rem 0;
   overflow-y: auto;
+  overscroll-behavior: none;
 }
 @media (max-width: 601px) {
   .minicart {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
     padding-top: 2rem;
+    padding-bottom: 0;
   }
 }
 
@@ -3518,6 +3520,9 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   justify-content: flex-start;
   align-items: center;
   padding: 1rem 1.7rem 1rem 1.1rem;
+  position: sticky;
+  z-index: 3;
+  top: 0;
 }
 
 .minicart__button-close::before {
@@ -3570,14 +3575,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   row-gap: 2rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  border-bottom: 0.1rem solid var(--c-border);
-  margin-bottom: 3rem;
 }
 @media (max-width: 601px) {
   .minicart__content {
     padding-top: 2.5rem;
     padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
   }
 }
 
@@ -3591,6 +3593,12 @@ body:not(.is-using-mouse) .fancybox__container :focus {
     row-gap: 1rem;
   }
 }
+@media (max-width: 601px) {
+  .minicart__buttons {
+    padding-top: 2rem;
+  }
+}
+
 .minicart__button-checkout,
 .minicart__button-continue {
   font-size: 1.7rem;
@@ -3601,6 +3609,21 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .minicart__button-continue {
     padding-top: 1rem;
     padding-bottom: 1.3rem;
+  }
+}
+
+.minicart__total {
+  background-color: var(--bg-card);
+  position: sticky;
+  bottom: 0;
+  padding-top: 3rem;
+  padding-bottom: 4.1rem;
+  border-top: 0.1rem solid var(--c-border);
+}
+@media (max-width: 601px) {
+  .minicart__total {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
