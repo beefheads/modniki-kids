@@ -35,7 +35,10 @@ import "./libs/lazyload.min.js";
 let lazyLoadInstance = new LazyLoad();
 
 import "./mdn_components/carousel.js";
+
 import "./mdn_sections/offer-carousel.js";
+
+import "./mdn_sections/product-hero.js";
 
 /**
  * Dropdown Select
