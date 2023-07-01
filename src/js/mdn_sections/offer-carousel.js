@@ -5,10 +5,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	const offerCarousel = document.querySelector('.offer-carousel');
 	if (!offerCarousel) return;
 
-	const autoplaySpeed = 5000;
+	const autoplaySpeed = 7000;
 	let offerCarouselSwiper = new Swiper(".offer-carousel-swiper", {
 	  modules: [Navigation, Pagination, EffectFade, Autoplay],
 	  speed: 350,
+	  loop: false,
+	  autoplay: {
+	  	delay: autoplaySpeed,
+	  },
 		autoHeight: true,
 	  pagination: {
 	    el: ".offer-carousel-pagination",
@@ -18,12 +22,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	    nextEl: ".offer-carousel-button-next",
 	    prevEl: ".offer-carousel-button-prev",
 	  },
-	  on: {
-      afterInit: function () {
-				// this.el.classList.add('b_swiper--indicate-autoplay');
-        // usePaginationPercentage(this, autoplaySpeed);
-      },
-    },
 	});
 
 });

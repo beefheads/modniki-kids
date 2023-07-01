@@ -88,6 +88,7 @@
 	line-height: 1.2;
 	font-weight: 400;
 	margin-bottom: 1rem;
+	display: flex;
 
 	@media (max-width: $mobile-xl) {
 		font-size: 1.2rem;
@@ -100,6 +101,7 @@
 
 .product-card__stat-title {
 	color: var(--fg-card-text-second);
+	margin-right: 0.4em;
 }
 
 .product-card__buttons {
