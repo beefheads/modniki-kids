@@ -39,7 +39,7 @@ const handleScroll = () => {
   prevScrollPos = currentScrollPos;
 };
 
-window.addEventListener('scroll', debounce(handleScroll, 50));
+window.addEventListener('scroll', debounce(handleScroll, 10));
 
 /*
 window.addEventListener("scroll", () => {

@@ -1,11 +1,15 @@
 :root {
   // --tr-enter-jolly: opacity 0.5s cubic-bezier(0.5, 0, 0.5, 1);
   // --tr-enter-jolly: all 0.5s cubic-bezier(0.4, 0, 0, 1);
+  --tr-jolly-enter: cubic-bezier(0.5, 0, 0.5, 1);
+  --tr-jolly-leave: cubic-bezier(0.4, 0, 0, 1);
   --c-b_modal-closer-hover: #ff3b30;
   --z-b_modal: 1234567890;
   // opacity 0.5s cubic-bezier(0.4, 0, 0, 1);
   --bg-overlay: rgba(0, 0, 0, 0);
   --bg-overlay-visible: rgba(0, 0, 0, 0.8);
+
+  --bg-b_modal-closer: rgba(222,222,222, 0.5);
 }
 
 .b_modal__storage {
@@ -27,11 +31,12 @@
   height: 100%;
   pointer-events: none;
   background-color: var(--bg-overlay);
-  transition: all 0.3s ease;
+  transition: all 0.5s var(--tr-jolly-leave);
 }
 .b_modal__overlay._show {
   pointer-events: initial;
   background-color: var(--bg-overlay-visible);
+  transition: all 0.5s var(--tr-jolly-enter);
 }
 
 .b_modal__aligner {
@@ -45,23 +50,24 @@
 
 .b_modal__content {
   position: relative;
-  // max-width: 900px;
-  // padding: 1em;
   margin-right: auto;
   margin-left: auto;
-  // background-color: #fff;
-  // border-radius: 2em;
   transition: all 0.3s ease;
+  transition: all 0.5s var(--tr-jolly-enter);
   transform: scale(0.86);
-}
-._show .b_modal {
-  transform: scale(1);
-  opacity: 1;
 }
 
 .b_modal {
   transition: var(--tr-regular);
   opacity: 0;
+  transform: translateY(25rem) scale(0.8);
+  transition: all 0.5s var(--tr-jolly-leave), opacity 0.3s var(--tr-jolly-leave);
+}
+
+._show .b_modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition: all 0.5s var(--tr-jolly-enter), opacity 0.3s var(--tr-jolly-leave);
 }
 
 .b_modal__closer {
@@ -71,54 +77,53 @@
   display: block;
   width: 2.5em;
   height: 2.5em;
-  font-size: 0;
-  background-color: transparent;
+  font-size: 1.4rem;
+  color: transparent;
   transition: all 0.3s ease;
-  --closer-color: #fff;
+  background-color: var(--bg-b_modal-closer);
+  border-radius: 1rem;
+  transform: scale(0);
 }
+
+._show .b_modal__closer {
+  transform: scale(1);
+}
+
 .b_modal__closer::before,
 .b_modal__closer::after {
+  --closer-color: rgba(222,222,222, 1);//#fff;
+  content: "";
   position: absolute;
-  top: 48%;
+  top: 44%;
+  right: 0;
   left: 0;
   display: block;
-  width: 100%;
-  height: 10%;
-  content: "";
-  background-color: var(--closer-color);
+  width: 80%;
+  height: 13%;//8%;
+  margin-right: auto;
+  margin-left: auto;
   border-radius: 1em;
+  background-color: var(--closer-color);
   transition: all 0.3s ease;
+
+  @media (max-width: $tablet) {
+    top: 46%;
+    width: 70%;
+  }
 }
+
 .b_modal__closer::before {
   transform: rotate(45deg);
 }
+
 .b_modal__closer::after {
   transform: rotate(-45deg);
 }
+
 .b_modal__closer:hover::before,
 .b_modal__closer:hover::after {
-  background-color: var(--c-b_modal-closer-hover);
-}
-
-
-.b_modal__closer {
-  --closer-color: var(--c-text-regular);
-  font-size: 1rem;
-  color: transparent;
-  background-color: var(--bg-b_modal);
-  border-radius: var(--radius-b_modal);
-}
-.b_modal__closer::before,
-.b_modal__closer::after {
-  top: 44%;
-  right: 0;
-  width: 80%;
-  height: 8%;
-  margin-right: auto;
-  margin-left: auto;
-  @media (max-width: 768px) {
-    top: 46%;
-    width: 70%;
+  @media (any-hover:hover) {
+    --closer-color: var(--c-b_modal-closer-hover);
   }
 }
 

@@ -20,7 +20,7 @@ import {setInputValid, setInputInvalid, validateInput} from "./input-validator.j
 //   button.disabled = false;
 // }
 
-const formsList = document.querySelectorAll(".form");
+const formsList = document.querySelectorAll(".js_form");
 formsList.forEach((form) => {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();

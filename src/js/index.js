@@ -40,7 +40,6 @@ import "./mdn_components/carousel.js";
 
 import "./mdn_sections/offer-carousel.js";
 
-import "./mdn_sections/product-hero.js";
 
 /**
  * Dropdown Select

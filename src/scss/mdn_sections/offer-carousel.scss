@@ -132,6 +132,7 @@
 	max-width: 70rem;
 	height: 70rem;
 	margin-top: auto;
+	pointer-events: none;
 
   @media (max-width: $desktop-s) {
   	max-width: 60rem;

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Производство</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230630202317" />
+    <link rel="stylesheet" href="./css/style.css?_v=20230701123234" />
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" />
@@ -587,7 +587,168 @@
 </div>
     </div>
 
-    
+    <div id="modal-login" class="b_modal modal modal-login">
+  <h3 class="modal__title">
+    Оставьте свой <br>
+    номер телефона
+  </h3>
+  <p class="modal__desc">
+    Отставьте свой контактный номер, чтобы <br>
+    мы могли открыть вам цены на продукцию <br>
+    и возможность заказать её онлайн
+  </p>
+  <form action="/" id="form-callback" class="form js_form modal__form">
+    <div class="form__hidden">
+      <input type="text" name="page" hidden />
+      <input type="text" name="formname" hidden />
+      <input type="text" name="additional" hidden />
+      
+      <input type="hidden" name="utm_source" value="">
+      <input type="hidden" name="utm_medium" value="">
+      <input type="hidden" name="utm_campaign" value="">
+      <input type="hidden" name="utm_content" value="">
+      <input type="hidden" name="utm_term" value="">
+      <input type="hidden" name="referer" value="">
+      <input type="hidden" name="requestTime" value="">
+      <input type="hidden" name="requestSimpleSign" value="">
+    </div>
+    <div class="form__fields">
+      <fieldset class="form__row">
+        <label class="input input-tel form-control">
+  <svg class="input__icon">
+    <use xlink:href="./img/common/tel.svg#tel"></use>
+  </svg>
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  />
+</label>
+
+      </fieldset>
+      <button type="submit" class="button-primary button-filled modal__button">
+        Смотреть цены
+      </button>
+    </div>
+  </form>
+</div>
+
+<div id="modal-price" class="b_modal modal modal--wide modal-price">
+  <h3 class="modal__title">
+    Получите прайс-лист <br>
+    по&nbsp;электронной почте
+  </h3>
+  <p class="modal__desc">
+    Оставьте свой контактный номер, чтобы <br>
+    мы могли отправить вам каталог с ценами <br>
+    и проконсультировать по продукции
+  </p>
+  <form action="/" id="form-callback" class="form js_form modal__form">
+    <div class="form__hidden">
+      <input type="text" name="page" hidden />
+      <input type="text" name="formname" hidden />
+      <input type="text" name="additional" hidden />
+
+      <input type="hidden" name="utm_source" value="">
+      <input type="hidden" name="utm_medium" value="">
+      <input type="hidden" name="utm_campaign" value="">
+      <input type="hidden" name="utm_content" value="">
+      <input type="hidden" name="utm_term" value="">
+      <input type="hidden" name="referer" value="">
+      <input type="hidden" name="requestTime" value="">
+      <input type="hidden" name="requestSimpleSign" value="">
+    </div>
+    <div class="form__fields">
+      <fieldset class="form__row">
+        <label class="input input-name form-control">
+  <svg class="input__icon">
+    <use xlink:href="./img/common/user.svg#user"></use>
+  </svg>
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Введите свое имя"
+    autocomplete="name"
+  />
+</label>
+
+        <label class="input input-tel form-control">
+  <svg class="input__icon">
+    <use xlink:href="./img/common/tel.svg#tel"></use>
+  </svg>
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  />
+</label>
+
+        <label class="input input-email form-control">
+  <svg class="input__icon">
+    <use xlink:href="./img/common/mail.svg#mail"></use>
+  </svg>
+  <input
+    class="input__field"
+    name="user_email"
+    type="email"
+    placeholder="Ваша почта"
+    autocorrect="off"
+    autocomplete="email"
+  />
+</label>
+
+      </fieldset>
+      <button type="submit" class="button-primary button-filled modal__button">
+        Получить прайс
+      </button>
+    </div>
+  </form>
+
+<div id="modal-success" class="b_modal modal">
+  <svg class="modal__icon">
+    <use xlink:href="./img/common/status-ok.svg#ok" />
+  </svg>
+  <div class="modal__info">
+    <h3 class="modal__title">
+      Заявка на&nbsp;консультацию отправлена!
+    </h3>
+    <p class="modal__desc">
+      Отзыв на сайте покажется после предварительной модерации.
+    </p>
+  </div>
+  <button class="button-primary button-filled modal__button" type="button" data-b_modal-close="modal-success">
+    Закрыть
+  </button>
+</div>
+
+<div id="modal-error" class="b_modal modal">
+  <svg class="modal__icon">
+    <use xlink:href="./img/common/status-fail.svg#fail" />
+  </svg>
+  <div class="modal__info">
+    <h3 class="modal__title">
+      Что-то пошло не&nbsp;так
+    </h3>
+    <p class="modal__desc">
+      Извините, у&nbsp;нас&nbsp;какая-то ошибка на&nbsp;сайте. Пожалуйста, напишите нам в&nbsp;тех.поддержку
+    </p>
+  </div>
+  <button class="button-primary button-filled modal__button">
+    Закрыть
+  </button>
+</div>
+
 
 <!-- <div class="snack" id="snack-cookies">
   <div class="container gtc-2 snack__container">
@@ -605,6 +766,6 @@
   </div>
 </div> -->
 
-    <script src="./js/bundle.min.js?_v=20230630202317"></script>
+    <script src="./js/index.min.js?_v=20230701123234"></script>
   </body>
 </html>

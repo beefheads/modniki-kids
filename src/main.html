@@ -38,7 +38,7 @@
                     <p class="offer-carousel__desc">
                       Закажите их у нас! При покупке школьных блузок у нас повысите лояльность клиентов. Бонусом избавитесь от лишней головной боли — налогов, логистики, сертификатов
                     </p>
-                    <button class="button-primary button-filled offer-carousel__button" data-b_modal="price">
+                    <button class="button-primary button-filled offer-carousel__button" data-b_modal-open="modal-price">
                       Получить прайс
                     </button>
                   </div>
@@ -554,6 +554,20 @@
               </p>
             </div>
             <form class="cta__form">
+              <div class="form__hidden">
+                <input type="text" name="page" hidden />
+                <input type="text" name="formname" hidden />
+                <input type="text" name="additional" hidden />
+                
+                <input type="hidden" name="utm_source" value="">
+                <input type="hidden" name="utm_medium" value="">
+                <input type="hidden" name="utm_campaign" value="">
+                <input type="hidden" name="utm_content" value="">
+                <input type="hidden" name="utm_term" value="">
+                <input type="hidden" name="referer" value="">
+                <input type="hidden" name="requestTime" value="">
+                <input type="hidden" name="requestSimpleSign" value="">
+              </div>
               <fieldset class="form__row">
                 @@include('tpls/input/email.html',{})
                 @@include('tpls/input/name.html',{})
@@ -569,6 +583,6 @@
     </div>
 
     @@include('tpls/modals.html', {})
-    <script src="./js/bundle.min.js"></script>
+    <script src="./js/index.min.js"></script>
   </body>
 </html>

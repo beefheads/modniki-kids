@@ -53,7 +53,7 @@ class b_modal {
     document.addEventListener("keydown", (e) => {
       const id = this.getLastOpenedId();
       if (e.key === "Escape" && id) {
-        console.log(id);
+        // console.log(id);
         this.closePop(id);
         // modal.classList.remove("_show");
         // bodyLock(false);
@@ -127,10 +127,6 @@ class b_modal {
       overlay.append(closer);
     }
 
-    if (b_modal.getBoundingClientRect().height > window.innerHeight) {
-      overlay.classList.add('b_modal--scrollable')
-    }
-
     this.instances.push(overlay);
   }
 
@@ -177,6 +173,17 @@ class b_modal {
     pop.querySelector(".b_modal").dispatchEvent(event);
 
     bodyLock(true);
+
+
+    setTimeout(() => {
+      const popupBody = pop.querySelector('.b_modal');
+      if (popupBody.getBoundingClientRect().height > window.innerHeight) {
+        pop.classList.add('b_modal--scrollable')
+      }
+    console.log(popupBody.getBoundingClientRect().height)
+    console.log(window.innerHeight)
+    }, 600)
+
   }
 
   handleClose(button) {
@@ -237,8 +244,15 @@ class b_modal {
   }
 
   openb_modalHash() {
+    const IGNORE_MODAL_AUTOOPEN = [
+      'modal-success',
+      'modal-error',
+    ];
     if (window.location.hash) {
       const hash = window.location.hash.substring(1);
+      
+      if (IGNORE_MODAL_AUTOOPEN.includes(hash)) return;
+
       const b_modal = document.querySelector(`.b_modal#${hash}`);
       if (b_modal) {
         this.openPop(hash);
