@@ -180,8 +180,6 @@ class b_modal {
       if (popupBody.getBoundingClientRect().height > window.innerHeight) {
         pop.classList.add('b_modal--scrollable')
       }
-    console.log(popupBody.getBoundingClientRect().height)
-    console.log(window.innerHeight)
     }, 600)
 
   }
@@ -250,7 +248,7 @@ class b_modal {
     ];
     if (window.location.hash) {
       const hash = window.location.hash.substring(1);
-      
+
       if (IGNORE_MODAL_AUTOOPEN.includes(hash)) return;
 
       const b_modal = document.querySelector(`.b_modal#${hash}`);
