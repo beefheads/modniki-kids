@@ -21,12 +21,22 @@
   --button-border-color: var(--c-primary);
   --button-border-color-hover: var(--c-primary);
 }
+
 .button-second {
   --button-bg: var(--c-second);
   --button-bg-hover: var(--c-second);
   --button-color: var(--fg-on);
   --button-color-hover: var(--fg-on);
   --button-border-color: var(--c-second);
+  --button-border-color-hover: var(--c-second);
+}
+
+.button-third {
+  --button-bg: transparent;
+  --button-bg-hover: var(--c-second);
+  --button-color: #B4B4B4;
+  --button-color-hover: var(--fg-on);
+  --button-border-color: var(--c-border);
   --button-border-color-hover: var(--c-second);
 }
 
@@ -71,9 +81,14 @@
 }
 
 .button-stroke {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 9999px;
   padding: 1.5rem 1.5rem 1.7rem;
   border: 1px solid var(--button-border-color);
+  background-color: var(--button-bg, transparent);
+  color: var(--button-color, var(--fg-regular));
   transition: var(--tr-regular);
   text-align: center;
 
@@ -81,6 +96,7 @@
     padding: 0.9rem 1.5rem;
   }
 }
+
 .button-stroke:hover {
   @media (any-hover:hover) {
     background-color: var(--button-bg-hover);

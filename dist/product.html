@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230701140246" />
+    <title>Товар</title>
+    <link rel="stylesheet" href="./css/style.css?_v=20230702115144" />
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" />
@@ -53,7 +53,7 @@
         </ul>
       </nav>
       <div class="header__buttons">
-        <button class="button-ghost header__button-callback" data-b_modal-open="callback">
+        <button class="button-ghost header__button-callback" data-b_modal-open="modal-callback">
           Заказать звонок
         </button>
 
@@ -1159,6 +1159,7 @@
       </button>
     </div>
   </form>
+</div>
 
 <div id="modal-price-no-tel" class="b_modal modal modal--wide modal-price">
   <h3 class="modal__title">
@@ -1220,6 +1221,118 @@
       </button>
     </div>
   </form>
+</div>
+<div id="modal-callback" class="b_modal modal modal-login">
+  <h3 class="modal__title">
+    Оставьте свой <br>
+    номер телефона
+  </h3>
+  <p class="modal__desc">
+    И мы перезвоним в ближайшее время
+  </p>
+  <form action="/" id="form-callback" class="form js_form modal__form">
+    <div class="form__hidden">
+      <input type="text" name="page" hidden />
+      <input type="text" name="formname" hidden />
+      <input type="text" name="additional" hidden />
+      
+      <input type="hidden" name="utm_source" value="">
+      <input type="hidden" name="utm_medium" value="">
+      <input type="hidden" name="utm_campaign" value="">
+      <input type="hidden" name="utm_content" value="">
+      <input type="hidden" name="utm_term" value="">
+      <input type="hidden" name="referer" value="">
+      <input type="hidden" name="requestTime" value="">
+      <input type="hidden" name="requestSimpleSign" value="">
+    </div>
+    <div class="form__fields">
+      <fieldset class="form__row">
+        <label class="input input-tel form-control">
+  <svg class="input__icon">
+    <use xlink:href="./img/common/tel.svg#tel"></use>
+  </svg>
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  />
+</label>
+
+      </fieldset>
+      <button type="submit" class="button-primary button-filled modal__button">
+        Заказать звонок
+      </button>
+    </div>
+  </form>
+</div>
+
+<div id="modal-cooperation" class="b_modal modal modal--wide modal-price">
+  <h3 class="modal__title">
+    Для обсуждения <br>
+    сотрудничества
+  </h3>
+  <p class="modal__desc">
+    Оставьте свои контакты номер, чтобы <br>
+    мы могли отправить связаться с&nbsp;вами <br>
+    и&nbsp;обсудить подробности
+  </p>
+  <form action="/" id="form-callback" class="form js_form modal__form">
+    <div class="form__hidden">
+      <input type="text" name="page" hidden />
+      <input type="text" name="formname" hidden />
+      <input type="text" name="additional" hidden />
+
+      <input type="hidden" name="utm_source" value="">
+      <input type="hidden" name="utm_medium" value="">
+      <input type="hidden" name="utm_campaign" value="">
+      <input type="hidden" name="utm_content" value="">
+      <input type="hidden" name="utm_term" value="">
+      <input type="hidden" name="referer" value="">
+      <input type="hidden" name="requestTime" value="">
+      <input type="hidden" name="requestSimpleSign" value="">
+    </div>
+    <div class="form__fields">
+      <fieldset class="form__row">
+        <label class="input input-name form-control">
+  <svg class="input__icon">
+    <use xlink:href="./img/common/user.svg#user"></use>
+  </svg>
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Введите свое имя"
+    autocomplete="name"
+  />
+</label>
+
+        <label class="input input-tel form-control">
+  <svg class="input__icon">
+    <use xlink:href="./img/common/tel.svg#tel"></use>
+  </svg>
+  <input
+    class="input__field"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  />
+</label>
+
+      </fieldset>
+      <button type="submit" class="button-primary button-filled modal__button">
+        Заказать звонок
+      </button>
+    </div>
+  </form>
 
 <div id="modal-success" class="b_modal modal">
   <svg class="modal__icon">
@@ -1272,7 +1385,7 @@
   </div>
 </div> -->
 
-    <script src="./js/index.min.js?_v=20230701140246"></script>
-    <script src="./js/product.min.js?_v=20230701140246"></script>
+    <script src="./js/index.min.js?_v=20230702115144"></script>
+    <script src="./js/product.min.js?_v=20230702115144"></script>
   </body>
 </html>

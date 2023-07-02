@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Покупателям</a>
+            </li>
+            <li class="breadcrumbs__item">Контакты</li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main">
+
+        <h1 class="page-title section-title">Покупателям</h1>
+
+        <div class="nav-index">
+          <div class="container nav-index__container">
+            <div class="nav-index__shaft">
+              <div class="nav-index__lift">
+                <a href="#" class="button-stroke button-third nav-index__button">
+                  Сотрудничество
+                </a>
+                <a href="#" class="button-stroke button-third nav-index__button">
+                  Доставка и оплата
+                </a>
+                <span class="button-stroke button-third nav-index__button active">
+                  Таблица размеров
+                </span>
+                <a href="#" class="button-stroke button-third nav-index__button">
+                  Контакты и реквизиты
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="help">
+          <div class="container help__container">
+            <div class="help__content wysiwyg">
+              <div class="b_ymap help__map"
+                data-map-icon="/img/common/map-icon.png"
+                data-address="Санкт-Петербург"
+                id="office-1"></div>
+              <h2>Контакты и реквизиты — офис</h2>
+              <h3>Санкт-Петербург</h3>
+              <div class="help__contacts">
+                <div class="help__contact">
+                  <svg class="help__contact-icon">
+                    <use xlink:href="./img/common/contact-time.svg#contact-time" />
+                  </svg>
+                  <div class="help__contact-info">
+                    <h6 class="help__contact-title">
+                      Режим работы: 
+                    </h6>
+                    <p class="help__contact-value">
+                      Понедельник – Пятница <br>
+                      с 09:00 до 18:00
+                    </p>
+                  </div>
+                </div>
+                <div class="help__contact">
+                  <svg class="help__contact-icon">
+                    <use xlink:href="./img/common/contact-tel.svg#contact-tel" />
+                  </svg>
+                  <div class="help__contact-info">
+                    <h6 class="help__contact-title">
+                      Телефон: 
+                    </h6>
+                    <a class="help__contact-value" href="tel:+7 993-976-60-86">+7 993-976-60-86</a>
+                    <a class="help__contact-value" href="tel:+7 800-533-88-35">+7 800-533-88-35</a>
+                  </div>
+                </div>
+                <div class="help__contact">
+                  <svg class="help__contact-icon">
+                    <use xlink:href="./img/common/contact-email.svg#contact-email" />
+                  </svg>
+                  <div class="help__contact-info">
+                    <h6 class="help__contact-title">
+                      По вопросам сотрудничества:
+                    </h6>
+                    <a class="help__contact-value" href="mailto:shop@modniki-kids.ru">
+                      shop@modniki-kids.ru
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <button class="button-filled button-primary button__start-cooperation" data-b_modal-open="modal-cooperation">
+                Начать сотрудничество
+              </button>
+
+              <div class="b_ymap help__map"
+                data-address="Кыргызстан, г.Бишкек ул. Орозбекова 74"
+                data-map-icon="/img/common/map-icon.png"
+                id="factory-1"
+                ></div>
+              <h3>Адрес производства</h3>
+              <div class="help__contacts">
+                <div class="help__contact">
+                  <svg class="help__contact-icon">
+                    <use xlink:href="./img/common/contact-location.svg#contact-location" />
+                  </svg>
+                  <div class="help__contact-info">
+                    <h6 class="help__contact-value">
+                      Кыргызстан, г.Бишкек ул. Орозбекова 74 (пл.Ала-Тоо)
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="help-cta">
+          <div class="container help-cta__container">
+            <h3 class="section-subtitle">Оставьте заявку прямо сейчас</h3>
+            <p class="section-desc">
+              Мы свяжемся с вами и поможем сформировать выгодный заказ.
+            </p>
+            <button class="button-filled button-primary help-cta__cooperation" data-b_modal-open="modal-cooperation">
+              Начать сотрудничество
+            </button>
+          </div>
+        </div>
+
+      </main>
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=da3c5221-98a4-4fec-af53-00eb3b281803&_v=20230217195447"></script>
+    <script src="./js/index.min.js"></script>
+    <script src="./js/product.min.js"></script>
+  </body>
+</html>

@@ -36,6 +36,23 @@
   }
 }
 
+.page-title {
+  @media (min-width: $mobile-l + 1) {
+    margin-bottom: 5.3rem;
+  }
+}
+
+
+.section-subtitle {
+  color: #444;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: var(--ff-title);
+  font-weight: 500;
+  line-height: 120%;
+  margin-bottom: 1rem;
+}
+
 .section-desc {
   text-align: center;
   font-weight: 400;
@@ -59,6 +76,12 @@
 
   @media (max-width: $mobile-xl) {
     margin-top: -1.3rem;
+  }
+}
+
+.help-cta .section-desc {
+  @media (min-width: $mobile-xl + 1) {
+    margin-bottom: 3rem;
   }
 }
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Доставка и оплата</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Покупателям</a>
+            </li>
+            <li class="breadcrumbs__item">Таблица размеров</li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main">
+
+        <h1 class="page-title section-title">Покупателям</h1>
+
+        <div class="nav-index">
+          <div class="container nav-index__container">
+            <div class="nav-index__shaft">
+              <div class="nav-index__lift">
+                <a href="#" class="button-stroke button-third nav-index__button">
+                  Сотрудничество
+                </a>
+                <a href="#" class="button-stroke button-third nav-index__button">
+                  Доставка и оплата
+                </a>
+                <span class="button-stroke button-third nav-index__button active">
+                  Таблица размеров
+                </span>
+                <a href="#" class="button-stroke button-third nav-index__button">
+                  Контакты и реквизиты
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="help">
+          <div class="container help__container">
+            <div class="help__content wysiwyg">
+              <h2>Таблица размеров</h2>
+              <h3>Таблица типовых размеров для девочек школьного возраста.</h3>
+
+              <img src="./img/common/sizes.jpg" alt="Таблица размеров">
+
+              <h3>Как определить размер ребенка?</h3>
+              <p>
+                Детские размеры определяют по росту, обхвату груди и обхвату талии. Наши размеры соответствуют типовым фигурам девочек ГОСТ 25294-2003.
+              </p>
+              <p>
+                Чтобы определить размер ребенка, необходимо знать рост и померить сантиметровой лентой обхват груди. 
+              </p>
+              <p>
+                Ребенок должен стоять ровно и спокойно. Мерку ОГ разделите на 2, получите ваш размер.
+              </p>
+              <p>
+                 Например, ОГ=64см 64:2=32 – это 32 размер, или ОГ=72см 72:2=36 – это 36 размер. <br>
+                 Если попали в промежуточное значение, то рекомендуем сделать свой выбор в сторону большего размера. Желаем всегда отлично выглядеть!
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="help-cta">
+          <div class="container help-cta__container">
+            <h3 class="section-subtitle">Оставьте заявку прямо сейчас</h3>
+            <p class="section-desc">
+              Мы свяжемся с вами и поможем сформировать выгодный заказ.
+            </p>
+            <button class="button-filled button-primary help-cta__cooperation" data-b_modal-open="modal-cooperation">
+              Начать сотрудничество
+            </button>
+          </div>
+        </div>
+
+      </main>
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/index.min.js"></script>
+    <script src="./js/product.min.js"></script>
+  </body>
+</html>

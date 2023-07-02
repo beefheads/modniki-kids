@@ -24,7 +24,6 @@ import "./b_components/controls/stepper.js";
 
 import "./b_components/controls/b_tabs.js";
 
-
 /**
  * Timer
  */
@@ -40,6 +39,7 @@ import "./mdn_components/carousel.js";
 
 import "./mdn_sections/offer-carousel.js";
 
+import "./mdn_sections/help.js";
 
 /**
  * Dropdown Select

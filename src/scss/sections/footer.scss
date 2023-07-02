@@ -5,6 +5,7 @@
 	background: var(--bg-app);
 	color: var(--fg-primary);
 	font-family: var(--ff-title);
+	border-top: 0.1rem solid var(--c-border);
 
 	@media (max-width: $mobile-l) {
 		padding-top: 2.5rem;

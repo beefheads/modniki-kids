@@ -16,11 +16,20 @@
 		font-size: 1.4rem;
 	  // -webkit-mask-image: var(--mask);
 	  // mask: var(--mask);
+	  margin-left: 0;
 	}
 
 	@media (max-width: $mobile-xl) {
 		font-size: 1.2rem;
 	  margin-left: 0;
+	}
+}
+
+.breadcrumbs ~ .main {
+	margin-top: -2.8rem;
+
+	@media (max-width: $mobile-xl) {
+		margin-top: 0;
 	}
 }
 
