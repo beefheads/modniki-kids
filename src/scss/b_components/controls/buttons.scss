@@ -87,14 +87,18 @@
   border-radius: 9999px;
   padding: 1.5rem 1.5rem 1.7rem;
   border: 1px solid var(--button-border-color);
-  background-color: var(--button-bg, transparent);
-  color: var(--button-color, var(--fg-regular));
+  background-color: transparent;
+  color: var(--fg-regular);
   transition: var(--tr-regular);
   text-align: center;
 
   @media (max-width: $mobile-xl) {
     padding: 0.9rem 1.5rem;
   }
+}
+.button-third.button-stroke {
+  background-color: var(--button-bg, transparent);
+  color: var(--button-color, var(--fg-regular));
 }
 
 .button-stroke:hover {

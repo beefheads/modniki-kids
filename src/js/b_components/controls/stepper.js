@@ -95,4 +95,6 @@ const initStepper = (stepper) => {
 }
 window.initStepper = initStepper;
 
-steppers.forEach((stepper) => initStepper(stepper));
+window.addEventListener('DOMContentLoaded', (event) => {
+	steppers.forEach((stepper) => initStepper(stepper));
+});

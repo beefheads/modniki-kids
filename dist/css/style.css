@@ -2486,7 +2486,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   line-height: 120%;
   overflow: hidden;
   width: 100%;
-  --mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.25) 0.9rem, rgb(0, 0, 0) 1.8rem, rgb(0, 0, 0) calc(100% - 1.8rem), rgba(0, 0, 0, 0.25) calc(100% - 0.9rem), rgba(0, 0, 0, 0));
+  --mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.25) 0.5rem, rgb(0, 0, 0) 1.8rem, rgb(0, 0, 0) calc(100% - 1.8rem), rgba(0, 0, 0, 0.25) calc(100% - 0.9rem), rgba(0, 0, 0, 0));
   margin-left: -1.6rem;
   font-size: 1.4rem;
   z-index: 1;
@@ -2558,9 +2558,12 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   white-space: nowrap;
 }
 
+.breadcrumbs__item:first-child {
+  font-weight: 700;
+}
+
 .breadcrumbs__link {
   transition: var(--tr-regular);
-  font-weight: 700;
 }
 
 @media (any-hover: hover) {
@@ -2730,7 +2733,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 :root {
   --tr-jolly-enter: cubic-bezier(0.5, 0, 0.5, 1);
-  --tr-jolly-leave: cubic-bezier(0.4, 0, 0, 1);
+  --tr-jolly-leave: cubic-bezier(0.5, 0, 0.5, 1);
   --c-b_modal-closer-hover: #ff3b30;
   --z-b_modal: 1234567890;
   --bg-overlay: rgba(0, 0, 0, 0);
@@ -3119,8 +3122,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   border-radius: 9999px;
   padding: 1.5rem 1.5rem 1.7rem;
   border: 1px solid var(--button-border-color);
-  background-color: var(--button-bg, transparent);
-  color: var(--button-color, var(--fg-regular));
+  background-color: transparent;
+  color: var(--fg-regular);
   transition: var(--tr-regular);
   text-align: center;
 }
@@ -3128,6 +3131,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   .button-stroke {
     padding: 0.9rem 1.5rem;
   }
+}
+
+.button-third.button-stroke {
+  background-color: var(--button-bg, transparent);
+  color: var(--button-color, var(--fg-regular));
 }
 
 @media (any-hover: hover) {
@@ -3674,6 +3682,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   }
 }
 
+.carousel-slide {
+  height: 100%;
+}
+
 .contact-item {
   display: flex;
   align-items: center;
@@ -3735,6 +3747,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 @media (max-width: 601px) {
   .product-card {
     padding: 0.8rem 1rem 1rem;
+    border-radius: 1rem;
   }
 }
 
@@ -3783,7 +3796,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: bottom;
   border-radius: inherit;
   transition: var(--tr-regular);
@@ -3905,6 +3918,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .product-card__price-currency {
   font-family: -apple-system, var(--ff-regular);
   font-weight: 300;
+}
+
+.carousel-slide .product-card {
+  height: 100%;
 }
 
 .minicart {
@@ -4087,10 +4104,12 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   height: 100%;
   width: 100%;
   display: block;
+  border-radius: inherit;
 }
 
 .minicart-product__media-img {
   object-position: bottom;
+  object-fit: cover;
 }
 
 .minicart-product__info {
@@ -4135,7 +4154,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .nav-index {
   margin-bottom: 3.3rem;
-  --mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.25) 0.9rem, rgb(0, 0, 0) 1.8rem, rgb(0, 0, 0) calc(100% - 1.8rem), rgba(0, 0, 0, 0.25) calc(100% - 0.9rem), rgba(0, 0, 0, 0));
+  --mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.25) 0.5rem, rgb(0, 0, 0) 1.8rem, rgb(0, 0, 0) calc(100% - 1.8rem), rgba(0, 0, 0, 0.25) calc(100% - 0.9rem), rgba(0, 0, 0, 0));
 }
 @media (max-width: 601px) {
   .nav-index {
@@ -5189,6 +5208,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   width: 100%;
   height: 100%;
   display: block;
+  border-radius: inherit;
 }
 
 .features-card__img {
@@ -5196,6 +5216,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   height: 100%;
   display: block;
   object-fit: contain;
+  border-radius: inherit;
 }
 
 .features-card__desc {
@@ -5488,6 +5509,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   margin-bottom: 6rem;
   position: relative;
   z-index: 2;
+  counter-reset: ol;
 }
 @media (max-width: 601px) {
   .cooperation__gallery {
@@ -5499,6 +5521,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .cooperation-card {
   position: relative;
+  counter-increment: ol;
 }
 @media (max-width: 601px) {
   .cooperation-card {
@@ -5545,6 +5568,37 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 @media (max-width: 450px) {
   .cooperation-card__media {
     margin-bottom: 2rem;
+  }
+}
+
+.cooperation-card .cooperation-card__media::after {
+  content: counter(ol, decimal-leading-zero);
+  position: absolute;
+  bottom: -3rem;
+  left: 0;
+  right: 0;
+  color: var(--fg-on);
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 140%;
+  --size: 6.2rem;
+  max-width: var(--size);
+  min-width: var(--size);
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: var(--bg-primary);
+}
+@media (max-width: 601px) {
+  .cooperation-card .cooperation-card__media::after {
+    font-size: 2.4rem;
+    bottom: -1.6rem;
+    --size: 4rem;
   }
 }
 

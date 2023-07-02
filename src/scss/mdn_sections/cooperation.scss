@@ -20,6 +20,7 @@
 	margin-bottom: 6rem;
 	position: relative;
 	z-index: 2;
+	counter-reset: ol;
 
 	@media (max-width: $mobile-xl) {
 		grid-template-columns: 100%;
@@ -31,6 +32,7 @@
 
 .cooperation-card {
 	position: relative;
+	counter-increment: ol;
 
 	@media (max-width: $mobile-xl) {
 		text-align: center;
@@ -73,6 +75,36 @@
 
 	@media (max-width: $mobile-l) {
 		margin-bottom: 2rem;
+	}
+}
+
+.cooperation-card .cooperation-card__media::after {
+	content: counter(ol, decimal-leading-zero);
+	position: absolute;
+	bottom: -3rem;
+	left: 0;
+	right: 0;
+	color: var(--fg-on);
+	font-size: 3.6rem;
+	font-weight: 700;
+	line-height: 140%;
+	--size: 6.2rem;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	background: var(--bg-primary);
+
+	@media (max-width: $mobile-xl) {
+		font-size: 2.4rem;
+		bottom: -1.6rem;
+		--size: 4rem;
 	}
 }
 

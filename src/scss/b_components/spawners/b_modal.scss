@@ -2,10 +2,11 @@
   // --tr-enter-jolly: opacity 0.5s cubic-bezier(0.5, 0, 0.5, 1);
   // --tr-enter-jolly: all 0.5s cubic-bezier(0.4, 0, 0, 1);
   --tr-jolly-enter: cubic-bezier(0.5, 0, 0.5, 1);
-  --tr-jolly-leave: cubic-bezier(0.4, 0, 0, 1);
+  --tr-jolly-leave: cubic-bezier(0.5, 0, 0.5, 1);
+  
   --c-b_modal-closer-hover: #ff3b30;
   --z-b_modal: 1234567890;
-  // opacity 0.5s cubic-bezier(0.4, 0, 0, 1);
+
   --bg-overlay: rgba(0, 0, 0, 0);
   --bg-overlay-visible: rgba(0, 0, 0, 0.8);
 

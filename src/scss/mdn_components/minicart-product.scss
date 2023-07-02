@@ -26,10 +26,12 @@
 	height: 100%;
 	width: 100%;
 	display: block;
+	border-radius: inherit;
 }
 
 .minicart-product__media-img {
 	object-position: bottom;
+	object-fit: cover;
 }
 
 .minicart-product__info {
