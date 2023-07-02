@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка и оплата</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">Каталог</li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main">
+
+        <h1 class="page-title section-title">Каталог</h1>
+
+        <div class="runway nav-links">
+          <div class="container runway__container">
+            <div class="runway__shaft">
+              <div class="runway__lift">
+                <span class="button-stroke button-third runway__button active">
+                  Новинки
+                </span>
+                <a href="#" class="button-stroke button-third runway__button">
+                  Распродажа
+                </a>
+                <a href="#" class="button-stroke button-third runway__button">
+                  Младшая школа
+                </a>
+                <a href="#" class="button-stroke button-third runway__button">
+                  Креативный подросток
+                </a>
+                <a href="#" class="button-stroke button-third runway__button">
+                  Подростки
+                </a>
+                <a href="#" class="button-stroke button-third runway__button">
+                  Не белые блузки
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section catalog">
+          <div class="container catalog__container">
+            <h2 class="section-title catalog__title">Новинки</h2>
+            <div class="catalog__gallery">
+              @@for (var i = 0; i < 12; i++) {
+                @@include('tpls/mdn/product-card.html',{})
+              }
+            </div>
+            <ul class="pagination">
+              <li><a href="#"><</a></li>
+              <li class="active">
+                <span>1</span>
+              </li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">></a></li>
+            </ul>
+          </div>
+        </section>
+
+      </main>
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/index.min.js"></script>
+    <script src="./js/product.min.js"></script>
+  </body>
+</html>

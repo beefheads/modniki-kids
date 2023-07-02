@@ -20,6 +20,10 @@
 	}
 }
 
+.page-title + .categories-showcase .categories-showcase__container {
+	padding-top: 0;
+}
+
 .categories-showcase:last-of-type .categories-showcase__container {
 	border-bottom: none;
 }
