@@ -11,6 +11,7 @@
   --button-bg: var(--c-primary);
   --button-color: var(--fg-on);
   --button-border-color: var(--c-primary);
+  font-weight: 700;
 }
 
 .nav-index__shaft {
@@ -26,13 +27,15 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: -2px;
+	flex-wrap: wrap;
+	margin-bottom: 0;
 	overflow-x: auto;
 	padding-left: var(--p-container);
 
 	@media (max-width: $mobile-xl) {
 		justify-content: flex-start;
 		margin-bottom: -2rem;
+		flex-wrap: nowrap;
 	}
 }
 .nav-index__lift::after {
@@ -45,6 +48,7 @@
 .nav-index__button {
 	flex-basis: 100%;
 	margin-right: 2.1rem;
+	font-size: 1.6rem;
 
 	@media (max-width: $laptop) {
 		flex-basis: initial;
@@ -53,6 +57,7 @@
 
 	@media (max-width: $mobile-xl) {
 		margin-bottom: 2rem;
+		font-size: 1.4rem;
 		white-space: nowrap;
 	}
 }

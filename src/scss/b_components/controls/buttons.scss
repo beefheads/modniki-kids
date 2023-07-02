@@ -116,7 +116,7 @@
   --button-bg-hover: var(--c-second);
   --button-color-hover: var(--fg-on);
 
-  background-position: center;
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -127,10 +127,25 @@
   cursor: pointer;
   border-radius: 9999px;
   color: var(--button-color);
+  transition: var(--tr-regular);
+}
+
+.button-ghost::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   background-color: var(--button-bg, transparent);
   background-image: url("../img/common/draw-button.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   transition: var(--tr-regular);
 }
 
@@ -138,6 +153,11 @@
   @media (any-hover:hover) {
     background-color: var(--button-bg-hover);
     color: var(--button-color-hover)
+  }
+}
+.button-ghost:hover::after {
+  @media (any-hover:hover) {
+    opacity: 0;
   }
 }
 

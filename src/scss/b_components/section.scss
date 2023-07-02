@@ -15,6 +15,17 @@
   }
 }
 
+.section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4.7rem;
+
+  @media (max-width: $mobile-xl) {
+    margin-bottom: 2rem;
+  }
+}
+
 .section-title {
   font-family: var(--ff-title);
   font-size: 5rem;
@@ -27,6 +38,17 @@
   @media (max-width: $mobile-l) {
     font-size: 2.5rem;
     margin-bottom: 2.1rem;
+  }
+}
+
+.section__head .section-title {
+  margin-bottom: 0;
+  font-size: 4rem;
+  text-align: left;
+  color: #5B5B5B;
+
+  @media (max-width: $mobile-xl) {
+    font-size: 1.8rem;
   }
 }
 

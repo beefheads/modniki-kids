@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка и оплата</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">Каталог</li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main">
+
+        <h1 class="page-title section-title">Каталог</h1>
+
+        <div class="nav-index">
+          <div class="container nav-index__container">
+            <div class="nav-index__shaft">
+              <div class="nav-index__lift">
+                <span class="button-stroke button-third nav-index__button active">
+                  Новинки
+                </span>
+                <a href="#" class="button-stroke button-third nav-index__button">
+                  Распродажа
+                </a>
+                <a href="#" class="button-stroke button-third nav-index__button">
+                  Младшая школа
+                </a>
+                <a href="#" class="button-stroke button-third nav-index__button">
+                  Креативный подросток
+                </a>
+                <a href="#" class="button-stroke button-third nav-index__button">
+                  Подростки
+                </a>
+                <a href="#" class="button-stroke button-third nav-index__button">
+                  Не белые блузки
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section categories-showcase">
+          <div class="container categories-showcase__container">
+            <div class="categories-showcase__head section__head">
+              <div class="section__head-primary">
+                <h2 class="section-title categories-showcase__title">
+                  Новинки
+                </h2>
+              </div>
+              <div class="section__head-second">
+                <a class="button-ghost categories-showcase__button" href="#">
+                  Смотреть категорию
+                </a>
+              </div> 
+            </div>
+            <div class="categories-showcase__gallery runway">
+              <div class="runway__shaft">
+                <div class="runway__lift">
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section categories-showcase">
+          <div class="container categories-showcase__container">
+            <div class="categories-showcase__head section__head">
+              <div class="section__head-primary">
+                <h2 class="section-title categories-showcase__title">
+                  Распродажа
+                </h2>
+              </div>
+              <div class="section__head-second">
+                <a class="button-ghost categories-showcase__button" href="#">
+                  Смотреть категорию
+                </a>
+              </div> 
+            </div>
+            <div class="categories-showcase__gallery runway">
+              <div class="runway__shaft">
+                <div class="runway__lift">
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section categories-showcase">
+          <div class="container categories-showcase__container">
+            <div class="categories-showcase__head section__head">
+              <div class="section__head-primary">
+                <h2 class="section-title categories-showcase__title">
+                  Младшая школа
+                </h2>
+              </div>
+              <div class="section__head-second">
+                <a class="button-ghost categories-showcase__button" href="#">
+                  Смотреть категорию
+                </a>
+              </div> 
+            </div>
+            <div class="categories-showcase__gallery runway">
+              <div class="runway__shaft">
+                <div class="runway__lift">
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section categories-showcase">
+          <div class="container categories-showcase__container">
+            <div class="categories-showcase__head section__head">
+              <div class="section__head-primary">
+                <h2 class="section-title categories-showcase__title">
+                  Подростки
+                </h2>
+              </div>
+              <div class="section__head-second">
+                <a class="button-ghost categories-showcase__button" href="#">
+                  Смотреть категорию
+                </a>
+              </div> 
+            </div>
+            <div class="categories-showcase__gallery runway">
+              <div class="runway__shaft">
+                <div class="runway__lift">
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                </div>
+              </div> 
+            </div>
+          </div>
+        </section>
+
+        <section class="section categories-showcase">
+          <div class="container categories-showcase__container">
+            <div class="categories-showcase__head section__head">
+              <div class="section__head-primary">
+                <h2 class="section-title categories-showcase__title">
+                  Креативный подросток
+                </h2>
+              </div>
+              <div class="section__head-second">
+                <a class="button-ghost categories-showcase__button" href="#">
+                  Смотреть категорию
+                </a>
+              </div> 
+            </div>
+            <div class="categories-showcase__gallery runway">
+              <div class="runway__shaft">
+                <div class="runway__lift">
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                </div>
+              </div> 
+            </div>
+          </div>
+        </section>
+
+        <section class="section categories-showcase">
+          <div class="container categories-showcase__container">
+            <div class="categories-showcase__head section__head">
+              <div class="section__head-primary">
+                <h2 class="section-title categories-showcase__title">
+                  Не белые блузки
+                </h2>
+              </div>
+              <div class="section__head-second">
+                <a class="button-ghost categories-showcase__button" href="#">
+                  Смотреть категорию
+                </a>
+              </div> 
+            </div>
+            <div class="categories-showcase__gallery runway">
+              <div class="runway__shaft">
+                <div class="runway__lift">
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                  @@include('tpls/mdn/product-card.html',{})
+                </div>
+              </div> 
+            </div>
+          </div>
+        </section>
+
+
+      </main>
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/index.min.js"></script>
+    <script src="./js/product.min.js"></script>
+  </body>
+</html>
