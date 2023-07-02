@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сотрудичество</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230702115144" />
+    <link rel="stylesheet" href="./css/style.css?_v=20230702150637" />
 
     <!-- Отключить автодетект телефонов -->
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="telephone=no">
 
-    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
-    <meta http-equiv="Cache-Control" content="no-cache" />
-    <meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" />
   </head>
   <body>
     <div class="wrapper">
@@ -83,7 +80,7 @@
           </svg>
         </button>
         <div class="search header-shoppers__dropdown">
-          <form action="" class="search__row">
+          <form action="/" class="search__row">
             <label class="search__input">
               <input type="text" name="s" class="search__field" placeholder="Что ищете?">
             </label>
@@ -267,7 +264,7 @@
       <footer class="footer">
   <div class="container footer__container">
     <a href="#" class="footer__logo logo">
-      <img src="./img/common/logo-footer.svg" alt="" class="logo__img" />
+      <img src="./img/common/logo-footer.svg" alt="" class="logo__img">
     </a>
     <div class="footer__about">
       <p class="footer__about-row">
@@ -470,11 +467,11 @@
     мы могли открыть вам цены на продукцию <br>
     и возможность заказать её онлайн
   </p>
-  <form action="/" id="form-callback" class="form js_form modal__form">
+  <form action="/" id="form-login" class="form js_form modal__form">
     <div class="form__hidden">
-      <input type="text" name="page" hidden />
-      <input type="text" name="formname" hidden />
-      <input type="text" name="additional" hidden />
+      <input type="text" name="page" hidden>
+      <input type="text" name="formname" hidden>
+      <input type="text" name="additional" hidden>
       
       <input type="hidden" name="utm_source" value="">
       <input type="hidden" name="utm_medium" value="">
@@ -500,7 +497,7 @@
     maxlength="25"
     minlength="10"
     autocomplete="tel"
-  />
+  >
 </label>
 
       </fieldset>
@@ -521,11 +518,11 @@
     мы могли отправить вам каталог с ценами <br>
     и проконсультировать по продукции
   </p>
-  <form action="/" id="form-callback" class="form js_form modal__form">
+  <form action="/" id="form-price" class="form js_form modal__form">
     <div class="form__hidden">
-      <input type="text" name="page" hidden />
-      <input type="text" name="formname" hidden />
-      <input type="text" name="additional" hidden />
+      <input type="text" name="page" hidden>
+      <input type="text" name="formname" hidden>
+      <input type="text" name="additional" hidden>
 
       <input type="hidden" name="utm_source" value="">
       <input type="hidden" name="utm_medium" value="">
@@ -548,7 +545,7 @@
     type="text"
     placeholder="Введите свое имя"
     autocomplete="name"
-  />
+  >
 </label>
 
         <label class="input input-tel form-control">
@@ -564,7 +561,7 @@
     maxlength="25"
     minlength="10"
     autocomplete="tel"
-  />
+  >
 </label>
 
         <label class="input input-email form-control">
@@ -576,9 +573,8 @@
     name="user_email"
     type="email"
     placeholder="Ваша почта"
-    autocorrect="off"
     autocomplete="email"
-  />
+  >
 </label>
 
       </fieldset>
@@ -599,11 +595,11 @@
     мы могли отправить вам каталог с ценами <br>
     и проконсультировать по продукции
   </p>
-  <form action="/" id="form-callback" class="form js_form modal__form">
+  <form action="/" id="form-price-2" class="form js_form modal__form">
     <div class="form__hidden">
-      <input type="text" name="page" hidden />
-      <input type="text" name="formname" hidden />
-      <input type="text" name="additional" hidden />
+      <input type="text" name="page" hidden>
+      <input type="text" name="formname" hidden>
+      <input type="text" name="additional" hidden>
 
       <input type="hidden" name="utm_source" value="">
       <input type="hidden" name="utm_medium" value="">
@@ -626,7 +622,7 @@
     type="text"
     placeholder="Введите свое имя"
     autocomplete="name"
-  />
+  >
 </label>
 
         <label class="input input-email form-control">
@@ -638,9 +634,8 @@
     name="user_email"
     type="email"
     placeholder="Ваша почта"
-    autocorrect="off"
     autocomplete="email"
-  />
+  >
 </label>
 
       </fieldset>
@@ -650,7 +645,7 @@
     </div>
   </form>
 </div>
-<div id="modal-callback" class="b_modal modal modal-login">
+<div id="modal-callback" class="b_modal modal modal-callback">
   <h3 class="modal__title">
     Оставьте свой <br>
     номер телефона
@@ -660,9 +655,9 @@
   </p>
   <form action="/" id="form-callback" class="form js_form modal__form">
     <div class="form__hidden">
-      <input type="text" name="page" hidden />
-      <input type="text" name="formname" hidden />
-      <input type="text" name="additional" hidden />
+      <input type="text" name="page" hidden>
+      <input type="text" name="formname" hidden>
+      <input type="text" name="additional" hidden>
       
       <input type="hidden" name="utm_source" value="">
       <input type="hidden" name="utm_medium" value="">
@@ -688,7 +683,7 @@
     maxlength="25"
     minlength="10"
     autocomplete="tel"
-  />
+  >
 </label>
 
       </fieldset>
@@ -711,9 +706,9 @@
   </p>
   <form action="/" id="form-callback" class="form js_form modal__form">
     <div class="form__hidden">
-      <input type="text" name="page" hidden />
-      <input type="text" name="formname" hidden />
-      <input type="text" name="additional" hidden />
+      <input type="text" name="page" hidden>
+      <input type="text" name="formname" hidden>
+      <input type="text" name="additional" hidden>
 
       <input type="hidden" name="utm_source" value="">
       <input type="hidden" name="utm_medium" value="">
@@ -736,7 +731,7 @@
     type="text"
     placeholder="Введите свое имя"
     autocomplete="name"
-  />
+  >
 </label>
 
         <label class="input input-tel form-control">
@@ -752,7 +747,7 @@
     maxlength="25"
     minlength="10"
     autocomplete="tel"
-  />
+  >
 </label>
 
       </fieldset>
@@ -761,7 +756,7 @@
       </button>
     </div>
   </form>
-
+</div>
 <div id="modal-success" class="b_modal modal">
   <svg class="modal__icon">
     <use xlink:href="./img/common/status-ok.svg#ok" />
@@ -797,23 +792,7 @@
 </div>
 
 
-<!-- <div class="snack" id="snack-cookies">
-  <div class="container gtc-2 snack__container">
-    <div class="snack__info">
-      <span class="snack__hl">Our Site Uses Cookies</span>
-      By clicking Agree, you agree to our
-      <a href="#" class="link link--inline">terms of service</a>,
-      <a href="#" class="link link--inline">privacy policy</a>
-      and
-      <a href="#" class="link link--inline">cookies policy</a>
-    </div>
-    <div class="snack__buttons flex">
-      <button class="snack__button button button--primary">Agree</button>
-    </div>
-  </div>
-</div> -->
-
-    <script src="./js/index.min.js?_v=20230702115144"></script>
-    <script src="./js/product.min.js?_v=20230702115144"></script>
+    <script src="./js/index.min.js?_v=20230702150637"></script>
+    <script src="./js/product.min.js?_v=20230702150637"></script>
   </body>
 </html>
