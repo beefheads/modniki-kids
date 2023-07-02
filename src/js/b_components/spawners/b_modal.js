@@ -203,6 +203,8 @@ class b_modal {
     const event = new Event("b_modal-close");
     pop.dispatchEvent(event);
     pop.querySelector(".b_modal").dispatchEvent(event);
+
+    if (document.querySelector.classList.contains('header--opened')) return;
     bodyLock(false);
   }
 

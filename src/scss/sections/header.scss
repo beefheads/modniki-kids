@@ -11,7 +11,7 @@
   transition: var(--tr-regular);
 }
 
-.header--hidden {
+body:not(._lock) .header--hidden {
   transform: translateY(-100%);
 }
 
@@ -73,6 +73,7 @@
 .header--opened .header__menu {
   transform: translateY(0);
 }
+
 .header__nav {
   margin-right: auto;
 

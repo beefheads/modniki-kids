@@ -6,7 +6,7 @@ function disableDefaultInvalid() {
 	  (function (e) {
 	    return function (e) {
 	      e.preventDefault();
-	      const input = e.target.closest('.form-control');
+	      const input = e.target.closest('.js_form__control');
 	      setInputInvalid(input);
 
         if (e.target.form.querySelector('.is-invalid') == undefined) return
@@ -19,7 +19,7 @@ function disableDefaultInvalid() {
 disableDefaultInvalid();
 
 export function setInputInvalid(input) {
-  input = input.classList.contains('iti') ? input.parentElement : input;
+  if (input.classList.contains('iti')) input = input.parentElement
 
   input.classList.add("is-invalid");
   const field = input.querySelector('[required]');
@@ -67,7 +67,6 @@ export function changeErrorText(input) {
 
 export function validateInput(input) {
   // return
-  console.log(input)
   const field = input.querySelector("[required]");
   if (field == null) return;
 
@@ -93,11 +92,13 @@ export function validateInputLength(input) {
 export function validatePhone(input) {
   // return
   const field = input.querySelector("[required]");
-  let regex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
-  if (!regex.test(field.value)) {
-    return setInputInvalid(input);
-  } else {
+  // let regex = /^(\+7|8)\s?\(?[489][0-9]{2}\)?\s?[0-9]{3}[-\s]?[0-9]{2}[-\s]?[0-9]{2}$/;
+  let regex = /^\+7\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/;
+  console.log(regex.test(field.value))
+  if (regex.test(field.value)) {
     return setInputValid(input);
+  } else {
+    return setInputInvalid(input);
   }
 }
 

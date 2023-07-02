@@ -5,6 +5,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		return window.location.origin + map.dataset.mapIcon
 	}
 
+	if (typeof ymaps == 'undefined') return;
+
 	ymaps.ready(() => {
 
 		const maps = document.querySelectorAll('.b_ymap');

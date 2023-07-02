@@ -1,5 +1,5 @@
 .input {
-  --text-color: var(--fg-regular);
+  --fg-color: var(--fg-regular);
   --border-color: var(--bg-second);
   --input-bg: var(--bg-second);
   --fz: 1.8rem;
@@ -34,7 +34,7 @@
   transition: all 0.3s ease;
   padding: var(--input-padding);
 
-  color: var(--text-color);
+  color: var(--fg-color);
   border-radius: inherit;
   background-color: inherit;
 }
@@ -42,19 +42,17 @@
 .input__field::placeholder {
   color: #cacbcf;
 }
+.is-invalid .input__field::placeholder {
+  color: #FF3B30 !important;
+}
 
 .input:last-of-type {
   margin-bottom: 0;
 }
 
-.input--invalid {
+.is-invalid {
   --border-color: #FF3B30 !important;
-  // --label-color: var(--c-error);
-  // --message-transform: scale(1);
-  // --message-color: var(--c-error);
-  // --message-offset: 9px;
-  // --border-color: var(--c-error);
-  // --error-icon-transform: scale(1);
+  --fg-color: #FF3B30 !important;
 }
 
 

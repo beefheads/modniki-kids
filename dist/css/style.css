@@ -3225,6 +3225,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   }
 }
 
+.button--disabled,
 .button--wait {
   opacity: 0.5;
   pointer-events: none;
@@ -3440,7 +3441,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 */
 .input {
-  --text-color: var(--fg-regular);
+  --fg-color: var(--fg-regular);
   --border-color: var(--bg-second);
   --input-bg: var(--bg-second);
   --fz: 1.8rem;
@@ -3476,7 +3477,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   line-height: var(--lh);
   transition: all 0.3s ease;
   padding: var(--input-padding);
-  color: var(--text-color);
+  color: var(--fg-color);
   border-radius: inherit;
   background-color: inherit;
 }
@@ -3485,12 +3486,17 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   color: #cacbcf;
 }
 
+.is-invalid .input__field::placeholder {
+  color: #FF3B30 !important;
+}
+
 .input:last-of-type {
   margin-bottom: 0;
 }
 
-.input--invalid {
+.is-invalid {
   --border-color: #FF3B30 !important;
+  --fg-color: #FF3B30 !important;
 }
 
 .input__icon {
@@ -4373,7 +4379,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   transition: var(--tr-regular);
 }
 
-.header--hidden {
+body:not(._lock) .header--hidden {
   transform: translateY(-100%);
 }
 

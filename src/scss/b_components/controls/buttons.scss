@@ -75,6 +75,8 @@
     box-shadow: inset 10.4463px 11.9387px 11.9387px rgba(255, 255, 255, 0.16), inset -7.46167px -2.98467px 11.9387px rgba(255, 255, 255, 0.12);
   }
 }
+
+.button--disabled,
 .button--wait {
   opacity: 0.5;
   pointer-events: none;
