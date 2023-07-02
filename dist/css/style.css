@@ -2731,6 +2731,47 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   margin-bottom: 3rem;
 }
 
+.runway {
+  margin-bottom: 3.3rem;
+  --mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.25) 0.5rem, rgb(0, 0, 0) 1.8rem, rgb(0, 0, 0) calc(100% - 1.8rem), rgba(0, 0, 0, 0.25) calc(100% - 0.9rem), rgba(0, 0, 0, 0));
+}
+@media (max-width: 601px) {
+  .runway {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 601px) {
+  .runway__shaft {
+    margin-left: calc(0px - var(--p-container));
+    margin-right: calc(0px - var(--p-container));
+    -webkit-mask-image: var(--mask);
+    mask: var(--mask);
+  }
+}
+
+.runway__lift {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -2px;
+  overflow-x: auto;
+  padding-left: var(--p-container);
+}
+@media (max-width: 601px) {
+  .runway__lift {
+    justify-content: flex-start;
+    margin-bottom: -2rem;
+  }
+}
+
+.runway__lift::after {
+  content: "";
+  display: block;
+  min-width: var(--p-container);
+  height: 1rem;
+}
+
 :root {
   --tr-jolly-enter: cubic-bezier(0.5, 0, 0.5, 1);
   --tr-jolly-leave: cubic-bezier(0.5, 0, 0.5, 1);
@@ -3152,6 +3193,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   --button-color: var(--c-second--dark);
   --button-bg-hover: var(--c-second);
   --button-color-hover: var(--fg-on);
+  background-position: center;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -7741,6 +7783,14 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .help__map > * {
   height: 100% !important;
+}
+
+@media (min-width: 602px) {
+  .categories-showcase__gallery {
+    display: grid;
+    grid-template-columns: repeat(37rem, 1fr);
+    gap: 3rem;
+  }
 }
 
 .is-hidden {
