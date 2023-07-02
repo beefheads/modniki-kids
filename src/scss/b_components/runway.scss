@@ -3,15 +3,17 @@
 	--mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.25) 0.5rem, rgb(0, 0, 0) 1.8rem, rgb(0, 0, 0) calc(100% - 1.8rem), rgba(0, 0, 0, 0.25) calc(100% - 0.9rem), rgba(0, 0, 0, 0));
 	// margin-bottom: 0rem;
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $tablet) {
 		overflow: hidden;
 		margin-left: #{'calc(0px - var(--p-container))'};
-		margin-right: #{'calc(0px - var(--p-container))'};
+	}
+	@media (max-width: $mobile-xl) {
+		// margin-right: #{'calc(0px - var(--p-container))'};
 	}
 }
 
 .runway__shaft {
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $tablet) {
 	  -webkit-mask-image: var(--mask);
 	  mask: var(--mask);
 	}
@@ -24,7 +26,7 @@
 	margin-bottom: -2rem;
 	padding-left: var(--p-container);
 
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $tablet) {
 		justify-content: flex-start;
 		overflow-x: auto;
 		margin-bottom: -2rem;
@@ -32,7 +34,7 @@
 }
 
 .categories-showcase__gallery .runway__lift {
-	@media (min-width: $mobile-xl + 1) {
+	@media (min-width: $tablet + 1) {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
 		gap: 3rem;
@@ -48,15 +50,42 @@
 }
 
 .categories-showcase__gallery .runway__lift::after {
-	@media (min-width: $mobile-xl + 1) {
+	@media (min-width: $tablet + 1) {
 		display: none;
 	}
 }
 
 .runway__lift > * {
-	@media (max-width: $mobile-xl) {
+	@media (max-width: $tablet) {
 		margin-right: 1.6rem;
 	  margin-bottom: 2rem;
 	}
 }
 
+.runway__button {
+	flex-basis: 100%;
+	margin-right: 2.1rem;
+	font-size: 1.6rem;
+
+	@media (max-width: $laptop) {
+		flex-basis: initial;
+		margin-right: 1rem;
+	}
+
+	@media (max-width: $tablet) {
+		margin-bottom: 2rem;
+		font-size: 1.4rem;
+		white-space: nowrap;
+	}
+}
+
+.runway__button:last-child {
+	margin-right: 0;
+}
+
+.runway__button.active {
+  --button-bg: var(--c-primary);
+  --button-color: var(--fg-on);
+  --button-border-color: var(--c-primary);
+  font-weight: 700;
+}

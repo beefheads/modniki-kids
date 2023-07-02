@@ -1,4 +1,8 @@
 .help {
+	padding-top: 3rem;
+	@media (max-width: $mobile-xl) {
+		padding-top: 0;
+	}
 }
 
 .help__content {

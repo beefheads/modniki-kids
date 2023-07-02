@@ -31,7 +31,7 @@
   --button-border-color-hover: var(--c-second);
 }
 
-.button-third {
+.button-third:not(span) {
   --button-bg: transparent;
   --button-bg-hover: var(--c-second);
   --button-color: #B4B4B4;
