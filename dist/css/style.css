@@ -5384,6 +5384,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   margin-right: 1.9rem;
   border: 0.1rem solid var(--c-border);
   border-radius: 2rem;
+  display: block;
 }
 @media (max-width: 601px) {
   .minicart-product__media {
@@ -5410,6 +5411,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .minicart-product__title {
+  position: relative;
   color: #444;
   font-size: 2rem;
   font-family: var(--ff-title);
@@ -5421,6 +5423,37 @@ body:not(.is-using-mouse) .fancybox__container :focus {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
   }
+}
+
+.minicart-product__link {
+  color: inherit;
+  transition: var(--tr-regular);
+}
+
+@media (any-hover: hover) {
+  .minicart-product__link:hover {
+    color: var(--c-second);
+  }
+}
+
+.minicart-product__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.minicart-product__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .minicart-product__price {
@@ -5435,6 +5468,11 @@ body:not(.is-using-mouse) .fancybox__container :focus {
     font-size: 1.3rem;
     margin-bottom: 0.9rem;
   }
+}
+
+.minicart-product__price-currency {
+  font-family: -apple-system, var(--ff-regular);
+  font-weight: 300;
 }
 
 .minicart-product__button-remove {
