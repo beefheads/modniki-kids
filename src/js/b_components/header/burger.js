@@ -15,12 +15,14 @@ export function openBurger() {
 
   stickyHeader.style.transform = '';
 }
+window.openBurger = openBurger
 
 export function closeBurger() {
   header.classList.remove(HEADER_OPENED_CLASS);
   burger.classList.remove(BURGER_OPENED)
   bodyLock(false);
 }
+window.closeBurger = closeBurger
 
 if (header && burger) {
   burger.addEventListener("click", () => {

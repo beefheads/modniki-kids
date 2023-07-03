@@ -1,4 +1,5 @@
 .header {
+  --tr-jolly-enter: cubic-bezier(0.5, 0, 0.5, 1);
   position: sticky;
   top: 0;
   left: 0;
@@ -8,7 +9,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: var(--bg-app);
-  transition: var(--tr-regular);
+  transition: all 0.4s var(--tr-jolly-enter);
 }
 
 body:not(._lock) .header--hidden {
@@ -48,7 +49,7 @@ body:not(._lock) .header--hidden {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  transition: var(--tr-regular);
+  transition: all 0.5s var(--tr-jolly-enter);
 
   @media (max-width: $w-burger) {
     position: fixed;
@@ -216,7 +217,7 @@ body:not(._lock) .header--hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition: var(--tr-regular);
+  transition: all 0.4s var(--tr-jolly-enter);
   position: absolute;
   top: 140%;
   right: 0;
@@ -298,7 +299,7 @@ body:not(._lock) .header--hidden {
   pointer-events: none;
   opacity: 0;
   transform: translateY(2rem);
-  transition: all 0.3s ease;
+  transition: all 0.4s var(--tr-jolly-enter);
 
   @media (max-width: $w-burger) {
     pointer-events: initial;

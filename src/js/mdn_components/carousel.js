@@ -6,8 +6,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	let carouselSwiper = new Swiper(".carousel-swiper", {
 	  modules: [Navigation, Pagination, EffectFade],
+	  speed: 350,
 		autoHeight: true,
 		spaceBetween: 20,
+		slidesPerGroup: 2,
 		slidesPerView: 2,
 	  pagination: {
 	    el: ".carousel-pagination",
@@ -21,6 +23,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	  	1100: {
 	  		slidesPerView: 3,
 				spaceBetween: 30,
+				allowTouchMove: false,
 	  	}
 	  }
 	});

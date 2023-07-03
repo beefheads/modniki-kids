@@ -97,14 +97,13 @@
 		margin-bottom: 0;
 	}
 
-	a[class=""] {
+	a {
 		color: var(--accent);
 		text-decoration: underline;
-	}
-	a {
 		transition: var(--tr-regular);
 	}
-	a[class=""]:hover {
+
+	a:hover {
 		@media (any-hover:hover) {
 			color: var(--c-second);
 		}
@@ -134,7 +133,7 @@
 	ol > li::before {
 		content: counter(ol)".";
 		position: absolute;
-		margin-left: #{'calc(0px - var(--list-gap))'};
+		left: #{'calc(0px - var(--list-gap))'};
 		font-weight: 700;
 	}
 
@@ -154,4 +153,61 @@
 	img {
 		margin-bottom: 3rem;
 	}
+}
+
+.wysiwyg-2 {
+	ol ul li {
+		list-style: none;
+		position: relative;
+	}
+	li {
+		list-style: none;
+		position: relative;
+		margin-bottom: 1rem;
+	}
+
+	ol > li::before {
+		--size: 2.5rem;
+		content: counter(ol);
+		color: var(--c-primary);
+		background-color: var(--bg-primary);
+		// left: #{'calc(0px - 1.2 * var(--list-gap))'};
+		max-width: var(--size);
+		min-width: var(--size);
+		width: var(--size);
+		height: var(--size);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 999px;
+		@media (max-width: $mobile-xl) {
+			--size: 2rem;
+			left: #{'calc(0px - 1.2 * var(--list-gap))'};
+		}
+	}
+
+	ol ul li::before,
+	ul li::before {
+		content: "";
+    top: 0.7rem;
+    left: -2.4rem;
+		position: absolute;
+		display: block;
+		--size: 1.6rem;
+		max-width: var(--size);
+		min-width: var(--size);
+		width: var(--size);
+		height: var(--size);
+		background-image: url("../img/common/heart-list.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+
+		@media (max-width: $mobile-xl) {
+			top: 0.45rem;
+			left: -2rem;
+			--size: 1.2rem;
+		}
+	}
+
 }

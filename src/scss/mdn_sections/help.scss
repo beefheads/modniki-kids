@@ -87,6 +87,7 @@
 	font-family: var(--ff-title);
 }
 
+.wysiwyg .help__contact-value:hover,
 a.help__contact-value:hover {
 	@media (any-hover:hover) {
 		color: var(--c-primary);

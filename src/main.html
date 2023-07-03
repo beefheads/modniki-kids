@@ -100,7 +100,7 @@
         <div class="section features">
           <div class="container features__container">
             <div class="features__gallery">
-              <div class="features-card">
+              <div class="features-card" data-aos="fade-up">
                 <div class="features-card__media">
                   <picture class="features-card__pic">
                     <img src="./img/features/cart-support.png" alt="Помощь и поддержка от выбора до отгрузки " class="features-card__img">
@@ -110,7 +110,7 @@
                   Помощь и поддержка <br> от&nbsp;выбора до отгрузки
                 </p>
               </div>
-              <div class="features-card">
+              <div class="features-card" data-aos="fade-up" data-aos-delay="50">
                 <div class="features-card__media">
                   <picture class="features-card__pic">
                     <img src="./img/features/wallet.png" alt="Заказ от 3500 рублей " class="features-card__img">
@@ -118,7 +118,7 @@
                 </div>
                 <p class="features-card__desc">Заказ от 3500 рублей </p>
               </div>
-              <div class="features-card">
+              <div class="features-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="features-card__media">
                   <picture class="features-card__pic">
                     <img src="./img/features/articuls.png" alt="Более 100 артикулов доступных к заказу " class="features-card__img">
@@ -132,11 +132,11 @@
 
         <section class="section why-we">
           <div class="container why-we__container">
-            <h2 class="section-title why-we__title">
+            <h2 class="section-title why-we__title" data-aos="fade-up">
               Почему <br> именно мы
             </h2>
             <div class="why-we__gallery">
-              <div class="why-we-card">
+              <div class="why-we-card" data-aos="fade-up">
                 <div class="why-we-card__media">
                   <picture class="why-we-card__pic">
                     <img class="why-we-card__img" src="./img/why-we/law.png" alt="">
@@ -147,10 +147,10 @@
                   Оформляем поставки по договору. Спецификации и&nbsp;сертификаты соответствия предоставим <br> по&nbsp;запросу.
                 </p>
               </div>
-              <div class="why-we-card">
+              <div class="why-we-card" data-aos="fade-up" data-aos-delay="50">
                 <div class="why-we-card__media">
                   <picture class="why-we-card__pic">
-                    <img class="why-we-card__img" src="./img/why-we/pig.png" alt="">
+                    <img class="why-we-card__img lazy" src="./img/common/loader.svg" data-src="./img/why-we/pig.png" alt="">
                   </picture>
                 </div>
                 <h3 class="why-we-card__title">Расчетный счет в РФ </h3>
@@ -158,19 +158,19 @@
                   Позаботились, чтобы вам не пришлось переводить деньги за границу.
                 </p>
               </div>
-              <div class="why-we-card">
+              <div class="why-we-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="why-we-card__media">
                   <picture class="why-we-card__pic">
-                    <img class="why-we-card__img" src="./img/why-we/pyramid.png" alt="">
+                    <img class="why-we-card__img lazy" src="./img/common/loader.svg" data-src="./img/why-we/pyramid.png" alt="">
                   </picture>
                 </div>
                 <h3 class="why-we-card__title">Сотрудничество надолго </h3>
                 <p class="why-we-card__desc">Работаем с 80% клиентов больше 7 лет.</p>
               </div>
-              <div class="why-we-card">
+              <div class="why-we-card" data-aos="fade-up" data-aos-delay="50">
                 <div class="why-we-card__media">
                   <picture class="why-we-card__pic">
-                    <img class="why-we-card__img" src="./img/why-we/torch.png" alt="">
+                    <img class="why-we-card__img lazy" src="./img/common/loader.svg" data-src="./img/why-we/torch.png" alt="">
                   </picture>
                 </div>
                 <h3 class="why-we-card__title">Свободный склад или предзаказ </h3>
@@ -178,10 +178,10 @@
                   Пополняем наличие товаров <br> и&nbsp;работаем по предзаказам. Заказать партию блузок можно всегда.
                 </p>
               </div>
-              <div class="why-we-card">
+              <div class="why-we-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="why-we-card__media">
                   <picture class="why-we-card__pic">
-                    <img class="why-we-card__img" src="./img/why-we/discount.png" alt="">
+                    <img class="why-we-card__img lazy" src="./img/common/loader.svg" data-src="./img/why-we/discount.png" alt="">
                   </picture>
                 </div>
                 <h3 class="why-we-card__title">Скидки</h3>
@@ -189,10 +189,10 @@
                   Устраиваем распродажи товаров <br> и&nbsp;даем максимально выгодные цены.
                 </p>
               </div>
-              <div class="why-we-card">
+              <div class="why-we-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="why-we-card__media">
                   <picture class="why-we-card__pic">
-                    <img class="why-we-card__img" src="./img/why-we/shipping.png" alt="">
+                    <img class="why-we-card__img lazy" src="./img/common/loader.svg" data-src="./img/why-we/shipping.png" alt="">
                   </picture>
                 </div>
                 <h3 class="why-we-card__title">Отправка в любой город</h3>
@@ -202,15 +202,15 @@
           </div>
         </section>
 
-        <section class="section categories">
+        <section class="section categories" id="categories">
           <div class="container categories__container">
-            <h2 class="section-title categories__title">Все категории</h2>
-            <p class="section-desc categories__desc">
+            <h2 class="section-title categories__title" data-aos="fade-up">Все категории</h2>
+            <p class="section-desc categories__desc" data-aos="fade-up">
               Здесь вы найдете прибыльный <br>
               товар для своего магазина
             </p>
             <div class="categories__gallery">
-              <article class="categories-card">
+              <article class="categories-card" data-aos="fade-up">
                 <div class="categories-card__content">
                   <h3 class="categories-card__title">Распродажа</h3>
                   <p class="categories-card__desc">
@@ -222,11 +222,11 @@
                 </div>
                 <figure class="categories-card__media">
                   <picture class="categories-card__pic">
-                    <img class="categories-card__img" src="./img/categories/sale.png" alt="">
+                    <img class="categories-card__img lazy" src="./img/common/loader.svg" data-src="./img/categories/sale.png" alt="">
                   </picture>
                 </figure>
               </article>
-              <article class="categories-card">
+              <article class="categories-card" data-aos="fade-up" data-aos-delay="50">
                 <div class="categories-card__content">
                   <h3 class="categories-card__title">Новинки</h3>
                   <p class="categories-card__desc">
@@ -238,11 +238,11 @@
                 </div>
                 <figure class="categories-card__media">
                   <picture class="categories-card__pic">
-                    <img class="categories-card__img" src="./img/categories/new.png" alt="">
+                    <img class="categories-card__img lazy" src="./img/common/loader.svg" data-src="./img/categories/new.png" alt="">
                   </picture>
                 </figure>
               </article>
-              <article class="categories-card">
+              <article class="categories-card" data-aos="fade-up" data-aos-delay="50">
                 <div class="categories-card__content">
                   <h3 class="categories-card__title">Младшая школа</h3>
                   <p class="categories-card__desc">
@@ -254,11 +254,11 @@
                 </div>
                 <figure class="categories-card__media">
                   <picture class="categories-card__pic">
-                    <img class="categories-card__img" src="./img/categories/junior.png" alt="">
+                    <img class="categories-card__img lazy" src="./img/common/loader.svg" data-src="./img/categories/junior.png" alt="">
                   </picture>
                 </figure>
               </article>
-              <article class="categories-card">
+              <article class="categories-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="categories-card__content">
                   <h3 class="categories-card__title">Подростки</h3>
                   <p class="categories-card__desc">
@@ -270,11 +270,11 @@
                 </div>
                 <figure class="categories-card__media">
                   <picture class="categories-card__pic">
-                    <img class="categories-card__img" src="./img/categories/teen.png" alt="">
+                    <img class="categories-card__img lazy" src="./img/common/loader.svg" data-src="./img/categories/teen.png" alt="">
                   </picture>
                 </figure>
               </article>
-              <article class="categories-card">
+              <article class="categories-card" data-aos="fade-up" data-aos-delay="150">
                 <div class="categories-card__content">
                   <h3 class="categories-card__title">Креативные подростки</h3>
                   <p class="categories-card__desc">
@@ -286,11 +286,11 @@
                 </div>
                 <figure class="categories-card__media">
                   <picture class="categories-card__pic">
-                    <img class="categories-card__img" src="./img/categories/creative.png" alt="">
+                    <img class="categories-card__img lazy" src="./img/common/loader.svg" data-src="./img/categories/creative.png" alt="">
                   </picture>
                 </figure>
               </article>
-              <article class="categories-card">
+              <article class="categories-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="categories-card__content">
                   <h3 class="categories-card__title">Не белые блузки</h3>
                   <p class="categories-card__desc">
@@ -302,7 +302,7 @@
                 </div>
                 <figure class="categories-card__media">
                   <picture class="categories-card__pic">
-                    <img class="categories-card__img" src="./img/categories/not-white.png" alt="">
+                    <img class="categories-card__img lazy" src="./img/common/loader.svg" data-src="./img/categories/not-white.png" alt="">
                   </picture>
                 </figure>
               </article>
@@ -313,8 +313,8 @@
 
         <section class="section bestseller">
           <div class="container bestseller__container">
-            <h2 class="section-title bestseller__title">Хиты продаж</h2>
-            <p class="section-desc bestseller__desc">
+            <h2 class="section-title bestseller__title" data-aos="fade-up">Хиты продаж</h2>
+            <p class="section-desc bestseller__desc" data-aos="fade-up">
               Разбирают безотказно — <br>
               подтверждено отзывами клиентов
             </p>
@@ -354,14 +354,14 @@
 
         <section class="section cooperation">
           <div class="container cooperation__container">
-            <h2 class="section-title cooperation__title">
+            <h2 class="section-title cooperation__title" data-aos="fade-up">
               4 шага успешного <br> сотрудничества
             </h2>
             <div class="cooperation__gallery">
               <article class="cooperation-card">
                 <div class="cooperation-card__media">
                   <picture class="cooperation-card__pic">
-                    <img src="./img/cooperation/step-help.jpg" alt="" class="cooperation-card__img">
+                    <img src="./img/common/loader.svg" data-src="./img/cooperation/step-help.jpg" alt="" class="cooperation-card__img lazy">
                   </picture>
                 </div>
                 <h3 class="cooperation-card__title">Поможем с выбором</h3>
@@ -372,7 +372,7 @@
               <article class="cooperation-card">
                 <div class="cooperation-card__media">
                   <picture class="cooperation-card__pic">
-                    <img src="./img/cooperation/step-checkout.jpg" alt="" class="cooperation-card__img">
+                    <img src="./img/common/loader.svg" data-src="./img/cooperation/step-checkout.jpg" alt="" class="cooperation-card__img lazy">
                   </picture>
                 </div>
                 <h3 class="cooperation-card__title">Оформим заказ</h3>
@@ -383,7 +383,7 @@
               <article class="cooperation-card">
                 <div class="cooperation-card__media">
                   <picture class="cooperation-card__pic">
-                    <img src="./img/cooperation/step-shipping.jpg" alt="" class="cooperation-card__img">
+                    <img src="./img/common/loader.svg" data-src="./img/cooperation/step-shipping.jpg" alt="" class="cooperation-card__img lazy">
                   </picture>
                 </div>
                 <h3 class="cooperation-card__title">Передадим логистам</h3>
@@ -394,7 +394,7 @@
               <article class="cooperation-card">
                 <div class="cooperation-card__media">
                   <picture class="cooperation-card__pic">
-                    <img src="./img/cooperation/step-ltv.jpg" alt="" class="cooperation-card__img">
+                    <img src="./img/common/loader.svg" data-src="./img/cooperation/step-ltv.jpg" alt="" class="cooperation-card__img lazy">
                   </picture>
                 </div>
                 <h3 class="cooperation-card__title">Будем ждать вас снова!</h3>
@@ -406,19 +406,19 @@
                 </p>
               </article>
             </div>
-            <div class="cooperation__warning">
+            <div class="cooperation__warning" data-aos="fade-up">
               <span class="cooperation__warning-hl">Не</span>
               <span class="cooperation__warning-text">
                 рассматриваем к сотрудничеству поставщиков маркетплейсов и желающих шить в нашем цеху вещи под собственным брендом.
               </span>
             </div>
             <div class="cooperation__figures">
-              <div class="cooperation__figure"></div>
-              <div class="cooperation__figure"></div>
-              <div class="cooperation__figure"></div>
-              <div class="cooperation__figure"></div>
-              <div class="cooperation__figure"></div>
-              <div class="cooperation__figure"></div>
+              <div class="cooperation__figure" data-aos="fade-right"></div>
+              <div class="cooperation__figure" data-aos="fade-left"></div>
+              <div class="cooperation__figure" data-aos="fade-right"></div>
+              <div class="cooperation__figure" data-aos="fade-left"></div>
+              <div class="cooperation__figure" data-aos="fade-right"></div>
+              <div class="cooperation__figure" data-aos="fade-left"></div>
             </div>
 
           </div>
@@ -426,7 +426,7 @@
 
         <section class="section faq">
           <div class="container faq__container">
-            <h2 class="section-title faq__title">Часто задаваемые <br> вопросы</h2>
+            <h2 class="section-title faq__title" data-aos="fade-up">Часто задаваемые <br> вопросы</h2>
             <div class="faq__content">
               <div class="faq__list">
                 <div class="bayan bayan--closer-minus faq-card">
@@ -503,7 +503,7 @@
               <div class="faq-help">
                 <div class="faq-help__media">
                   <picture class="faq-help__media-pic">
-                    <img src="./img/faq/faq-hero.jpg" alt="" class="faq-help__media-img">
+                    <img src="./img/common/loader.svg" data-src="./img/faq/faq-hero.jpg" alt="" class="faq-help__media-img lazy">
                   </picture>
                 </div>
                 <h3 class="faq-help__title">Не нашли ответа <br> на&nbsp;свой вопрос?</h3>
@@ -540,10 +540,10 @@
         <section class="section cta">
           <div class="container cta__container">
             <div class="cta__offer">
-              <h2 class="section-title cta__title">
+              <h2 class="section-title cta__title" data-aos="fade-up">
                 Получите прайс-лист по&nbsp;электронной почте
               </h2>
-              <p class="section-desc cta__desc">
+              <p class="section-desc cta__desc" data-aos="fade-up">
                 Сможете подобрать позиции под свой <br> 
                 бюджет, посчитать чистую прибыль, <br> 
                 выбрать самый выгодный вариант <br>

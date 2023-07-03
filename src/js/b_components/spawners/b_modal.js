@@ -204,7 +204,7 @@ class b_modal {
     pop.dispatchEvent(event);
     pop.querySelector(".b_modal").dispatchEvent(event);
 
-    if (document.querySelector.classList.contains('header--opened')) return;
+    if (document.querySelector('.header').classList.contains('header--opened')) return;
     bodyLock(false);
   }
 

@@ -44,3 +44,22 @@ telInputs.forEach(tel => {
 
   new Inputmask(maskOptions).mask(tel);
 })
+
+
+import AOS from "aos";
+window.aos = AOS;
+window.aos.init({
+  offset: 50
+});
+
+setTimeout(() => {
+  window.aos.refresh();
+}, 5000)
+
+const phones = document.querySelectorAll('a[href^="tel:"]');
+phones.forEach((phone) => {
+  phone.classList.add('js_copyclicker');
+});
+import "./b_components/controls/copyclicker.js"
+
+import "./b_helpers/smooth-anchors.js"

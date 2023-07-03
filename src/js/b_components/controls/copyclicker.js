@@ -1,35 +1,49 @@
-import { copyToClipboard } from "../utils/helpers.js";
+import { copyToClipboard } from "../../b_helpers/action-helpers.js";
 
-const copyNotificationText = "Скопировано";
+const copyNotificationText = "Скопировано ✓";
 
-const copyClickItems = document.querySelectorAll(".js_click-copy");
-copyClickItems.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    ) {
-      // код для мобильных устройств
-    } else {
-      // код для обычных устройств
-      e.preventDefault();
+const NESTED_TO_COPY_NODES = [
+  'contact-item__text',
+];
 
-      const copiedText = item.innerText;
-      copyToClipboard(copiedText);
-      item.dataset.text = copiedText;
-      if (item.classList.contains("hints__item--tel")) {
-        const telText = item.querySelector(".hints__item-text");
-        telText.innerText = copyNotificationText;
-        setTimeout(() => {
-          telText.innerText = item.dataset.text;
-        }, 5000);
+function initCopyclicker(copyClickItems) {
+  copyClickItems.forEach((item) => {
+    if (item.classList.contains('js_copyclicker--init')) return
+      
+    item.addEventListener("click", (e) => {
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
+        // код для мобильных устройств
       } else {
-        item.innerText = copyNotificationText;
+        // код для обычных устройств
+        e.preventDefault();
+
+        let textNode = item;
+        if (item.querySelector('svg')) {
+          textNode = item.querySelector('span[class*="__text"]');
+        }
+        console.log(textNode)
+
+        const copiedText = textNode.innerText;
+        copyToClipboard(copiedText);
+        item.dataset.text = copiedText;
+
+        textNode.innerText = copyNotificationText;
+
         setTimeout(() => {
-          item.innerText = item.dataset.text;
+          textNode.innerText = item.dataset.text;
         }, 5000);
       }
-    }
+    });
+
+    item.classList.add('js_copyclicker--init')
   });
+}
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  const copyClickItems = document.querySelectorAll(".js_copyclicker");
+  initCopyclicker(copyClickItems)
 });
