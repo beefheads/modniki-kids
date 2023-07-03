@@ -66,15 +66,46 @@ import "./b_components/controls/copyclicker.js"
 import "./b_helpers/smooth-anchors.js"
 
 import "./libs/masonry.pkgd.min.js";
-const reviewsGallery = document.querySelector('.reviews__gallery');
-if (reviewsGallery) {
-  let msnr = new Masonry(reviewsGallery, {
+const reviewsMasonryContainer = document.querySelector('.reviews__masonry');
+if (reviewsMasonryContainer) {
+  let reviewsMasonry = new Masonry(reviewsMasonryContainer, {
       // options...
       itemSelector: '.review-card',
       gutter: 30,
       columnWidth: '.review-card',
       percentPosition: true
   });
-  window.msnr = msnr
-  msnr.layout();
+  window.reviewsMasonry = reviewsMasonry
+  reviewsMasonry.layout();
+
+  let previousWidth = window.innerWidth;
+  window.addEventListener('resize', function() {
+    const currentWidth = window.innerWidth;
+    if (currentWidth === previousWidth) return;
+
+    reviewsMasonry.layout();
+    previousWidth = currentWidth;
+  });
+}
+
+const blogMasonryContainer = document.querySelector('.blog__masonry');
+if (blogMasonryContainer) {
+  let blogMasonry = new Masonry(blogMasonryContainer, {
+      // options...
+      itemSelector: '.blog-card',
+      gutter: 30,
+      columnWidth: '.blog-card',
+      percentPosition: true
+  });
+  window.blogMasonry = blogMasonry
+  blogMasonry.layout();
+
+  let previousWidth = window.innerWidth;
+  window.addEventListener('resize', function() {
+    const currentWidth = window.innerWidth;
+    if (currentWidth === previousWidth) return;
+
+    blogMasonry.layout();
+    previousWidth = currentWidth;
+  });
 }
