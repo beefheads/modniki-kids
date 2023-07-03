@@ -94,7 +94,6 @@ export function validatePhone(input) {
   const field = input.querySelector("[required]");
   // let regex = /^(\+7|8)\s?\(?[489][0-9]{2}\)?\s?[0-9]{3}[-\s]?[0-9]{2}[-\s]?[0-9]{2}$/;
   let regex = /^\+7\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/;
-  console.log(regex.test(field.value))
   if (regex.test(field.value)) {
     return setInputValid(input);
   } else {

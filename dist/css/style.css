@@ -6963,8 +6963,8 @@ body:not(._lock) .header--hidden {
 }
 @media (max-width: 450px) {
   .cooperation__figure:nth-child(2) {
-    top: 5rem;
     width: 24.6rem;
+    height: 24rem;
   }
 }
 

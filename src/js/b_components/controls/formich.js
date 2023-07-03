@@ -110,7 +110,7 @@ async function onFormSuccess(event) {
     try {
       let result = await response.json();
       if (result.status) {
-        console.log('success')
+        // console.log('success')
         setFormStatusOk(form)
       }
     } catch {
@@ -131,8 +131,9 @@ async function onFormSuccess(event) {
 window.addEventListener('DOMContentLoaded', (event) => {
   const formsList = document.querySelectorAll(".js_form");
   formsList.forEach((form) => {
+    if (form.classList.contains('js_form--init')) return;
+    
     form.addEventListener("submit", async (event) => {
-      console.log('click')
       event.preventDefault();
 
       extractUTM(form);
@@ -159,6 +160,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 
     form.addEventListener('submit:valid', onFormSuccess);
+
+    form.classList.add('js_form--init');
   });
 
 

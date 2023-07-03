@@ -312,8 +312,9 @@
     transform: rotate(35deg);
 	}
 	@media (max-width: $mobile-l) {
-		top: 5rem;
+		// top: 0;//5rem;
 		width: 24.6rem;
+		height: 24rem;
 	}
 }
 
