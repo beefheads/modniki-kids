@@ -24,10 +24,21 @@ function hideHeader() {
   header.dispatchEvent(hideHeaderEvent);
 }
 
+function headerStickySet() {
+  header.classList.add('header--sticky');
+}
+function headerStickyUnset() {
+  header.classList.remove('header--sticky');
+}
+
+
 const handleScroll = () => {
   if (window.pageYOffset <= header.getBoundingClientRect().height) {
     showHeader();
+    headerStickyUnset();
     return;
+  } else {
+    headerStickySet();
   }
 
   const currentScrollPos = window.pageYOffset;

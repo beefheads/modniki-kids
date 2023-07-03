@@ -10,10 +10,15 @@
   margin-right: auto;
   background-color: var(--bg-app);
   transition: all 0.4s var(--tr-jolly-enter);
+  border-bottom: 0.1rem solid transparent;
 }
 
 body:not(._lock) .header--hidden {
   transform: translateY(-100%);
+}
+
+.header--sticky {
+  border-bottom: 0.1rem solid var(--c-border);
 }
 
 .header__container {
@@ -127,7 +132,7 @@ body:not(._lock) .header--hidden {
 
 .header__nav-link:hover {
   @media (any-hover:hover) {
-    color: var(--c-primary);
+    color: var(--c-second);
   }
 }
 
@@ -145,6 +150,31 @@ body:not(._lock) .header--hidden {
   @media (max-width: $w-burger) {
     margin-right: unset;
     margin-bottom: 1.4rem;
+  }
+}
+
+.header__nav-item--has-children::after {
+  @media (min-width: $w-burger + 1) {
+    content: "";
+    display: block;
+    width: 0.334em;
+    height: 0.556em;
+    margin-left: 0.334em;
+    transition: var(--tr-regular);
+    background-image: url("../img/common/link-angle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    right: -1.2rem;
+    transition: var(--tr-regular);
+  }
+}
+.header__nav-item--has-children:hover::after {
+  @media (any-hover:hover) {
+    transform: translateY(-50%) rotate(90deg);
   }
 }
 
@@ -300,12 +330,15 @@ body:not(._lock) .header--hidden {
   opacity: 0;
   transform: translateY(2rem);
   transition: all 0.4s var(--tr-jolly-enter);
+  border: 0.1rem solid var(--c-border);
+  border-top: none;
 
   @media (max-width: $w-burger) {
     pointer-events: initial;
     opacity: 1;
     transform: translateY(0);
     position: static;
+    box-shadow: none;
   }
 }
 
