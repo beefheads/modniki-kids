@@ -75,23 +75,28 @@
 }
 
 .cart-item__column--line {
-	grid-area: line;
-
 	@media (max-width: $mobile-xl) {
+		grid-area: line;
 		align-self: center;
 	}
 }
 
 .cart-item__column--count {
-	grid-area: count;
+	@media (max-width: $mobile-xl) {
+		grid-area: count;
+	}
 }
 
 .cart-item__column--price {
-	grid-area: price;
+	@media (max-width: $mobile-xl) {
+		grid-area: price;
+	}
 }
 
 .cart-item__column--total {
-	grid-area: total;
+	@media (max-width: $mobile-xl) {
+		grid-area: total;
+	}
 }
 
 .cart-item__column--line::before,

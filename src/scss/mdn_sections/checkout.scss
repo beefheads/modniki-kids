@@ -74,6 +74,10 @@
 .checkout__total-caption {
 	font-size: 1.4rem;
 	color: var(--fg-third);
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.3rem;
+	}
 }
 
 .checkout__total-row-value-currency {

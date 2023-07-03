@@ -1,59 +1,49 @@
-.progress__wrap {
+.progress {
 	position: relative;
-	padding-top: 0.3rem;
-	padding-bottom: 0.3rem;
 	overflow: hidden;
+	background-color: var(--c-border);
+	border-radius: 2rem;
+	height: 2rem;
 }
 
 .progress__bar {
 	position: relative;
 	width: 100%;
+	height: 100%;
 	display: block;
 	border-radius: 2rem;
-	height: 2rem;
-}
-
-.progress__bar::-webkit-progress-value {
 	background-color: var(--c-second);
-	z-index: 0;
+	z-index: 3;
 	border-radius: 2rem;
 	transition: all 0.3s linear;
-}
-.progress__bar::-moz-progress-bar {
-	background-color: var(--c-second);
-	z-index: 0;
-	border-radius: 2rem;
-	transition: all 0.3s linear;
-}
-
-.progress__bar::-webkit-progress-bar {
-	background-color: var(--c-border);
-	border-radius: 2rem;
-}
-
-.progress__bar::-moz-progress-bar {
-	background-color: var(--c-border);
-	border-radius: 2rem;
+	min-width: 2.8em;
+	max-width: initial;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 0.5rem;
 }
 
 .progress__value,
 .progress__max {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
 	color: var(--fg-on);
-	z-index: 3;
 	font-family: -apple-system, var(--ff-regular);
 	font-weight: 700;
 	font-size: 1.4rem;
 }
 
 .progress__value {
-	left: 0;
+	position: relative;
 	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	background: inherit;
 }
 
 .progress__max {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 	right: 0;
 	padding-right: 0.5rem;
+	z-index: 2;
 }

@@ -14,62 +14,69 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	}
 
 	function setProgress(value) {
-		const progressWrap = this.querySelector('.progress__wrap');
-		const progressBar = this.querySelector('.progress__bar');
-		if (!progressWrap || !progressBar) return
 
-		progressBar.value = value
+		this.dataset.value = value
 		syncProgressData(this);
 
 		return this;
 	}
 
 	function moveIndicator(progress) {
-		const progressWrap = progress.querySelector('.progress__wrap');
-		const progressBar = progress.querySelector('.progress__bar');
-
-		const max = progressBar.max;
-		const value = progressBar.value;
+		const max = progress.dataset.max;
+		const value = progress.dataset.value;
 		let percent = value / max * 100;
-		const PERCENT_GAP_FIX = 12;
-		percent = percent - PERCENT_GAP_FIX;
 
-		const valueNode = progressWrap.querySelector('.progress__value');
+		const progressBarNode = progress.querySelector('.progress__bar');
+		progressBarNode.style.maxWidth = `${percent}%`;
 
-		valueNode.style.left = `${percent}%`;
+		const PERCENT_GAP_FIX = 16;
+		let valueOffset = 0;
+		if (percent > PERCENT_GAP_FIX) {
+			valueOffset = percent - PERCENT_GAP_FIX;
+		}
 
-		return this;
+		// const valueNode = progress.querySelector('.progress__value');
+		// valueNode.style.left = `${valueOffset}%`;
+
+		return progress;
+	}
+
+	function appendBarNode(progress) {
+		const progressBar = document.createElement('span');
+		progressBar.classList.add('progress__bar');
+		progress.append(progressBar);
+
+		return progressBar;
 	}
 
 	function appendValueNode(progress) {
-		const progressWrap = progress.querySelector('.progress__wrap');
-		
+		const progressBar = progress.querySelector('.progress__bar');
 		const valueNode = document.createElement('span');
 		valueNode.classList.add('progress__value');
-		progressWrap.append(valueNode);
+		progressBar.append(valueNode);
 
 		return valueNode;
 	}
 
 	function appendMaxNode(progress) {
-		const progressWrap = progress.querySelector('.progress__wrap');
-
 		const maxNode = document.createElement('span');
 		maxNode.classList.add('progress__max');
-		progressWrap.append(maxNode);
+		progress.append(maxNode);
 
 		return maxNode;
 	}
 
 	function syncProgressData(progress) {
-		const progressWrap = progress.querySelector('.progress__wrap');
-		const progressBar = progress.querySelector('.progress__bar');
-
-		const progressValue = `${progressBar.value}${progressBar.dataset.currency}`
-		const progressMax = `${progressBar.max}${progressBar.dataset.currency}`
+		const progressValue = `${progress.dataset.value}${progress.dataset.currency}`
+		const progressMax = `${progress.dataset.max}${progress.dataset.currency}`
 
 		let progressValueNode = progress.querySelector('.progress__value');
 		let progressMaxNode = progress.querySelector('.progress__max');
+		let progressBarNode = progress.querySelector('.progress__bar');
+
+		if (!progressBarNode) {
+			progressBarNode = appendBarNode(progress);
+		}
 
 		if (!progressValueNode) {
 			progressValueNode = appendValueNode(progress);
@@ -79,10 +86,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			progressMaxNode = appendMaxNode(progress);
 		}
 
+
 		progressValueNode.innerText = progressValue;
 		progressMaxNode.innerText = progressMax;
 
-		// moveIndicator(progress)
+		moveIndicator(progress);
 
 		return progress;
 	}
