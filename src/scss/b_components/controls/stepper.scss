@@ -32,6 +32,7 @@
 	color: var(--fg-stepper-button);
 	background-color: var(--bg-stepper-button);
 	font-size: var(--fz);
+	padding-bottom: 0.2rem;
 }
 
 .stepper__minus[disabled],

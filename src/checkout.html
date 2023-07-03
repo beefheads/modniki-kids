@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="main">
+
+        <h1 class="page-title section-title">Оформление заказа</h1>
+
+        <div class="checkout">
+          <div class="checkout__container container">
+            <div class="checkout__column">
+              <div class="cart">
+                <div class="cart__container">
+                  <div class="cart__head">
+                    <p class="cart__head-title">Товар</p>
+                    <p class="cart__head-title">Размерные ряды</p>
+                    <p class="cart__head-title">Общее количество</p>
+                    <p class="cart__head-title">Цена за единицу</p>
+                    <p class="cart__head-title">Общая цена</p>
+                  </div>
+                  <div class="cart__body">
+                    @@for (var i = 0; i < 3; i++) {
+                      @@include('tpls/mdn/cart-item.html',{})
+                    }
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__customer checkout__section">
+                <h2 class="checkout__section-title">Покупатель</h2>
+                <fieldset class="form__row">
+                  @@include('tpls/input/input.html',{placeholder: "Имя"})
+                  @@include('tpls/input/input.html',{placeholder: "Фамилия"})
+                  @@include('tpls/input/input.html',{placeholder: "Страна/регион"})
+                  @@include('tpls/input/input.html',{placeholder: "Населенный пункт"})
+                  @@include('tpls/input/input.html',{placeholder: "E-mail"})
+                  @@include('tpls/input/input.html',{placeholder: "Адрес"})
+                  @@include('tpls/input/textarea.html',{})
+                </fieldset>
+              </div>
+            </div>
+            <div class="checkout__column">
+              <div class="checkout__total">
+                <div class="checkout__total-row">
+                  <span class="checkout__total-row-title">Итого</span>
+                  <span class="checkout__total-row-value">
+                    <span class="checkout__total-row-value-sum">320 000</span>
+                    <span class="checkout__total-row-value-currency">₽</span>
+                  </span>
+                </div>
+                <div class="checkout__total-row">
+                  <span class="checkout__total-row-title">25 вещей
+                  </span>
+                  <span class="checkout__total-row-value">
+                    <span class="checkout__total-row-value-sum">320 000</span>
+                    <span class="checkout__total-row-value-currency">₽</span>
+                  </span>
+                </div>
+
+                <div class="checkout__total-row">
+                  <span class="checkout__total-row-title">До бесплатной доставки:</span>
+                  <span class="checkout__total-row-value">
+                    <span class="checkout__total-row-value-sum">2000</span>
+                    <span class="checkout__total-row-value-currency">₽</span>
+                  </span>
+                  <div class="progress checkout__progress">
+                    <div class="progress__wrap">
+                      <progress class="progress__bar" value="1000" max="3000" data-currency="₽"></progress>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout__total-row">
+                  <span class="checkout__total-row-value">
+                    <span class="section-text--success">Доставим бесплатно ✓</span>
+                  </span>
+                </div>
+                <button class="button-filled button-primary checkout__button-submit">Заказать</button>
+                <p class="checkout__total-caption">
+                  Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей <a href="#" class="link">политике конфиденциальности</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="section bestseller">
+          <div class="container bestseller__container">
+            <h2 class="section-title bestseller__title">Похожее</h2>
+            <div class="bestseller-carousel carousel">
+              <div class="swiper carousel-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card--has-price.html',{})
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card.html',{})
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card.html',{})
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card.html',{})
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card.html',{})
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    @@include('tpls/mdn/product-card.html',{})
+                  </div>
+                </div>
+              </div>
+              <div class="carousel__nav">
+                <div class="swiper-buttons carousel-buttons">
+                  <div class="swiper-button-prev carousel-button-prev"></div>
+                  <div class="swiper-button-next carousel-button-next"></div>
+                </div>
+                <div class="swiper-pagination carousel-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/index.min.js"></script>
+    <script src="./js/product.min.js"></script>
+  </body>
+</html>

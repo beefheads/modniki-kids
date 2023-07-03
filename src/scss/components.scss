@@ -14,6 +14,7 @@
  @import "./b_components/controls/link";
  @import "./b_components/controls/buttons";
  @import "./b_components/controls/input";
+ @import "./b_components/controls/textarea";
  @import "./b_components/controls/forms";
  @import "./b_components/controls/stepper";
  @import "./b_components/controls/b_tabs";
@@ -33,3 +34,6 @@
 
  @import "./mdn_components/review-card";
  @import "./mdn_components/blog-card";
+
+ @import "./mdn_components/cart";
+ @import "./mdn_components/cart-item";

@@ -37,6 +37,7 @@ const isStepperMoreMax = (stepper) => {
 const getStepperMin = (stepper) => {
 	return getStepperField(stepper).min === '' ? 2 : +getStepperField(stepper).min;
 }
+
 const isStepperLessMin = (stepper) => {
 	return getStepperValue(stepper) < getStepperMin(stepper);
 }
@@ -60,11 +61,29 @@ const initStepper = (stepper) => {
 			return;
 		}
 		if (isStepperLessMin(stepper)) {
-			setStepperValue(stepper, getStepperMin(stepper) - 1);
+			setStepperValue(stepper, getStepperMin(stepper) - 2);
 			minus.disabled = true;
 			return;
 		}
 
+		setStepperValue(stepper, getStepperValue(stepper));
+	});
+	value.addEventListener("blur", (e) => {
+		e.target.value = e.target.value.replaceAll(/\D/g, "");
+
+		plus.disabled = false;
+		minus.disabled = false;
+
+		if (isStepperMoreMax(stepper)) {
+			setStepperValue(stepper, getStepperMax(stepper));
+			plus.disabled = true;
+			return;
+		}
+		if (isStepperLessMin(stepper)) {
+			setStepperValue(stepper, getStepperMin(stepper) - 1);
+			minus.disabled = true;
+			return;
+		}
 		setStepperValue(stepper, getStepperValue(stepper));
 	});
 

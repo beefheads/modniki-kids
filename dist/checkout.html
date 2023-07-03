@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты</title>
+    <title>Оформление заказа</title>
     <link rel="stylesheet" href="./css/style.css?_v=20230703182417">
 
     <!-- Отключить автодетект телефонов -->
@@ -110,132 +110,486 @@
 </header>
 
 
-      <div class="breadcrumbs">
-        <div class="breadcrumbs__container container">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a href="#" class="breadcrumbs__link">Главная</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="#" class="breadcrumbs__link">Покупателям</a>
-            </li>
-            <li class="breadcrumbs__item">Контакты</li>
-          </ul>
-        </div>
-      </div>
-
       <main class="main">
 
-        <h1 class="page-title section-title">Покупателям</h1>
+        <h1 class="page-title section-title">Оформление заказа</h1>
 
-        <div class="runway nav-links">
-          <div class="container runway__container">
-            <div class="runway__shaft">
-              <div class="runway__lift">
-                <a href="#" class="button-stroke button-third runway__button">
-                  Сотрудничество
-                </a>
-                <a href="#" class="button-stroke button-third runway__button">
-                  Доставка и оплата
-                </a>
-                <span class="button-stroke button-third runway__button active">
-                  Таблица размеров
-                </span>
-                <a href="#" class="button-stroke button-third runway__button">
-                  Контакты и реквизиты
-                </a>
+        <div class="checkout">
+          <div class="checkout__container container">
+            <div class="checkout__column">
+              <div class="cart">
+                <div class="cart__container">
+                  <div class="cart__head">
+                    <p class="cart__head-title">Товар</p>
+                    <p class="cart__head-title">Размерные ряды</p>
+                    <p class="cart__head-title">Общее количество</p>
+                    <p class="cart__head-title">Цена за единицу</p>
+                    <p class="cart__head-title">Общая цена</p>
+                  </div>
+                  <div class="cart__body">
+                    
+                      <article class="cart-item">
+  <a href="#" class="cart-item__media">
+    <picture class="cart-item__media-pic">
+      <img src="./img/catalog/product-page.jpg" alt="" class="cart-item__media-img">
+    </picture>
+  </a>
+  <h3 class="cart-item__title">
+    <a href="#" class="cart-item__link">
+      Блузка голубая «Первый класс»
+    </a>
+  </h3>
+  <div class="cart-item__column cart-item__column--line" data-title="Размерные ряды">
+    <div class="cart-item__column-value">38, 39, 40, 41</div>
+    <div class="stepper cart-item__stepper">
+      <button class="stepper__button stepper__minus" type="button">−</button>
+      <input type="text" name="product_conunt" class="stepper__value" value="8" inputmode="decimal">
+      <button class="stepper__button stepper__plus" type="button">+</button>
+    </div>
+  </div>
+  <div class="cart-item__column cart-item__column--count" data-title="Общее количество">
+    <div class="cart-item__column-value">3</div>
+  </div>
+  <div class="cart-item__column cart-item__column--price" data-title="Цена за единицу">
+    <div class="cart-item__column-value">
+      <div class="cart-item__column-value-text">3500</div>
+      <div class="cart-item__currency">₽</div>
+    </div>
+  </div>
+  <div class="cart-item__column cart-item__column--total" data-title="Общая цена">
+    <div class="cart-item__column-value">
+      <div class="cart-item__column-value-text">100 500</div>
+      <div class="cart-item__currency">₽</div>
+    </div>
+  </div>
+  <button class="cart-item__remove" type="button">×</button>
+</article>
+
+                    
+                      <article class="cart-item">
+  <a href="#" class="cart-item__media">
+    <picture class="cart-item__media-pic">
+      <img src="./img/catalog/product-page.jpg" alt="" class="cart-item__media-img">
+    </picture>
+  </a>
+  <h3 class="cart-item__title">
+    <a href="#" class="cart-item__link">
+      Блузка голубая «Первый класс»
+    </a>
+  </h3>
+  <div class="cart-item__column cart-item__column--line" data-title="Размерные ряды">
+    <div class="cart-item__column-value">38, 39, 40, 41</div>
+    <div class="stepper cart-item__stepper">
+      <button class="stepper__button stepper__minus" type="button">−</button>
+      <input type="text" name="product_conunt" class="stepper__value" value="8" inputmode="decimal">
+      <button class="stepper__button stepper__plus" type="button">+</button>
+    </div>
+  </div>
+  <div class="cart-item__column cart-item__column--count" data-title="Общее количество">
+    <div class="cart-item__column-value">3</div>
+  </div>
+  <div class="cart-item__column cart-item__column--price" data-title="Цена за единицу">
+    <div class="cart-item__column-value">
+      <div class="cart-item__column-value-text">3500</div>
+      <div class="cart-item__currency">₽</div>
+    </div>
+  </div>
+  <div class="cart-item__column cart-item__column--total" data-title="Общая цена">
+    <div class="cart-item__column-value">
+      <div class="cart-item__column-value-text">100 500</div>
+      <div class="cart-item__currency">₽</div>
+    </div>
+  </div>
+  <button class="cart-item__remove" type="button">×</button>
+</article>
+
+                    
+                      <article class="cart-item">
+  <a href="#" class="cart-item__media">
+    <picture class="cart-item__media-pic">
+      <img src="./img/catalog/product-page.jpg" alt="" class="cart-item__media-img">
+    </picture>
+  </a>
+  <h3 class="cart-item__title">
+    <a href="#" class="cart-item__link">
+      Блузка голубая «Первый класс»
+    </a>
+  </h3>
+  <div class="cart-item__column cart-item__column--line" data-title="Размерные ряды">
+    <div class="cart-item__column-value">38, 39, 40, 41</div>
+    <div class="stepper cart-item__stepper">
+      <button class="stepper__button stepper__minus" type="button">−</button>
+      <input type="text" name="product_conunt" class="stepper__value" value="8" inputmode="decimal">
+      <button class="stepper__button stepper__plus" type="button">+</button>
+    </div>
+  </div>
+  <div class="cart-item__column cart-item__column--count" data-title="Общее количество">
+    <div class="cart-item__column-value">3</div>
+  </div>
+  <div class="cart-item__column cart-item__column--price" data-title="Цена за единицу">
+    <div class="cart-item__column-value">
+      <div class="cart-item__column-value-text">3500</div>
+      <div class="cart-item__currency">₽</div>
+    </div>
+  </div>
+  <div class="cart-item__column cart-item__column--total" data-title="Общая цена">
+    <div class="cart-item__column-value">
+      <div class="cart-item__column-value-text">100 500</div>
+      <div class="cart-item__currency">₽</div>
+    </div>
+  </div>
+  <button class="cart-item__remove" type="button">×</button>
+</article>
+
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__customer checkout__section">
+                <h2 class="checkout__section-title">Покупатель</h2>
+                <fieldset class="form__row">
+                  <label class="input input-name js_form__control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Имя"
+    autocomplete="name"
+    required
+  >
+</label>
+
+                  <label class="input input-name js_form__control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Фамилия"
+    autocomplete="name"
+    required
+  >
+</label>
+
+                  <label class="input input-name js_form__control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Страна/регион"
+    autocomplete="name"
+    required
+  >
+</label>
+
+                  <label class="input input-name js_form__control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Населенный пункт"
+    autocomplete="name"
+    required
+  >
+</label>
+
+                  <label class="input input-name js_form__control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="E-mail"
+    autocomplete="name"
+    required
+  >
+</label>
+
+                  <label class="input input-name js_form__control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Адрес"
+    autocomplete="name"
+    required
+  >
+</label>
+
+                  <label class="textarea">
+  <textarea class="textarea__field" placeholder="Пожелания"></textarea>
+</label>
+
+                </fieldset>
+              </div>
+            </div>
+            <div class="checkout__column">
+              <div class="checkout__total">
+                <div class="checkout__total-row">
+                  <span class="checkout__total-row-title">Итого</span>
+                  <span class="checkout__total-row-value">
+                    <span class="checkout__total-row-value-sum">320 000</span>
+                    <span class="checkout__total-row-value-currency">₽</span>
+                  </span>
+                </div>
+                <div class="checkout__total-row">
+                  <span class="checkout__total-row-title">25 вещей
+                  </span>
+                  <span class="checkout__total-row-value">
+                    <span class="checkout__total-row-value-sum">320 000</span>
+                    <span class="checkout__total-row-value-currency">₽</span>
+                  </span>
+                </div>
+
+                <div class="checkout__total-row">
+                  <span class="checkout__total-row-title">До бесплатной доставки:</span>
+                  <span class="checkout__total-row-value">
+                    <span class="checkout__total-row-value-sum">2000</span>
+                    <span class="checkout__total-row-value-currency">₽</span>
+                  </span>
+                  <div class="progress checkout__progress">
+                    <div class="progress__wrap">
+                      <progress class="progress__bar" value="1000" max="3000" data-currency="₽"></progress>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout__total-row">
+                  <span class="checkout__total-row-value">
+                    <span class="section-text--success">Доставим бесплатно ✓</span>
+                  </span>
+                </div>
+                <button class="button-filled button-primary checkout__button-submit">Заказать</button>
+                <p class="checkout__total-caption">
+                  Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей <a href="#" class="link">политике конфиденциальности</a>
+                </p>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="help">
-          <div class="container help__container">
-            <div class="help__content wysiwyg">
-              <div class="b_ymap help__map"
-                data-map-icon="/img/common/map-icon.png"
-                data-address="Санкт-Петербург"
-                id="office-1"></div>
-              <h2>Контакты и реквизиты — офис</h2>
-              <h3>Санкт-Петербург</h3>
-              <div class="help__contacts">
-                <div class="help__contact">
-                  <svg class="help__contact-icon">
-                    <use xlink:href="./img/common/contact-time.svg#contact-time" />
-                  </svg>
-                  <div class="help__contact-info">
-                    <h6 class="help__contact-title">
-                      Режим работы: 
-                    </h6>
-                    <p class="help__contact-value">
-                      Понедельник – Пятница <br>
-                      с 09:00 до 18:00
-                    </p>
+        <section class="section bestseller">
+          <div class="container bestseller__container">
+            <h2 class="section-title bestseller__title">Похожее</h2>
+            <div class="bestseller-carousel carousel">
+              <div class="swiper carousel-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide carousel-slide">
+                    <article class="product-card">
+  <div class="product-card__info">
+    <a href="#" class="product-card__media">
+      <picture class="product-card__pic">
+      	<img  src="./img/common/loader.svg" data-src="./img/catalog/product-no-bg.png" alt="" class="product-card__img lazy">
+      </picture>
+    </a>
+    <p class="product-card__price">
+      <span class="product-card__price-new">
+        <span class="product-card__price-value">1500</span>
+        <span class="product-card__price-currency">₽</span>
+      </span>
+      <span class="product-card__price-old">
+        <span class="product-card__price-value">3000</span>
+        <span class="product-card__price-currency">₽</span>
+      </span>
+    </p>
+    <h3 class="product-card__title">
+      <a href="#" class="product-card__link">Название</a>  
+    </h3>
+    <div class="product-card__stats">
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Размеры:</span>
+      	<span class="product-card__stat-value">40 42 44 46</span>
+      </p>
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Артикул:</span>
+      	<span class="product-card__stat-value">019584</span>
+      </p>
+  	</div>
+  </div>
+  <div class="product-card__buttons">
+  	<button class="button-stroke button-primary product-card__button product-card__add-to-cart">
+      В корзину
+    </button>
+  	<a href="#" class="button-stroke button-second product-card__button product-card__more">
+  		Подробнее
+  	</a>
+    </div>
+</article>
+ 
                   </div>
-                </div>
-                <div class="help__contact">
-                  <svg class="help__contact-icon">
-                    <use xlink:href="./img/common/contact-tel.svg#contact-tel" />
-                  </svg>
-                  <div class="help__contact-info">
-                    <h6 class="help__contact-title">
-                      Телефон: 
-                    </h6>
-                    <a class="help__contact-value" href="tel:+79939766086">+7 993-976-60-86</a>
-                    <a class="help__contact-value" href="tel:+78005338835">+7 800-533-88-35</a>
+                  <div class="swiper-slide carousel-slide">
+                    <article class="product-card">
+  <div class="product-card__info">
+    <a href="#" class="product-card__media">
+      <picture class="product-card__pic">
+      	<img  src="./img/common/loader.svg" data-src="./img/catalog/product-no-bg.png" alt="" class="product-card__img lazy">
+      </picture>
+    </a>
+    <h3 class="product-card__title">
+      <a href="#" class="product-card__link">Название</a>
+    </h3>
+    <div class="product-card__stats">
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Размеры:</span>
+      	<span class="product-card__stat-value">40 42 44 46</span>
+      </p>
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Артикул:</span>
+      	<span class="product-card__stat-value">019584</span>
+      </p>
+  	</div>
+  </div>
+  <div class="product-card__buttons">
+  	<button class="button-stroke button-primary product-card__button product-card__get-price" data-b_modal-open="modal-login">
+    	Узнайте цену
+    </button>
+  	<a href="#" class="button-stroke button-second product-card__button product-card__more">
+  		Подробнее
+  	</a>
+    </div>
+</article>
+ 
                   </div>
-                </div>
-                <div class="help__contact">
-                  <svg class="help__contact-icon">
-                    <use xlink:href="./img/common/contact-email.svg#contact-email" />
-                  </svg>
-                  <div class="help__contact-info">
-                    <h6 class="help__contact-title">
-                      По вопросам сотрудничества:
-                    </h6>
-                    <a class="help__contact-value" href="mailto:shop@modniki-kids.ru">
-                      shop@modniki-kids.ru
-                    </a>
+                  <div class="swiper-slide carousel-slide">
+                    <article class="product-card">
+  <div class="product-card__info">
+    <a href="#" class="product-card__media">
+      <picture class="product-card__pic">
+      	<img  src="./img/common/loader.svg" data-src="./img/catalog/product-no-bg.png" alt="" class="product-card__img lazy">
+      </picture>
+    </a>
+    <h3 class="product-card__title">
+      <a href="#" class="product-card__link">Название</a>
+    </h3>
+    <div class="product-card__stats">
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Размеры:</span>
+      	<span class="product-card__stat-value">40 42 44 46</span>
+      </p>
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Артикул:</span>
+      	<span class="product-card__stat-value">019584</span>
+      </p>
+  	</div>
+  </div>
+  <div class="product-card__buttons">
+  	<button class="button-stroke button-primary product-card__button product-card__get-price" data-b_modal-open="modal-login">
+    	Узнайте цену
+    </button>
+  	<a href="#" class="button-stroke button-second product-card__button product-card__more">
+  		Подробнее
+  	</a>
+    </div>
+</article>
+ 
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    <article class="product-card">
+  <div class="product-card__info">
+    <a href="#" class="product-card__media">
+      <picture class="product-card__pic">
+      	<img  src="./img/common/loader.svg" data-src="./img/catalog/product-no-bg.png" alt="" class="product-card__img lazy">
+      </picture>
+    </a>
+    <h3 class="product-card__title">
+      <a href="#" class="product-card__link">Название</a>
+    </h3>
+    <div class="product-card__stats">
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Размеры:</span>
+      	<span class="product-card__stat-value">40 42 44 46</span>
+      </p>
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Артикул:</span>
+      	<span class="product-card__stat-value">019584</span>
+      </p>
+  	</div>
+  </div>
+  <div class="product-card__buttons">
+  	<button class="button-stroke button-primary product-card__button product-card__get-price" data-b_modal-open="modal-login">
+    	Узнайте цену
+    </button>
+  	<a href="#" class="button-stroke button-second product-card__button product-card__more">
+  		Подробнее
+  	</a>
+    </div>
+</article>
+ 
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    <article class="product-card">
+  <div class="product-card__info">
+    <a href="#" class="product-card__media">
+      <picture class="product-card__pic">
+      	<img  src="./img/common/loader.svg" data-src="./img/catalog/product-no-bg.png" alt="" class="product-card__img lazy">
+      </picture>
+    </a>
+    <h3 class="product-card__title">
+      <a href="#" class="product-card__link">Название</a>
+    </h3>
+    <div class="product-card__stats">
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Размеры:</span>
+      	<span class="product-card__stat-value">40 42 44 46</span>
+      </p>
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Артикул:</span>
+      	<span class="product-card__stat-value">019584</span>
+      </p>
+  	</div>
+  </div>
+  <div class="product-card__buttons">
+  	<button class="button-stroke button-primary product-card__button product-card__get-price" data-b_modal-open="modal-login">
+    	Узнайте цену
+    </button>
+  	<a href="#" class="button-stroke button-second product-card__button product-card__more">
+  		Подробнее
+  	</a>
+    </div>
+</article>
+ 
+                  </div>
+                  <div class="swiper-slide carousel-slide">
+                    <article class="product-card">
+  <div class="product-card__info">
+    <a href="#" class="product-card__media">
+      <picture class="product-card__pic">
+      	<img  src="./img/common/loader.svg" data-src="./img/catalog/product-no-bg.png" alt="" class="product-card__img lazy">
+      </picture>
+    </a>
+    <h3 class="product-card__title">
+      <a href="#" class="product-card__link">Название</a>
+    </h3>
+    <div class="product-card__stats">
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Размеры:</span>
+      	<span class="product-card__stat-value">40 42 44 46</span>
+      </p>
+      <p class="product-card__stat">
+      	<span class="product-card__stat-title">Артикул:</span>
+      	<span class="product-card__stat-value">019584</span>
+      </p>
+  	</div>
+  </div>
+  <div class="product-card__buttons">
+  	<button class="button-stroke button-primary product-card__button product-card__get-price" data-b_modal-open="modal-login">
+    	Узнайте цену
+    </button>
+  	<a href="#" class="button-stroke button-second product-card__button product-card__more">
+  		Подробнее
+  	</a>
+    </div>
+</article>
+ 
                   </div>
                 </div>
               </div>
-              <button class="button-filled button-primary button__start-cooperation" data-b_modal-open="modal-cooperation">
-                Начать сотрудничество
-              </button>
-
-              <div class="b_ymap help__map"
-                data-address="Кыргызстан, г.Бишкек ул. Орозбекова 74"
-                data-map-icon="/img/common/map-icon.png"
-                id="factory-1"
-                ></div>
-              <h3>Адрес производства</h3>
-              <div class="help__contacts">
-                <div class="help__contact">
-                  <svg class="help__contact-icon">
-                    <use xlink:href="./img/common/contact-location.svg#contact-location" />
-                  </svg>
-                  <div class="help__contact-info">
-                    <h6 class="help__contact-value">
-                      Кыргызстан, г.Бишкек ул. Орозбекова 74 (пл.Ала-Тоо)
-                    </h6>
-                  </div>
+              <div class="carousel__nav">
+                <div class="swiper-buttons carousel-buttons">
+                  <div class="swiper-button-prev carousel-button-prev"></div>
+                  <div class="swiper-button-next carousel-button-next"></div>
                 </div>
+                <div class="swiper-pagination carousel-pagination"></div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="help-cta">
-          <div class="container help-cta__container">
-            <h3 class="section-subtitle">Оставьте заявку прямо сейчас</h3>
-            <p class="section-desc">
-              Мы свяжемся с вами и поможем сформировать выгодный заказ.
-            </p>
-            <button class="button-filled button-primary help-cta__cooperation" data-b_modal-open="modal-cooperation">
-              Начать сотрудничество
-            </button>
-          </div>
-        </div>
+        </section>
 
       </main>
       <footer class="footer">
@@ -799,8 +1153,6 @@
 </div>
 
 
-
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=da3c5221-98a4-4fec-af53-00eb3b281803&_v=20230217195447"></script>
     <script src="./js/index.min.js?_v=20230703182417"></script>
     <script src="./js/product.min.js?_v=20230703182417"></script>
   </body>

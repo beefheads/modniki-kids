@@ -20,6 +20,10 @@
 @import "./reset";
 @import "./normalize";
 
+fieldset {
+  padding: 0;
+  margin: 0;
+}
 
 html {
   overscroll-behavior: none;

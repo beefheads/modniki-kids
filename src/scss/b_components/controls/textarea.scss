@@ -1,21 +1,35 @@
 .textarea {
-  --brad: 4px;
-  --text-color: var(--c-text-regular);
-  --label-color: var(--bg-element);
-  --border-color: var(--c-text-regular);
-  --input-bg: var(--bg-element);
-  --fz: 0.875rem; //12
-  --lh: 1;
-  --padding: 0.75rem 1.25rem;//19 24 18
-  border-radius: rem(10);
+  --fg-color: #000;
+  --border-color: var(--bg-second);
+  --input-bg: var(--bg-second);
+  --fz: 1.8rem; //12
+  --lh: initial;
+  --input-padding: 3.1rem 4.2rem 3.7rem 6.9rem;
+  --brad: 5rem;
+  border-radius: var(--brad);
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
   max-width: 100%;
   min-width: 100%;
-  min-height: 94px;
+  min-height: 20rem;
+
+  @media (max-width: $tablet) {
+    --fz: 2.2rem;
+  }
+
+  @media (max-width: $mobile-l) {
+    --fz: 1.5rem;
+    --input-padding: 2.1rem 4.9rem 2.2rem;
+  }
 }
+
+.textarea.is-invalid:not(.input--focused) {
+  --c-placeholder: var(--c-error);
+  --fg-color: var(--c-error);
+}
+
 .textarea__field {
   max-width: 100%;
   display: block;
@@ -26,36 +40,17 @@
   background: var(--input-bg);
   border: 1px solid var(--border-color);
   border-radius: var(--brad);
-  padding: var(--padding);
-  font-weight: 600;
+  padding: var(--input-padding);
   font-size: var(--fz);
   line-height: var(--lh);
-  color: var(--text-color);
+  color: var(--fg-color);
   min-height: inherit;
   position: relative;
   border-radius: inherit;
+  min-height: inherit;
 }
+
 .textarea__field::placeholder {
-  color: var(--c-text-regular);
+  color: #cacbcf;
 }
-// .textarea__resizer {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 24px;
-//   height: 16px;
-//   cursor: row-resize;
-//   position: absolute;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-// .textarea__resizer::before {
-//   content: "";
-//   display: block;
-//   width: 100%;
-//   height: 2px;
-//   background: #A1AEB3;
-// }
+

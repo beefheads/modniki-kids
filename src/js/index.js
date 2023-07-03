@@ -63,6 +63,7 @@ phones.forEach((phone) => {
 });
 import "./b_components/controls/copyclicker.js"
 
+import "./b_helpers/apple-helpers.js"
 import "./b_helpers/smooth-anchors.js"
 
 import "./libs/masonry.pkgd.min.js";
