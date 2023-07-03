@@ -3709,6 +3709,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 .wysiwyg img {
   margin-bottom: 3rem;
+  border-radius: 1rem;
 }
 
 .wysiwyg-2 ol ul li {
@@ -5683,7 +5684,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .blog__masonry .blog-card {
-  width: 28%;
+  width: 31.5%;
   margin-bottom: 3rem;
 }
 @media (max-width: 1100px) {
@@ -9377,6 +9378,21 @@ a.help__contact-value:hover {
 
 .blog {
   padding-top: 3rem;
+}
+
+.help + .blog {
+  padding-top: 10rem;
+}
+@media (max-width: 601px) {
+  .help + .blog {
+    padding-top: 5rem;
+  }
+}
+
+.blog__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
+  gap: 3rem;
 }
 
 .is-hidden {
