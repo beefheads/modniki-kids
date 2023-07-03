@@ -17,11 +17,13 @@
 	background-color: var(--c-second);
 	z-index: 0;
 	border-radius: 2rem;
+	transition: all 0.3s linear;
 }
 .progress__bar::-moz-progress-bar {
 	background-color: var(--c-second);
 	z-index: 0;
 	border-radius: 2rem;
+	transition: all 0.3s linear;
 }
 
 .progress__bar::-webkit-progress-bar {

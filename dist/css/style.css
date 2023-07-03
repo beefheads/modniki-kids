@@ -65,6 +65,7 @@
   --fg-card-title: #444;
   --fg-card-text-second: #c7c7c7;
   --c-error: #E5042C;
+  --c-success: #34C759;
   --c-border: #eee;
   --bg-app: #fff;
   --bg-card: #fff;
@@ -3250,6 +3251,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   }
 }
 
+.section-text--success {
+  color: var(--c-success);
+}
+
 .section-text--color {
   color: var(--c-accent);
 }
@@ -5391,12 +5396,14 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   background-color: var(--c-second);
   z-index: 0;
   border-radius: 2rem;
+  transition: all 0.3s linear;
 }
 
 .progress__bar::-moz-progress-bar {
   background-color: var(--c-second);
   z-index: 0;
   border-radius: 2rem;
+  transition: all 0.3s linear;
 }
 
 .progress__bar::-webkit-progress-bar {
