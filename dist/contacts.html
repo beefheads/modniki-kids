@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230703103653">
+    <link rel="stylesheet" href="./css/style.css?_v=20230703135656">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -418,8 +418,23 @@
   <div class="minicart__total">
     <p class="minicart__row minicart__total-sum">
       <span class="minicart__row-title">Итого:</span>
-      <span class="minicart__row-value">31500 <span class="minicart__currency">₽</span></span>
+      <span class="minicart__row-value">
+        <span class="minicart__row-value-sum">31500</span>
+        <span class="minicart__currency">₽</span>
+      </span>
     </p>
+    <div class="minicart__row minicart__progress">
+      <span class="minicart__row-title">До бесплатной доставки:</span>
+      <span class="minicart__row-value">
+        <span class="minicart__row-value-sum">2000</span>
+        <span class="minicart__currency">₽</span>
+      </span>
+      <div class="progress">
+        <div class="progress__wrap">
+          <progress class="progress__bar" value="1000" max="3000" data-currency="₽"></progress>
+        </div>
+      </div>
+    </div>
     <div class="minicart__buttons">
       <a href="#" class="button-filled button-primary minicart__button-continue">Продолжить покупки</a>
       <a href="#" class="button-stroke button-primary minicart__button-checkout">Оформить заказ</a>
@@ -779,7 +794,7 @@
 
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=da3c5221-98a4-4fec-af53-00eb3b281803&_v=20230217195447"></script>
-    <script src="./js/index.min.js?_v=20230703103653"></script>
-    <script src="./js/product.min.js?_v=20230703103653"></script>
+    <script src="./js/index.min.js?_v=20230703135656"></script>
+    <script src="./js/product.min.js?_v=20230703135656"></script>
   </body>
 </html>

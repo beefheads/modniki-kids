@@ -13,6 +13,7 @@ let lazyLoadInstance = new LazyLoad();
 window.lazyLoad = lazyLoadInstance;
 
 import "./mdn_components/carousel.js";
+import "./mdn_components/progress.js";
 
 import "./mdn_sections/offer-carousel.js";
 
