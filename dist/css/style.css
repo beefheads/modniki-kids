@@ -6454,7 +6454,7 @@ body:not(._lock) .header--hidden {
     opacity: 1;
     transform: translateY(0);
     position: static;
-    box-shadow: none;
+    border: none;
   }
 }
 
