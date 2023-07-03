@@ -64,3 +64,17 @@ phones.forEach((phone) => {
 import "./b_components/controls/copyclicker.js"
 
 import "./b_helpers/smooth-anchors.js"
+
+import "./libs/masonry.pkgd.min.js";
+const reviewsGallery = document.querySelector('.reviews__gallery');
+if (reviewsGallery) {
+  let msnr = new Masonry(reviewsGallery, {
+      // options...
+      itemSelector: '.review-card',
+      gutter: 30,
+      columnWidth: '.review-card',
+      percentPosition: true
+  });
+  window.msnr = msnr
+  msnr.layout();
+}

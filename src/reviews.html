@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">Отзывы</li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main">
+
+        <h1 class="page-title section-title">Отзывы</h1>
+
+        <section class="section reviews">
+          <div class="container reviews__container">
+            <div class="reviews__gallery">
+                @@include('tpls/mdn/review-card.html',{lines: 6})
+                @@include('tpls/mdn/review-card.html',{lines: 3})
+                @@include('tpls/mdn/review-card.html',{lines: 2})
+                @@include('tpls/mdn/review-card.html',{lines: 5})
+                @@include('tpls/mdn/review-card.html',{lines: 2})
+                @@include('tpls/mdn/review-card.html',{lines: 4})
+            </div>
+            <ul class="pagination">
+              <li><a href="#"><</a></li>
+              <li class="active">
+                <span>1</span>
+              </li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">></a></li>
+            </ul>
+          </div>
+        </section>
+
+      </main>
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/index.min.js"></script>
+    <script src="./js/product.min.js"></script>
+  </body>
+</html>
